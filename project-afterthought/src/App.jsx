@@ -8,6 +8,7 @@ import RootPage from './Pages/RootPage'
 import ErrorPage from './Pages/ErrorPage'
 import HomePage from './Pages/HomePage'
 import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
           {
             path: "about",
             element: <AboutPage />,
+          },
+          {
+            path: "contact",
+            element: <ContactPage />,
           },
         ],
       },
