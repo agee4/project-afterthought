@@ -7,9 +7,12 @@ import './App.css'
 import RootPage from './Pages/RootPage'
 import ErrorPage from './Pages/ErrorPage'
 import HomePage from './Pages/HomePage'
-import AboutPage from './pages/AboutPage'
-import ContactPage from './pages/ContactPage'
-import ProjectsPage from './pages/ProjectsPage'
+import PurposePage from './pages/about/PurposePage'
+import AboutMePage from './pages/about/AboutMePage'
+import ContactPage from './pages/about/ContactPage'
+import ProjectsPage from './pages/projects/ProjectsPage'
+import RideOrganizerPage from './pages/projects/RideOrganizerPage'
+import FireDetectorPage from './pages/projects/FireDetectorPage'
 
 const router = createBrowserRouter([
   {
@@ -18,42 +21,43 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "purpose",
+        element: <PurposePage />,
+      },
+      {
+        path: "about-me",
+        element: <AboutMePage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
+      },
+      {
+        path: "projects",
         errorElement: <ErrorPage />,
         children: [
           {
             index: true,
-            element: <HomePage />,
-          },
-          {
-            path: "about",
-            element: <AboutPage />,
-          },
-          {
-            path: "contact",
-            element: <ContactPage />,
-          },
-          {
-            path: "projects",
             element: <ProjectsPage />,
-            errorElement: <ErrorPage />,
-            children: [
-              {
-                path: "ride-organizer",
-                element: <ProjectsPage />,
-              },
-              {
-                path: "fire-detector",
-                element: <ProjectsPage />,
-              },
-              {
-                path: "storyboard",
-                element: <ProjectsPage />,
-              },
-            ]
+          },
+          {
+            path: "ride-organizer",
+            element: <RideOrganizerPage />,
+          },
+          {
+            path: "fire-detector",
+            element: <FireDetectorPage />,
+          },
+          {
+            path: "storyboard",
+            element: <ProjectsPage />,
           },
         ],
       },
-      
     ],
   },
 ])
