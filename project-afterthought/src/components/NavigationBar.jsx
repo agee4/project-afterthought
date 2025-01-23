@@ -16,13 +16,13 @@ const NavigationBar = () => {
           About
           <ul className="dropdown-content">
             <li>
-              <Link to="/purpose">Project Goals</Link>
+              <Link to="/purpose">About the Project</Link>
             </li>
             <li>
               <Link to="/about-me">About Me</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact">Contact Me</Link>
             </li>
           </ul>
         </li>
