@@ -10,13 +10,9 @@ const ErrorPage = () => {
   return (
     <>
       <NavigationBar />
-      <div className={'mainContainer'}>
-        <div className={'titleContainer'}>
-          Uh oh!
-        </div>
-        <p>
-          <i>{error.status + ": " + (error.statusText || error.message)}</i>
-        </p>
+      <div className={'titleContainer'}>
+        <h1>Uh oh!</h1>
+        <p><i>{error.status + ": " + (error.statusText || error.message)}</i></p>
         <sub>how did you even get here lol</sub>
       </div>
     </>

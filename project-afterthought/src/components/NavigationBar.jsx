@@ -1,9 +1,6 @@
 // NavigationBar.js
 import { Link, } from "react-router-dom"
 import React, { useState } from 'react'
-//import BereanLogoPng from "../Resources/BereanLogoNoText.png"
-import "../styles/NavigationBar.css"
-import '../App.css'
 
 const NavigationBar = () => {
   return (
@@ -15,26 +12,16 @@ const NavigationBar = () => {
         <li className="dropdown">
           About
           <ul className="dropdown-content">
-            <li>
-              <Link to="/purpose">About the Project</Link>
-            </li>
-            <li>
-              <Link to="/about-me">About Me</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact Me</Link>
-            </li>
+            <li><Link to="/purpose">About the Project</Link></li>
+            <li><Link to="/about-me">About Me</Link></li>
+            <li><Link to="/contact">Contact Me</Link></li>
           </ul>
         </li>
         <li className="dropdown">
           <Link to="/projects">Projects</Link>
           <ul className="dropdown-content">
-            <li>
-              <Link to="/projects/ride-organizer">Ride Organizer</Link>
-            </li>
-            <li>
-              <Link to="/projects/fire-detector">Fire Detection Model</Link>
-            </li>
+            <li><Link to="/projects/ride-organizer">Ride Organizer</Link></li>
+            <li><Link to="/projects/fire-detector">Fire Detection Model</Link></li>
           </ul>
         </li>
       </ul>
