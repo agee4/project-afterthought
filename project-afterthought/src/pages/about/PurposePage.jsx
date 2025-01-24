@@ -2,7 +2,7 @@
 
 const PurposePage = () => {
   return (
-    <div className="titleContainer">
+    <div>
       <h1>Why does this site exist?</h1>
       <p>
         <b>Project Afterthought</b> is intended to be a small exhibition of Aaron Gee's 

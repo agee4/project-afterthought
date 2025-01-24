@@ -1,13 +1,17 @@
 // AboutMePage.jsx
-import GradImg from '../../assets/aarongeenicegradphoto.jpg'
-import NiceProfileImg from '../../assets/aarongeenicephoto.jpg'
+import GradImg from "../../assets/aarongeenicegradphoto.jpg"
+import NiceProfileImg from "../../assets/aarongeenicephoto.jpg"
 
 const AboutMePage = () => {
   return (
-    <div className={'titleContainer'}>
+    <div>
       <h1>Who are you?</h1>
       <p>Hi there! My name is <b>Aaron Gee</b>!</p>
-      <img src={GradImg} width='500' alt='Imagine a really cool photo of Aaron Gee, the site creator, here!' />
+      <img
+        src={GradImg}
+        alt="Imagine a really cool photo of Aaron Gee, the site creator, here!"
+        width="500"
+      />
       <p>
         I am a Computer Science & Engineering graduate from University of California, Irvine.
         I enjoy learning, practicing, and teaching others the wonders of computers, 

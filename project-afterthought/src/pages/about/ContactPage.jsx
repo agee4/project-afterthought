@@ -2,7 +2,7 @@
 
 const ContactPage = () => {
   return (
-    <div className={'titleContainer'}>
+    <div>
       <h1>Talk to me!</h1>
       <a href="mailto:agee4@uci.edu">agee4@uci.edu</a>
       <br />

@@ -41,6 +41,8 @@
   color: #888;
 }
 
+/* NavigationBar */
+
 .navigation {
   background-color: white;
   color: black;
@@ -121,4 +123,11 @@
 
 .navigation .dropdown:hover .dropdown-content li.active {
   color: #B3B3B3;
+}
+
+/* Footer */
+
+footer {
+  align-items: stretch;
+  justify-content: space-between;
 }

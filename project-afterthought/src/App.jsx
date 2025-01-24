@@ -1,18 +1,17 @@
-import { useState } from 'react'
 import {
   RouterProvider,
   createBrowserRouter
 } from "react-router-dom"
-import './App.css'
-import RootPage from './Pages/RootPage'
-import ErrorPage from './Pages/ErrorPage'
-import HomePage from './Pages/HomePage'
-import PurposePage from './pages/about/PurposePage'
-import AboutMePage from './pages/about/AboutMePage'
-import ContactPage from './pages/about/ContactPage'
-import ProjectsPage from './pages/projects/ProjectsPage'
-import RideOrganizerPage from './pages/projects/RideOrganizerPage'
-import FireDetectorPage from './pages/projects/FireDetectorPage'
+import "./App.css"
+import RootPage from "./pages/RootPage"
+import ErrorPage from "./pages/ErrorPage"
+import HomePage from "./pages/HomePage"
+import PurposePage from "./pages/about/PurposePage"
+import AboutMePage from "./pages/about/AboutMePage"
+import ContactPage from "./pages/about/ContactPage"
+import ProjectsPage from "./pages/projects/ProjectsPage"
+import RideOrganizerPage from "./pages/projects/RideOrganizerPage"
+import FireDetectorPage from "./pages/projects/FireDetectorPage"
 
 const router = createBrowserRouter([
   {

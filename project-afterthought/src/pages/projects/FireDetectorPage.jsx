@@ -2,9 +2,12 @@
 
 const FireDetectorPage = () => {
   return (
-    <div className={'titleContainer'}>
+    <div>
       <h1>Fire Detector!</h1>
-      Undergraduate capstone project<br/>Fire detector.
+      <p>
+        Undergraduate capstone project<br/>
+        Fire detector.
+      </p>
     </div>    
   )
 }

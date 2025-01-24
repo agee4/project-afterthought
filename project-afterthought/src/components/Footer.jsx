@@ -5,7 +5,8 @@ const Footer = () => {
     <footer>
       <hr />
       <small>
-        This site was designed by Aaron Gee! Idk what rights are reserved. :P
+        <b>This site was designed by Aaron Gee</b><br />
+        Idk what rights are reserved :P
       </small>
     </footer>
   )

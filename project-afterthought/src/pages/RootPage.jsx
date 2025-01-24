@@ -6,7 +6,7 @@ import Footer from "../components/Footer"
 const RootPage = () => {
   return (
     <>
-      <header><NavigationBar /></header>
+      <NavigationBar />
       <Outlet />
       <Footer />
     </>
