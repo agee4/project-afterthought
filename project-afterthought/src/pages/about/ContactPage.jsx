@@ -1,9 +1,11 @@
 // ContactPage.jsx
 import { Link } from "react-router-dom"
+import PageTitle from "../../components/PageTitle"
 
 const ContactPage = () => {
   return (
     <div>
+      <PageTitle title="Contact - Aaron Gee Portfolio" />
       <h1>Talk to me!</h1>
       <p>
         Interested in hiring me? Contact me through one of the following!<br />

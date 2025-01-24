@@ -2,6 +2,7 @@
 import React from "react"
 import { useRouteError } from "react-router-dom"
 import NavigationBar from "../components/NavigationBar"
+import PageTitle from "../components/PageTitle"
 
 const ErrorPage = () => {
   const error = useRouteError()
@@ -9,6 +10,7 @@ const ErrorPage = () => {
 
   return (
     <>
+      <PageTitle title={error.status + ": " + (error.statusText || error.message)} />
       <NavigationBar />
       <div>
         <h1>Uh oh!</h1>

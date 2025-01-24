@@ -22,6 +22,7 @@ const NavigationBar = () => {
           <ul className="dropdown-content">
             <li><Link to="/projects/ride-organizer">Ride Organizer</Link></li>
             <li><Link to="/projects/fire-detector">Fire Detection Model</Link></li>
+            <li><hr /></li>
           </ul>
         </li>
       </ul>

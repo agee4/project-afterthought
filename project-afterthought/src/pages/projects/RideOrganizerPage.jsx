@@ -1,9 +1,11 @@
 // RideOrganizerPage.jsx
 import { Link } from "react-router-dom"
+import PageTitle from "../../components/PageTitle"
 
 const RideOrganizerPage = () => {
   return (
     <div>
+      <PageTitle title="Ride Organizer (Original) - Aaron Gee Portfolio" />
       <h1>College Ride Organizer!</h1>
       <p>
         <i>A fullstack application designed for ride coordinators to assign passengers to drivers.</i><br />

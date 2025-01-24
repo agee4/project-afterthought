@@ -141,7 +141,7 @@ button:focus-visible {
   display: block;
 }
 
-.navigation .dropdown:hover .dropdown-content li:hover {
+.navigation .dropdown:hover .dropdown-content li:hover a {
   color: #4B86C2;
 }
 
