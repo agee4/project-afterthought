@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <footer>
       <hr />
-      <small>
-        <b>This site was designed by Aaron Gee</b><br />
-        Idk what rights are reserved :P
-      </small>
+      <p>
+          <b>This site was designed by Aaron Gee</b><br />
+          C 2025 idk what rights are reserved :P
+      </p>
     </footer>
   )
 }

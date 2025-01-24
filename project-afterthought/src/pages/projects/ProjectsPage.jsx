@@ -12,6 +12,7 @@ const ProjectsPage = () => {
       </p>
       <h2>Present Projects</h2>
       <p>
+        <Link to="/projects/portfolio-website">Portfolio Website</Link><br />
         <Link to="/projects/ride-organizer">Ride Organizer (But Better!)</Link><br />
         <Link to="/projects/pvz-bb">Plants vs. Zombies: Botanical Battles</Link>
       </p>
