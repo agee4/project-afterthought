@@ -156,3 +156,9 @@ footer {
   justify-content: space-between;
   font-size: small;
 }
+
+.profile-img {
+  margin: auto;
+  max-width: 50%;
+  height: auto;
+}

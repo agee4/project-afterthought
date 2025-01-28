@@ -10,9 +10,9 @@ const AboutMePage = () => {
       <h1>Who are you?</h1>
       <p>Hi there! My name is <b>Aaron Gee</b>!</p>
       <img
+        className={"profile-img"}
         src={GradImg}
         alt="Imagine a really cool photo of Aaron Gee, the site creator, here!"
-        width="500"
       />
       <p>
         I am a Computer Science & Engineering graduate from University of California, Irvine.

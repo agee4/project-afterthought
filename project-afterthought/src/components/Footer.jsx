@@ -6,7 +6,7 @@ const Footer = () => {
       <hr />
       <p>
           <b>This site was designed by Aaron Gee</b><br />
-          C 2025 idk what rights are reserved :P
+          🄯 2025 idk what rights are reserved :P
       </p>
     </footer>
   )
