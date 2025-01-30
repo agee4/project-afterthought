@@ -13,7 +13,7 @@ const RideOrganizerPage = () => {
       <h2>What is this project?</h2>
       <p>
         The <b>Berean Community Church College Ride Organizer</b> was a programming project 
-        for UCI's CompSci 137 class (Internet Applications Engineering). 
+        for <abbr title="University of California, Irvine">UCI</abbr>'s CompSci 137 class (Internet Applications Engineering). 
         It was completed as a group alongside 3 other students during the UCI 2024 Spring Quarter. 
         The goal was to create a fullstack internet application 
         with the purpose of helping ride coordinators 

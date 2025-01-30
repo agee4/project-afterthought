@@ -52,6 +52,10 @@ const router = createBrowserRouter([
             element: <FireDetectorPage />,
           },
           {
+            path: "pvz-bb",
+            element: <ProjectsPage />,
+          },
+          {
             path: "storyboard",
             element: <ProjectsPage />,
           },
