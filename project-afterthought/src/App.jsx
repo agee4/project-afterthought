@@ -12,6 +12,7 @@ import ContactPage from "./pages/about/ContactPage"
 import ProjectsPage from "./pages/projects/ProjectsPage"
 import RideOrganizerPage from "./pages/projects/RideOrganizerPage"
 import FireDetectorPage from "./pages/projects/FireDetectorPage"
+import PvZGamePage from "./pages/projects/PvZGamePage"
 
 const router = createBrowserRouter([
   {
@@ -53,7 +54,7 @@ const router = createBrowserRouter([
           },
           {
             path: "pvz-bb",
-            element: <ProjectsPage />,
+            element: <PvZGamePage />,
           },
           {
             path: "storyboard",

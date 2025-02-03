@@ -26,6 +26,7 @@ const NavigationBar = () => {
             <li><Link to="/projects/ride-organizer">Old Ride Organizer</Link></li>
             <li><Link to="/projects/fire-detector">Fire Detection Model</Link></li>
             <li><hr /></li>
+            <li><Link to="/purpose">Portfolio Website</Link></li>
             <li><Link to="/projects/pvz-bb">PvZ Fangame</Link></li>
           </ul>
         </li>
