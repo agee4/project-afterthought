@@ -1,15 +1,19 @@
 // NavigationBar.js
 import { Link, } from "react-router-dom"
 import React, { useState } from "react"
+import bobLogo from "../assets/thebobclear.svg"
 
 const NavigationBar = () => {
+  const [mobileNavOff, setMobileNavOff] = useState(true)
   const toggleNav = () => {
+    setMobileNavOff(!mobileNavOff)
   }
 
   return (
     <nav className="navigation">
       <Link to="/" className="site-title">
-        Aaron Gee's Portfolio
+        <img className="site-title" src={bobLogo} />
+        <div className="laptop">Aaron Gee's Portfolio</div>
       </Link>
       <ul className="laptop">
         <li className="dropdown">
@@ -31,7 +35,24 @@ const NavigationBar = () => {
           </ul>
         </li>
       </ul>
-      <button className="mobile" onClick={toggleNav}>=</button>
+      <div className="mobile">
+        <button onClick={toggleNav}>=</button>
+        { !mobileNavOff ?
+          <ul className="dropdown-mobile">
+            <li><Link to="/purpose">About the Project</Link></li>
+            <li><Link to="/about-me">About Me</Link></li>
+            <li><Link to="/contact">Contact Me</Link></li>
+            <li><br /></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/projects/ride-organizer">Ride Organizer App</Link></li>
+            <li><Link to="/projects/fire-detector">Fire Detection Model</Link></li>
+            <li><hr /></li>
+            <li><Link to="/purpose">Portfolio Website</Link></li>
+            <li><Link to="/projects/pvz-bb">PvZ Fangame</Link></li>
+          </ul> : <></>
+        }
+      </div>
+      
     </nav>
   )
 }
