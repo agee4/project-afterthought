@@ -12,6 +12,7 @@ import ContactPage from "./pages/about/ContactPage"
 import ProjectsPage from "./pages/projects/ProjectsPage"
 import RideOrganizerPage from "./pages/projects/RideOrganizerPage"
 import FireDetectorPage from "./pages/projects/FireDetectorPage"
+import PortfolioSitePage from "./pages/projects/PortfolioSitePage"
 import PvZGamePage from "./pages/projects/PvZGamePage"
 
 const router = createBrowserRouter([
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
           {
             path: "fire-detector",
             element: <FireDetectorPage />,
+          },
+          {
+            path: "portfolio-site",
+            element: <PortfolioSitePage />,
           },
           {
             path: "pvz-bb",

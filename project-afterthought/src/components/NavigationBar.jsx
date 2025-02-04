@@ -30,7 +30,7 @@ const NavigationBar = () => {
             <li><Link to="/projects/ride-organizer">Ride Organizer App</Link></li>
             <li><Link to="/projects/fire-detector">Fire Detection Model</Link></li>
             <li><hr /></li>
-            <li><Link to="/purpose">Portfolio Website</Link></li>
+            <li><Link to="/projects/portfolio-site">Portfolio Website</Link></li>
             <li><Link to="/projects/pvz-bb">PvZ Fangame</Link></li>
           </ul>
         </li>
@@ -47,7 +47,7 @@ const NavigationBar = () => {
             <li><Link to="/projects/ride-organizer">Ride Organizer App</Link></li>
             <li><Link to="/projects/fire-detector">Fire Detection Model</Link></li>
             <li><hr /></li>
-            <li><Link to="/purpose">Portfolio Website</Link></li>
+            <li><Link to="/projects/portfolio-site">Portfolio Website</Link></li>
             <li><Link to="/projects/pvz-bb">PvZ Fangame</Link></li>
           </ul> : <></>
         }
