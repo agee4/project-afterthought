@@ -9,7 +9,7 @@ const NavigationBar = () => {
   return (
     <nav className="navigation">
       <Link to="/" className="site-title">
-        Project Afterthought
+        Aaron Gee's Portfolio
       </Link>
       <ul className="laptop">
         <li className="dropdown">
@@ -23,7 +23,7 @@ const NavigationBar = () => {
         <li className="dropdown">
           <Link to="/projects">Projects</Link>
           <ul className="dropdown-content">
-            <li><Link to="/projects/ride-organizer">Old Ride Organizer</Link></li>
+            <li><Link to="/projects/ride-organizer">Ride Organizer App</Link></li>
             <li><Link to="/projects/fire-detector">Fire Detection Model</Link></li>
             <li><hr /></li>
             <li><Link to="/purpose">Portfolio Website</Link></li>

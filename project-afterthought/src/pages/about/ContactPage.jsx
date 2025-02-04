@@ -6,14 +6,10 @@ import resumePDF from "../../assets/aarongeeresume.pdf"
 const ContactPage = () => {
   const downloadResume = () => {
     fetch({resumePDF}).then((response) => {
-      response.blob().then((blob) => {
-        const fileURL = window.URL.createObjectURL(blob);
-
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "aarongee-resume.pdf";
-        alink.click();
-      })
+      let alink = document.createElement("a");
+      alink.href = resumePDF;
+      alink.download = "aarongee-resume.pdf";
+      alink.click();
     })
   }
 
