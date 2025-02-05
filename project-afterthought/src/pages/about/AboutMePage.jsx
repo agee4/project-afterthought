@@ -1,7 +1,9 @@
 // AboutMePage.jsx
-import GradImg from "../../assets/aarongeenicegradphoto.jpg"
-import NiceProfileImg from "../../assets/aarongeenicephoto.jpg"
 import PageTitle from "../../components/PageTitle"
+import GradImg from "../../assets/aargeephoto/aargeephoto_grad.jpg"
+import TahoeImg from "../../assets/aargeephoto/aargeephoto_tahoe.jpg"
+import HippoImg from "../../assets/aargeephoto/aargeephoto_goldenhippo.jpg"
+import DinoImg from "../../assets/aargeephoto/aargeephoto_retreatdilopho.jpg"
 
 const AboutMePage = () => {
   return (
@@ -20,6 +22,21 @@ const AboutMePage = () => {
         from coding to building them. I hope to use the skills God has given me 
         to glorify His name and improve the lives of others around me!
       </p>
+      <img
+        className={"gallery-img"}
+        src={TahoeImg}
+        alt="Imagine a really cool photo of Aaron Gee overlooking Lake Tahoe here!"
+      />
+      <img
+        className={"gallery-img"}
+        src={HippoImg}
+        alt="Imagine a really cool photo of Aaron Gee dressed like a mustached yellow hippopotomas here!"
+      />
+      <img
+        className={"gallery-img"}
+        src={DinoImg}
+        alt="Imagine a really cool photo of Aaron Gee next to a Dilophosaurus statue here!"
+      />
     </div>    
   )
 }

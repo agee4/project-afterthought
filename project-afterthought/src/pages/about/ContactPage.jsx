@@ -1,17 +1,9 @@
 // ContactPage.jsx
 import { Link } from "react-router-dom"
 import PageTitle from "../../components/PageTitle"
-import resumePDF from "../../assets/aarongeeresume.pdf"
+import ResumeButton from "../../components/ResumeButton"
 
 const ContactPage = () => {
-  const downloadResume = () => {
-    fetch({resumePDF}).then((response) => {
-      let alink = document.createElement("a");
-      alink.href = resumePDF;
-      alink.download = "aarongee-resume.pdf";
-      alink.click();
-    })
-  }
 
   return (
     <div>
@@ -19,6 +11,7 @@ const ContactPage = () => {
       <h1>Talk to me!</h1>
       <p>Interested in hiring me? Contact me through one of the following!</p>
       <table>
+        <caption>Contact Links</caption>
         <tbody>
           <tr>
             <th>Email</th>
@@ -34,7 +27,8 @@ const ContactPage = () => {
           </tr>
         </tbody>
       </table>
-      <button onClick={downloadResume}>Resume</button>
+      <p>You can also download and review my resume!</p>
+      <ResumeButton />
     </div>    
   )
 }
