@@ -7,7 +7,7 @@ import DinoImg from "../../assets/aargeephoto/aargeephoto_retreatdilopho.jpg"
 
 const AboutMePage = () => {
   return (
-    <div>
+    <div className="page">
       <PageTitle title="About Me - Aaron Gee Portfolio" />
       <h1>Who are you?</h1>
       <p>Hi there! My name is <b>Aaron Gee</b>!</p>
@@ -15,6 +15,7 @@ const AboutMePage = () => {
         className={"profile-img"}
         src={GradImg}
         alt="Imagine a really cool photo of Aaron Gee, the site creator, here!"
+        title="Aaron Gee dressed in college graduation attire. He looks happy."
       />
       <p>
         I am a Computer Science & Engineering graduate from University of California, Irvine.
@@ -26,16 +27,19 @@ const AboutMePage = () => {
         className={"gallery-img"}
         src={TahoeImg}
         alt="Imagine a really cool photo of Aaron Gee overlooking Lake Tahoe here!"
+        title="Aaron Gee overlooking Lake Tahoe from Mount Tallac. He looks happy."
       />
       <img
         className={"gallery-img"}
         src={HippoImg}
         alt="Imagine a really cool photo of Aaron Gee dressed like a mustached yellow hippopotomas here!"
+        title="Aaron Gee dressed like a mustached yellow hippopotomas. He looks happy."
       />
       <img
         className={"gallery-img"}
         src={DinoImg}
         alt="Imagine a really cool photo of Aaron Gee next to a Dilophosaurus statue here!"
+        title="Aaron Gee standing next to a Dilophosaurus statue. He looks happy."
       />
     </div>    
   )

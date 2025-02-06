@@ -3,7 +3,7 @@ import PageTitle from "../../components/PageTitle"
 
 const FireDetectorPage = () => {
   return (
-    <div>
+    <div className="page">
       <PageTitle title="Fire Detector - Aaron Gee Portfolio" />
       <h1>Fire Detector Drone</h1>
       <p>

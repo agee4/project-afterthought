@@ -4,7 +4,7 @@ import PageTitle from "../../components/PageTitle"
 
 const RideOrganizerPage = () => {
   return (
-    <div>
+    <div className="page">
       <PageTitle title="Ride Organizer - Aaron Gee Portfolio" />
       <h1>Ride Organizer Application</h1>
       <p>

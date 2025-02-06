@@ -4,7 +4,7 @@ import PageTitle from "../../components/PageTitle"
 
 const PvZGamePage = () => {
   return (
-    <div>
+    <div className="page">
       <PageTitle title="Plants vs. Zombies Fan Game - Aaron Gee Portfolio" />
       <h1>Project Chloroville</h1>
       <p>

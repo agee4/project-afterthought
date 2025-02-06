@@ -13,7 +13,7 @@ const ResumeButton = () => {
   }
 
   return (
-    <button onClick={downloadResume}>Resume</button>
+    <button onClick={downloadResume}  title="Download my Resume!">Resume</button>
   )
 }
 

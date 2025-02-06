@@ -4,13 +4,14 @@ import Logo from "../assets/logo.svg"
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="page">
       <PageTitle title="Aaron Gee's Portfolio" />
       <h1>Aaron Gee's Amazing Digital Portfolio</h1>
       <img
-        className={"gallery-img"}
+        className={"home-img"}
         src={Logo}
         alt="a crudely drawn simplistic face"
+        title="hello!"
       />
       <h2>An online collection of Aaron Gee's past and present work</h2>
       <p>

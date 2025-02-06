@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="reference">
       <hr />
       <p>
           <b>This site was designed by Aaron Gee</b><br />

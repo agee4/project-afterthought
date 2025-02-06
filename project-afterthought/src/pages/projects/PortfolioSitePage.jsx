@@ -4,7 +4,7 @@ import PageTitle from "../../components/PageTitle"
 
 const PortfolioSitePage = () => {
   return (
-    <div>
+    <div className="page">
       <PageTitle title="Digital Portfolio Website - Aaron Gee Portfolio" />
       <h1>Digital Portfolio Website</h1>
       <p>

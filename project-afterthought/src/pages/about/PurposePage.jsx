@@ -3,7 +3,7 @@ import PageTitle from "../../components/PageTitle"
 
 const PurposePage = () => {
   return (
-    <div>
+    <div className="page">
       <PageTitle title="Site Purpose - Aaron Gee Portfolio" />
       <h1>Why does this site exist?</h1>
       <p>

@@ -4,7 +4,7 @@ import PageTitle from "../../components/PageTitle"
 
 const ProjectsPage = () => {
   return (
-    <div>
+    <div className="page">
       <PageTitle title="Projects Home - Aaron Gee Portfolio" />
       <h1>Past, Present, and Pfuture Projects!</h1>
       <h2>Past Projects</h2>
