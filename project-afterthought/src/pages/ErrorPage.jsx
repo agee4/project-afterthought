@@ -3,7 +3,7 @@ import React from "react"
 import { useRouteError } from "react-router-dom"
 import NavigationBar from "../components/NavigationBar"
 import PageTitle from "../components/PageTitle"
-import Footer from "../components/Footer"
+import ReferenceFooter from "../components/ReferenceFooter"
 
 const ErrorPage = () => {
   const error = useRouteError()
@@ -18,7 +18,7 @@ const ErrorPage = () => {
         <p><i>{error.status + ": " + (error.statusText || error.message)}</i></p>
         <sub>how did you even get here lol</sub>
       </div>
-      <Footer />
+      <ReferenceFooter />
     </>
   )
 }

@@ -171,7 +171,7 @@ table {
   flex: 3;
 }
 
-/* Footer */
+/* Reference */
 
 .reference {
   background-color: black;
@@ -195,7 +195,8 @@ table {
 
 .home-img {
   margin: auto;
-  max-width: 10%;
+  min-width: 135px;
+  max-width: 15%;
 }
 
 /* @media */

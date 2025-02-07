@@ -1,6 +1,6 @@
-// Footer.jsx
+// ReferenceFooter.jsx
 
-const Footer = () => {
+const ReferenceFooter = () => {
   return (
     <footer className="reference">
       <hr />
@@ -12,4 +12,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default ReferenceFooter
