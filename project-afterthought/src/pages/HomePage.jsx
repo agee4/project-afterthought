@@ -1,6 +1,6 @@
 // HomePage.jsx
 import PageTitle from "../components/PageTitle"
-import Logo from "../assets/logo/logo.png"
+import Logo from "../assets/logo/logo_shadow.png"
 
 const HomePage = () => {
   return (
@@ -15,8 +15,7 @@ const HomePage = () => {
       />
       <h2>An online collection of Aaron Gee's past and present work</h2>
       <p>
-        Welcome to my site! Check out my projects, past and present, 
-        and learn what I might be able to do for you!
+        Welcome to my site! Check out my projects and learn what I might be able to do for you!
       </p>
     </div>    
   )

@@ -1,7 +1,7 @@
 // NavigationBar.js
 import { Link, } from "react-router-dom"
 import React, { useState } from "react"
-import bobLogo from "../assets/logo/logo.svg"
+import bobLogo from "../assets/logo/logo_shadow.svg"
 import ResumeButton from "./ResumeButton"
 
 const NavigationBar = () => {

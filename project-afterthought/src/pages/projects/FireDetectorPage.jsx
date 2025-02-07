@@ -1,5 +1,6 @@
 // FireDetectorPage.jsx
 import PageTitle from "../../components/PageTitle"
+import SystemDiagramImg from "../../assets/firedetectordronediagram.jpg"
 
 const FireDetectorPage = () => {
   return (
@@ -17,6 +18,12 @@ const FireDetectorPage = () => {
         that it could use to identify fires.
         Undergraduate capstone project<br/>
       </p>
+      <img
+        className="gallery-img"
+        src={SystemDiagramImg}
+        alt="System diagram of the final fire detection drone"
+        title="System diagram of the final fire detection drone"
+      />
       <h2>What did I learn?</h2>
     </div>    
   )
