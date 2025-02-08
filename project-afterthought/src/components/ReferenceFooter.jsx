@@ -1,6 +1,6 @@
 // ReferenceFooter.jsx
 import { Link, } from "react-router-dom"
-import bobLogo from "../assets/logo/logo_shadow.svg"
+import bobLogo from "../assets/logo/logo.svg"
 import resumePDF from "../assets/aarongeeresume.pdf"
 
 const ReferenceFooter = () => {
@@ -26,8 +26,9 @@ const ReferenceFooter = () => {
         </ul>
       </nav>
       <p>
-        <b>This site was designed by Aaron Gee</b><br />
-        🄯 2025 idk what rights are reserved <img className="emoji-img" src={bobLogo} alt=":D" />
+        <b>This site was designed by Aaron Gee</b>
+        <br />
+        Copypaste 2025. idk what rights are reserved <img className="emoji-img" src={bobLogo} alt=":D" />
       </p>
     </footer>
   )
