@@ -20,8 +20,8 @@ const NavigationBar = () => {
   return (
     <header className="navigation">
       <Link to="/" className="site-title" title="Return Home">
-        <img className="site-title" src={bobLogo} />
-        Aaron Gee's Portfolio
+        <img className="title-img" src={bobLogo} />
+        <div className="title-text">Aaron Gee's Portfolio</div>
       </Link>
       <ul className="laptop">
         <li className="dropdown">
@@ -48,6 +48,7 @@ const NavigationBar = () => {
         <button onClick={toggleMobNav}>{mobileNavOff ? "≡" : "⨯"}</button>
         { !mobileNavOff &&
           <ul className="dropdown-mobile">
+            <li><Link to="/" title="Home"><u>Home</u></Link></li>
             <li><Link to="/purpose" title="Purpose">About the Site</Link></li>
             <li><Link to="/about-me" title="About Me">About Me</Link></li>
             <li><Link to="/contact" title="Contact">Contact Me</Link></li>

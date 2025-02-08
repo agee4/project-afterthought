@@ -27,8 +27,8 @@ const ContactPage = () => {
           </tr>
         </tbody>
       </table>
-      <p>You can also download and review my resume!</p>
-      <ResumeButton />
+      <p>You can also download and review my resume below!</p>
+      <p> ---&gt; <ResumeButton /> &lt;---</p>
     </div>    
   )
 }

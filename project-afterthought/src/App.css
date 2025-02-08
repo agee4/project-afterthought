@@ -127,14 +127,21 @@ table {
   }
 
   .site-title {
-    font-size: 2rem;
-    font-weight: 600;
     height: 2rem;
-    white-space: nowrap;
-    overflow: hidden;
 
     &:hover {
       color: black;
+    }
+
+    .title-text {
+      font-size: 2rem;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .title-img {
+      height: 2rem;
     }
   }
   
@@ -259,7 +266,18 @@ table {
 @media only screen and (max-width: 650px) {
   .laptop * {
     display: none !important;
-    
+  }
+
+  .title-text {
+    display: none;
+  }
+
+  .reference .reference-nav {
+    display: block;
+
+    ul {
+      text-align: center;
+    }
   }
 
   .mobile {
