@@ -1,14 +1,21 @@
 // NavigationBar.js
+import React, { useState, useRef } from "react"
 import { Link, } from "react-router-dom"
-import React, { useState } from "react"
 import bobLogo from "../assets/logo/logo_shadow.svg"
 import ResumeButton from "./ResumeButton"
+import clickOutside from "./clickOutsideFunct"
 
 const NavigationBar = () => {
   const [mobileNavOff, setMobileNavOff] = useState(true)
-  const toggleNav = () => {
+  const navRef = useRef(null)
+  const toggleMobNav = () => {
     setMobileNavOff(!mobileNavOff)
   }
+  const disableMobNav = () => {
+    setMobileNavOff(true)
+  }
+
+  clickOutside(navRef, disableMobNav)
 
   return (
     <header className="navigation">
@@ -37,8 +44,8 @@ const NavigationBar = () => {
         </li>
         <li><ResumeButton /></li>
       </ul>
-      <div className="mobile">
-        <button onClick={toggleNav}>{mobileNavOff ? "≡" : "⨯"}</button>
+      <div className="mobile" ref={navRef}>
+        <button onClick={toggleMobNav}>{mobileNavOff ? "≡" : "⨯"}</button>
         { !mobileNavOff &&
           <ul className="dropdown-mobile">
             <li><Link to="/purpose" title="Purpose">About the Site</Link></li>

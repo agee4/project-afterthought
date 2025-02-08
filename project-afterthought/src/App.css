@@ -28,6 +28,10 @@ a {
   }
 }
 
+ul {
+  text-align: left;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -48,6 +52,10 @@ button {
   &:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
+}
+
+img {
+  object-fit: contain;
 }
 
 table {
@@ -124,7 +132,6 @@ table {
     height: 2rem;
     white-space: nowrap;
     overflow: hidden;
-    object-fit: contain;
 
     &:hover {
       color: black;
@@ -178,6 +185,29 @@ table {
   color: white;
   justify-content: space-between;
   font-size: small;
+  box-shadow: 0px -1px 5px grey;
+
+  .reference-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    h1 {
+      font-size: 1rem;
+    }
+
+    a {
+      color: white;
+
+      &:hover {
+        color: #646cff;
+      }
+    }
+
+    li {
+      list-style-type: none;
+    }
+  }
 }
 
 /* Images */
@@ -197,6 +227,10 @@ table {
   margin: auto;
   min-width: 135px;
   max-width: 15%;
+}
+
+.emoji-img {
+  height: 1em;
 }
 
 /* @media */

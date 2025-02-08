@@ -1,5 +1,6 @@
 // FireDetectorPage.jsx
 import PageTitle from "../../components/PageTitle"
+import DroneFinalImg from "../../assets/firedetectordronefinal.png"
 import SystemDiagramImg from "../../assets/firedetectordronediagram.jpg"
 
 const FireDetectorPage = () => {
@@ -20,10 +21,25 @@ const FireDetectorPage = () => {
       </p>
       <img
         className="gallery-img"
+        src={DroneFinalImg}
+        alt="The final fire detection drone"
+        title="The final fire detection drone"
+      />
+      <img
+        className="gallery-img"
         src={SystemDiagramImg}
         alt="System diagram of the final fire detection drone"
         title="System diagram of the final fire detection drone"
       />
+      <h2>Resources Used</h2>
+      <ul>
+        <li>Python</li>
+        <ul>
+          <li>OpenCV</li>
+          <li>NumPy</li>
+          <li>DJITello</li>
+        </ul>
+      </ul>
       <h2>What did I learn?</h2>
     </div>    
   )

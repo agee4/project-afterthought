@@ -24,12 +24,22 @@ const RideOrganizerPage = () => {
         The application supported authentication, ride list creation, and ride list saving/loading.
       </p>
       <h2>What did I learn?</h2>
+      <h3>General</h3>
       <ul>
         <li>principles of web development (frontend & backend)</li>
-        <li>delegate responsibilities and tasks with others</li>
-        <br />
-        <li>basics of HTML, CSS, JS, React, NodeJS</li>
-        <li>create authentication protocols</li>
+        <li>delegation of responsibilities and tasks</li>
+      </ul>
+      <h3>Specific Skills</h3>
+      <ul>
+        <li>Basics of fundamental website-related languages, libraries, and environments</li>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>NodeJS</li>
+        </ul>
+        <li>Auth0 (create authentication protocols)</li>
       </ul>
       <h2>Other Resources</h2>
       <h3>
