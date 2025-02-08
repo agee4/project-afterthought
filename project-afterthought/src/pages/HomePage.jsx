@@ -1,11 +1,11 @@
 // HomePage.jsx
-import PageTitle from "../components/PageTitle"
+import pageTitle from "../components/pageTitleFunct"
 import Logo from "../assets/logo/logo_shadow.png"
 
 const HomePage = () => {
+  pageTitle()
   return (
     <div className="page">
-      <PageTitle title="Aaron Gee's Portfolio" />
       <h1>Aaron Gee's Amazing Digital Portfolio</h1>
       <img
         className={"home-img"}

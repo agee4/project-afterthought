@@ -1,10 +1,11 @@
 // PurposePage.jsx
-import PageTitle from "../../components/PageTitle"
+import pageTitle from "../../components/pageTitleFunct"
 
 const PurposePage = () => {
+  pageTitle("Site Purpose")
+
   return (
     <div className="page">
-      <PageTitle title="Site Purpose - Aaron Gee Portfolio" />
       <h1>Why does this site exist?</h1>
       <p>
         <b>Aaron Gee's Digital Portfolio</b> is intended to be a small exhibition of 

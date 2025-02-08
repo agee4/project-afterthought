@@ -1,11 +1,11 @@
 // PortfolioSitePage.jsx
-import { Link } from "react-router-dom"
-import PageTitle from "../../components/PageTitle"
+import pageTitle from "../../components/pageTitleFunct"
 
 const PortfolioSitePage = () => {
+  pageTitle("Digital Portfolio Website")
+
   return (
     <div className="page">
-      <PageTitle title="Digital Portfolio Website - Aaron Gee Portfolio" />
       <h1>Digital Portfolio Website</h1>
       <p>
         <i>Showcasing my computer science skills in more ways than one.</i>

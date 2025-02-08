@@ -1,11 +1,12 @@
 // RideOrganizerPage.jsx
 import { Link } from "react-router-dom"
-import PageTitle from "../../components/PageTitle"
+import pageTitle from "../../components/pageTitleFunct"
 
 const RideOrganizerPage = () => {
+  pageTitle("Ride Organizer")
+
   return (
     <div className="page">
-      <PageTitle title="Ride Organizer - Aaron Gee Portfolio" />
       <h1>Ride Organizer Application</h1>
       <p>
         <i>A first step into fullstack application development.</i>

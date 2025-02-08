@@ -1,12 +1,13 @@
 // FireDetectorPage.jsx
-import PageTitle from "../../components/PageTitle"
+import pageTitle from "../../components/pageTitleFunct"
 import DroneFinalImg from "../../assets/firedetectordronefinal.png"
 import SystemDiagramImg from "../../assets/firedetectordronediagram.jpg"
 
 const FireDetectorPage = () => {
+  pageTitle("Fire Detector")
+  
   return (
     <div className="page">
-      <PageTitle title="Fire Detector - Aaron Gee Portfolio" />
       <h1>Fire Detector Drone</h1>
       <p>
         <i>The culmination of my undergraduate CSE skills.</i><br />

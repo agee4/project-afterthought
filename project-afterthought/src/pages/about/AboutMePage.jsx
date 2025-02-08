@@ -1,14 +1,15 @@
 // AboutMePage.jsx
-import PageTitle from "../../components/PageTitle"
+import pageTitle from "../../components/pageTitleFunct"
 import GradImg from "../../assets/aargeephoto/aargeephoto_grad.jpg"
 import TahoeImg from "../../assets/aargeephoto/aargeephoto_tahoe.jpg"
 import HippoImg from "../../assets/aargeephoto/aargeephoto_goldenhippo.jpg"
 import DinoImg from "../../assets/aargeephoto/aargeephoto_retreatdilopho.jpg"
 
 const AboutMePage = () => {
+  pageTitle("About Me")
+  
   return (
     <div className="page">
-      <PageTitle title="About Me - Aaron Gee Portfolio" />
       <h1>Who are you?</h1>
       <p>Hi there! My name is <b>Aaron Gee</b>!</p>
       <img

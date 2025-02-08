@@ -1,9 +1,19 @@
 // ReferenceFooter.jsx
 import { Link, } from "react-router-dom"
+import downloadFile from "./downloadFileFunct"
 import bobLogo from "../assets/logo/logo.svg"
 import resumePDF from "../assets/aarongeeresume.pdf"
 
 const ReferenceFooter = () => {
+  const downloadResume = () => {
+      fetch({resumePDF}).then(() => {
+        let alink = document.createElement("a");
+        alink.href = resumePDF;
+        alink.download = "aarongee-resume.pdf";
+        alink.click();
+      })
+    }
+
   return (
     <footer className="reference">
       <nav className="reference-nav">
@@ -23,6 +33,7 @@ const ReferenceFooter = () => {
           <li><h1><Link to="/contact" title="Contact">Contact</Link></h1></li>
           <li><Link to="mailto:agee4@uci.edu">agee4@uci.edu</Link></li>
           <li><Link to="https://www.linkedin.com/in/aaron-gee-7350712b9">LinkedIn</Link></li>
+          <li><Link onClick={downloadResume}>Resume</Link></li>
         </ul>
       </nav>
       <p>

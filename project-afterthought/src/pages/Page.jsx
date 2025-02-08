@@ -1,10 +1,11 @@
 // Page.jsx
-import PageTitle from "../components/PageTitle"
+import pageTitleFunct from "../components/pageTitleFunct"
 
 const Page = () => {
+  pageTitleFunct("", false)
+
   return (
     <div className="page">
-      <PageTitle title=" - Aaron Gee's Portfolio" />
     </div>    
   )
 }

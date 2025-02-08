@@ -1,10 +1,11 @@
 // ChangeLogPage.jsx
-import PageTitle from "../components/PageTitle"
+import pageTitle from "../components/pageTitleFunct"
 
 const ChangeLogPage = () => {
+  pageTitle("Change Log")
+
   return (
     <div className="page">
-      <PageTitle title="Change Log - Aaron Gee's Portfolio" />
       <h1>Change Log</h1>
     </div>    
   )

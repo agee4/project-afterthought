@@ -1,11 +1,12 @@
 // ProjectsPage.jsx
 import { Link } from "react-router-dom"
-import PageTitle from "../../components/PageTitle"
+import pageTitle from "../../components/pageTitleFunct"
 
 const ProjectsPage = () => {
+  pageTitle("Projects Home")
+
   return (
     <div className="page">
-      <PageTitle title="Projects Home - Aaron Gee Portfolio" />
       <h1>Past, Present, and Pfuture Projects!</h1>
       <h2>Past Projects</h2>
       <p>
