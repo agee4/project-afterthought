@@ -1,8 +1,17 @@
 // RideOrganizerPage.jsx
 import { Link } from "react-router-dom"
 import pageTitle from "../../components/pageTitleFunct"
+import LoggedInHomeImg from "../../assets/rideorganizerapploggedin.png"
+import LoggedOutHomeImg from "../../assets/rideorganizerapploggedout.png"
 
 const RideOrganizerPage = () => {
+  const HTMLIcon = "https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+  const CSSIcon = "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"
+  const JSIcon = "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+  const ReactIcon = "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+  const NodeJSIcon = "https://nodejs.org/static/logos/jsIconGreen.svg"
+  const Auth0Icon = "https://cdn.auth0.com/quantum-assets/dist/latest/logos/auth0/auth0-icon-onlight.svg"
+
   pageTitle("Ride Organizer")
 
   return (
@@ -21,6 +30,12 @@ const RideOrganizerPage = () => {
         assign a large amount of passengers to various drivers, 
         accounting for location and time.
       </p>
+      <img
+        className="profile-img"
+        src={LoggedInHomeImg}
+        alt="A sample screenshot of the Ride Organizer Website, logged in"
+        title="A sample screenshot of the Ride Organizer Website, logged in"
+      />
       <p>
         The application supported authentication, ride list creation, and ride list saving/loading.
       </p>
@@ -32,20 +47,30 @@ const RideOrganizerPage = () => {
       </ul>
       <h3>Specific Skills</h3>
       <ul>
-        <li>Basics of fundamental website-related languages, libraries, and environments</li>
+        <li>Basics of standard web standard languages</li>
         <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>NodeJS</li>
+          <li>HTML<img className="emoji-img" src={HTMLIcon} /></li>
+          <li>CSS<img className="emoji-img" src={CSSIcon} /></li>
+          <li>JavaScript<img className="emoji-img" src={JSIcon} /></li>
         </ul>
-        <li>Auth0 (create authentication protocols)</li>
+        <li>Basics of web development JavaScript-based libraries and environments</li>
+        <ul>
+          <li>React<img className="emoji-img" src={ReactIcon} /></li>
+          <li>NodeJS<img className="emoji-img" src={NodeJSIcon} /></li>
+        </ul>
+        <li>Auth0<img className="emoji-img" src={Auth0Icon} /> (create authentication protocols)</li>
       </ul>
-      <h2>Other Resources</h2>
+      <h2>Check out the final site!</h2>
       <h3>
-        <Link to="https://ridesprojectfrontend.onrender.com">Project Site</Link>
+        <Link to="https://ridesprojectfrontend.onrender.com"><button>Project Site</button></Link>
       </h3>
+      <Link to="https://ridesprojectfrontend.onrender.com">
+        <img
+          className="profile-img"
+          src={LoggedOutHomeImg}
+          title="Check out the website!"
+        />
+      </Link>
     </div>    
   )
 }

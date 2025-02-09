@@ -1,4 +1,4 @@
-/* App.css*/
+/* App.css */
 
 body {
   margin: 0;
@@ -181,10 +181,6 @@ table {
   }
 }
 
-.page {
-  flex: 3;
-}
-
 /* Reference */
 
 .reference {
@@ -223,6 +219,21 @@ table {
   }
 }
 
+/* General */
+
+.page {
+  flex: 3;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
 
 /* Images */
 
