@@ -26,6 +26,16 @@ a {
   &:active {
     color: #B3B3B3;
   }
+
+  img {
+    border: 1px solid #646cff;
+    border-radius: 4px;
+    padding: 5px;
+
+    &:hover {
+      box-shadow: 0 0 2px 1px #535bf2;
+    }
+  }
 }
 
 ul {
@@ -56,6 +66,8 @@ button {
 
 img {
   object-fit: contain;
+  max-width: 100%;
+  height: auto;
 }
 
 table {
@@ -63,6 +75,7 @@ table {
   text-align: center;
   border: 2px solid #ddd;
   border-collapse: collapse;
+
   th, td {
     border: 1px solid #ddd;
     padding: 8px;
@@ -89,7 +102,7 @@ table {
 
 /* NavigationBar */
 
-.navigation {
+#navigation {
   background-color: white;
   color: black;
   position: sticky;
@@ -126,21 +139,21 @@ table {
   gap: 1rem;
   }
 
-  .site-title {
+  #site-title {
     height: 2rem;
 
     &:hover {
       color: black;
     }
 
-    .title-text {
+    #title-text {
       font-size: 2rem;
       font-weight: 600;
       white-space: nowrap;
       overflow: hidden;
     }
 
-    .title-img {
+    #title-img {
       height: 2rem;
     }
   }
@@ -155,9 +168,9 @@ table {
     position: absolute;
     left: auto;
     right: 0;
+    white-space: nowrap;
     overflow: hidden;
     background-color: white;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
@@ -183,14 +196,14 @@ table {
 
 /* Reference */
 
-.reference {
+#reference {
   background-color: black;
   color: white;
   justify-content: space-between;
   font-size: small;
   box-shadow: 0px -1px 5px grey;
 
-  .reference-nav {
+  #reference-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -233,6 +246,11 @@ table {
   margin: 0;
   list-style: none;
   text-align: center;
+
+  img {
+    margin: auto;
+    max-width: 20%;
+  }
 }
 
 /* Images */
@@ -248,16 +266,16 @@ table {
   max-width: 20%;
 }
 
-.home-img {
-  margin: auto;
-  min-width: 135px;
-  max-width: 15%;
-}
-
 .emoji-img {
   height: 1rem;
   display: inline-block;
   vertical-align: text-bottom;
+}
+
+#home-img {
+  margin: auto;
+  min-width: 135px;
+  max-width: 15%;
 }
 
 /* @media */
@@ -279,16 +297,16 @@ table {
   display: none;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 600px) {
   .laptop * {
     display: none !important;
   }
 
-  .title-text {
+  #title-text {
     display: none;
   }
 
-  .reference .reference-nav {
+  #reference #reference-nav {
     display: block;
 
     ul {

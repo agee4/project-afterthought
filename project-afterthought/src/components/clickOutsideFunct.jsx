@@ -1,7 +1,7 @@
 // clickOutsideFunct.jsx
 import { useEffect } from "react"
 
-function clickOutside(ref, callback) {
+const clickOutside = (ref, callback) => {
   useEffect(() => {
     function clickOutsideCaller(event) {
       if (ref && !ref.current.contains(event.target)) {

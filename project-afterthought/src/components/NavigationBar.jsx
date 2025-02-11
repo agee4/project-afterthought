@@ -18,10 +18,10 @@ const NavigationBar = () => {
   clickOutside(navRef, disableMobNav)
 
   return (
-    <header className="navigation">
-      <Link to="/" className="site-title" title="Return Home">
-        <img className="title-img" src={bobLogo} />
-        <div className="title-text">Aaron Gee's Portfolio</div>
+    <header id="navigation">
+      <Link to="/" id="site-title" title="Return Home">
+        <img id="title-img" src={bobLogo} />
+        <div id="title-text">Aaron Gee's Portfolio</div>
       </Link>
       <ul className="laptop">
         <li className="dropdown">
@@ -29,7 +29,6 @@ const NavigationBar = () => {
           <ul className="dropdown-content">
             <li><Link to="/purpose" title="Purpose">About the Project</Link></li>
             <li><Link to="/about-me" title="About Me">About Me</Link></li>
-            <li><Link to="/contact" title="Contact">Contact Me</Link></li>
           </ul>
         </li>
         <li className="dropdown">
@@ -42,7 +41,12 @@ const NavigationBar = () => {
             <li><Link to="/projects/pvz-bb" title="Plants vs. Zombies Fangame">PvZ Fangame</Link></li>
           </ul>
         </li>
-        <li><ResumeButton /></li>
+        <li className="dropdown">
+          <Link to="/contact" title="Contact">Contact</Link>
+          <ul className="dropdown-content">
+            <li><ResumeButton /></li>
+          </ul>
+        </li>
       </ul>
       <div className="mobile" ref={navRef}>
         <button onClick={toggleMobNav}>{mobileNavOff ? "≡" : "⨯"}</button>

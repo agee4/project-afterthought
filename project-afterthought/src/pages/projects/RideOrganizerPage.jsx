@@ -61,9 +61,6 @@ const RideOrganizerPage = () => {
         <li>Auth0<img className="emoji-img" src={Auth0Icon} /> (create authentication protocols)</li>
       </ul>
       <h2>Check out the final site!</h2>
-      <h3>
-        <Link to="https://ridesprojectfrontend.onrender.com"><button>Project Site</button></Link>
-      </h3>
       <Link to="https://ridesprojectfrontend.onrender.com">
         <img
           className="profile-img"
@@ -71,6 +68,9 @@ const RideOrganizerPage = () => {
           title="Check out the website!"
         />
       </Link>
+      <h3>
+        <Link to="https://ridesprojectfrontend.onrender.com"><button>Project Site</button></Link>
+      </h3>
     </div>    
   )
 }

@@ -24,24 +24,24 @@ const AboutMePage = () => {
         from coding to building them. I hope to use the skills God has given me 
         to glorify His name and improve the lives of others around me!
       </p>
-      <img
-        className={"gallery-img"}
-        src={TahoeImg}
-        alt="Imagine a really cool photo of Aaron Gee overlooking Lake Tahoe here!"
-        title="Aaron Gee overlooking Lake Tahoe from Mount Tallac. He looks happy."
-      />
-      <img
-        className={"gallery-img"}
-        src={HippoImg}
-        alt="Imagine a really cool photo of Aaron Gee dressed like a mustached yellow hippopotomas here!"
-        title="Aaron Gee dressed like a mustached yellow hippopotomas. He looks happy."
-      />
-      <img
-        className={"gallery-img"}
-        src={DinoImg}
-        alt="Imagine a really cool photo of Aaron Gee next to a Dilophosaurus statue here!"
-        title="Aaron Gee standing next to a Dilophosaurus statue. He looks happy."
-      />
+      <ul className="gallery">
+        <img
+          src={TahoeImg}
+          alt="Imagine a really cool photo of Aaron Gee overlooking Lake Tahoe here!"
+          title="Aaron Gee overlooking Lake Tahoe from Mount Tallac. He looks happy."
+        />
+        <img
+          src={HippoImg}
+          alt="Imagine a really cool photo of Aaron Gee dressed like a mustached yellow hippopotomas here!"
+          title="Aaron Gee dressed like a mustached yellow hippopotomas. He looks happy."
+        />
+        <img
+          src={DinoImg}
+          alt="Imagine a really cool photo of Aaron Gee next to a Dilophosaurus statue here!"
+          title="Aaron Gee standing next to a Dilophosaurus statue. He looks happy."
+        />
+      </ul>
+      
     </div>    
   )
 }

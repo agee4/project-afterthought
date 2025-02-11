@@ -6,14 +6,15 @@ import "./App.css"
 import RootPage from "./pages/RootPage"
 import ErrorPage from "./pages/ErrorPage"
 import HomePage from "./pages/HomePage"
+import ContactPage from "./pages/ContactPage"
 import PurposePage from "./pages/about/PurposePage"
 import AboutMePage from "./pages/about/AboutMePage"
-import ContactPage from "./pages/about/ContactPage"
 import ProjectsPage from "./pages/projects/ProjectsPage"
 import RideOrganizerPage from "./pages/projects/RideOrganizerPage"
 import FireDetectorPage from "./pages/projects/FireDetectorPage"
 import PortfolioSitePage from "./pages/projects/PortfolioSitePage"
 import PvZGamePage from "./pages/projects/PvZGamePage"
+import ChangeLogPage from "./pages/about/ChangeLogPage"
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
             element: <ProjectsPage />,
           },
         ],
+      },
+      {
+        path: "changelog",
+        element: <ChangeLogPage />,
       },
     ],
   },

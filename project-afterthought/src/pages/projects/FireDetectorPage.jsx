@@ -20,18 +20,18 @@ const FireDetectorPage = () => {
         that it could use to identify fires.
         Undergraduate capstone project<br/>
       </p>
-      <img
-        className="gallery-img"
-        src={DroneFinalImg}
-        alt="The final fire detection drone"
-        title="The final fire detection drone"
-      />
-      <img
-        className="gallery-img"
-        src={SystemDiagramImg}
-        alt="System diagram of the final fire detection drone"
-        title="System diagram of the final fire detection drone"
-      />
+      <ul className="gallery">
+        <img
+          src={DroneFinalImg}
+          alt="The final fire detection drone"
+          title="The final fire detection drone"
+        />
+        <img
+          src={SystemDiagramImg}
+          alt="System diagram of the final fire detection drone"
+          title="System diagram of the final fire detection drone"
+        />
+      </ul>
       <h2>Resources Used</h2>
       <ul>
         <li>Python</li>

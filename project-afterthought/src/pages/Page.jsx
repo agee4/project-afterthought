@@ -2,6 +2,7 @@
 import pageTitleFunct from "../components/pageTitleFunct"
 
 const Page = () => {
+  
   pageTitleFunct("", false)
 
   return (

@@ -9,7 +9,7 @@ const HomePage = () => {
     <div className="page">
       <h1>Aaron Gee's Amazing Digital Portfolio</h1>
       <img
-        className={"home-img"}
+        id="home-img"
         src={Logo}
         alt="a crudely drawn simplistic face"
         title="hello!"
@@ -19,9 +19,9 @@ const HomePage = () => {
         Welcome to my site! Check out my projects and learn what I might be able to do for you!
       </p>
       <ul className="gallery">
-        <li><h2><Link>Ride Organizer App</Link></h2></li>
-        <li><h2><Link>Fire Detector Drone</Link></h2></li>
-        <li><h2><Link>Portfolio Website</Link></h2></li>
+        <li><h2><Link to="/projects/ride-organizer" title="Ride Organizer App">Ride Organizer App</Link></h2></li>
+        <li><h2><Link to="/projects/fire-detector" title="Fire Detection Model">Fire Detector Drone</Link></h2></li>
+        <li><h2><Link to="/projects/portfolio-site" title="Portfolio Website">Portfolio Website</Link></h2></li>
       </ul>
     </div>    
   )

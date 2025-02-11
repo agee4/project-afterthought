@@ -1,22 +1,36 @@
 // ReferenceFooter.jsx
+import React, { useState } from "react"
 import { Link, } from "react-router-dom"
 import downloadFile from "./downloadFileFunct"
 import bobLogo from "../assets/logo/logo.svg"
 import resumePDF from "../assets/aarongeeresume.pdf"
 
 const ReferenceFooter = () => {
+  const [randomPath, setRandomPath] = useState('/')
+
   const downloadResume = () => {
-      fetch({resumePDF}).then(() => {
-        let alink = document.createElement("a");
-        alink.href = resumePDF;
-        alink.download = "aarongee-resume.pdf";
-        alink.click();
-      })
+    downloadFile(resumePDF, "aarongee-resume.pdf")
+  }
+
+  const randomPage = () => {
+    let randomIndex = Math.floor(Math.random() * 10)
+    switch (randomIndex) {
+      case 0: setRandomPath('/'); break;
+      case 1: setRandomPath('/purpose'); break;
+      case 2: setRandomPath('/about-me'); break;
+      case 3: setRandomPath('/projects'); break;
+      case 4: setRandomPath('/projects/ride-organizer'); break;
+      case 5: setRandomPath('/projects/fire-detector'); break;
+      case 6: setRandomPath('/projects/portfolio-site'); break;
+      case 7: setRandomPath('/projects/pvz-bb'); break;
+      case 8: setRandomPath('/changelog'); break;
+      case 9: setRandomPath('/contact'); break;
     }
+  }
 
   return (
-    <footer className="reference">
-      <nav className="reference-nav">
+    <footer id="reference">
+      <nav id="reference-nav">
         <ul>
           <li><h1><Link to="/" title="Home">Home</Link></h1></li>
           <li><Link to="/purpose" title="Purpose">About the Project</Link></li>
@@ -28,6 +42,10 @@ const ReferenceFooter = () => {
           <li><Link to="/projects/fire-detector" title="Fire Detection Model">Fire Detection Model</Link></li>
           <li><Link to="/projects/portfolio-site" title="Portfolio Website">Portfolio Website</Link></li>
           <li><Link to="/projects/pvz-bb" title="Plants vs. Zombies Fangame">PvZ Fangame</Link></li>
+        </ul>
+        <ul>
+          <li><h1>Fun</h1></li>
+          <li><Link onClick={randomPage} to={randomPath}>Random Page</Link></li>
         </ul>
         <ul>
           <li><h1><Link to="/contact" title="Contact">Contact</Link></h1></li>
