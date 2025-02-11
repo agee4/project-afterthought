@@ -7,6 +7,7 @@ import RootPage from "./pages/RootPage"
 import ErrorPage from "./pages/ErrorPage"
 import HomePage from "./pages/HomePage"
 import ContactPage from "./pages/ContactPage"
+import ThanksPage from "./pages/ThanksPage"
 import PurposePage from "./pages/about/PurposePage"
 import AboutMePage from "./pages/about/AboutMePage"
 import ProjectsPage from "./pages/projects/ProjectsPage"
@@ -15,6 +16,7 @@ import FireDetectorPage from "./pages/projects/FireDetectorPage"
 import PortfolioSitePage from "./pages/projects/PortfolioSitePage"
 import PvZGamePage from "./pages/projects/PvZGamePage"
 import ChangeLogPage from "./pages/about/ChangeLogPage"
+import Secret1Page from "./pages/secret/Secret1"
 
 const router = createBrowserRouter([
   {
@@ -33,10 +35,6 @@ const router = createBrowserRouter([
       {
         path: "about-me",
         element: <AboutMePage />,
-      },
-      {
-        path: "contact",
-        element: <ContactPage />,
       },
       {
         path: "projects",
@@ -71,6 +69,18 @@ const router = createBrowserRouter([
       {
         path: "changelog",
         element: <ChangeLogPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
+      },
+      {
+        path: "thanks",
+        element: <ThanksPage />,
+      },
+      {
+        path: "secret",
+        element: <Secret1Page />,
       },
     ],
   },

@@ -2,6 +2,7 @@
 import pageTitle from "../../components/pageTitleFunct"
 import DroneFinalImg from "../../assets/firedetectordronefinal.png"
 import SystemDiagramImg from "../../assets/firedetectordronediagram.jpg"
+import PresentationImg from "../../assets/firedetectorpresentation.jpg"
 
 const FireDetectorPage = () => {
   pageTitle("Fire Detector")
@@ -31,8 +32,13 @@ const FireDetectorPage = () => {
           alt="System diagram of the final fire detection drone"
           title="System diagram of the final fire detection drone"
         />
+        <img
+          src={PresentationImg}
+          alt="Me in front of a poster detailing the project"
+          title="Me in front of a poster detailing the project"
+        />
       </ul>
-      <h2>Resources Used</h2>
+      <h2>What did I learn?</h2>
       <ul>
         <li>Python</li>
         <ul>
@@ -40,8 +46,20 @@ const FireDetectorPage = () => {
           <li>NumPy</li>
           <li>DJITello</li>
         </ul>
+        <li>How to work on an engineering project with a limited budget</li>
+        <li>How to create a classical object detection algorithm</li>
+        <li>How to present an engineering project succinctly and understandably to others via presentation</li>
       </ul>
-      <h2>What did I learn?</h2>
+      <h2>Resources Used</h2>
+      <ul>
+        <li>Python</li>
+        <ul>
+          <li>OpenCV</li>
+          <li>NumPy</li>
+          <li>DJITelloPy</li>
+        </ul>
+        <li>DJI Tello (RC Drone)</li>
+      </ul>
     </div>    
   )
 }

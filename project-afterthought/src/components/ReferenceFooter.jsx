@@ -13,19 +13,22 @@ const ReferenceFooter = () => {
   }
 
   const randomPage = () => {
-    let randomIndex = Math.floor(Math.random() * 10)
-    switch (randomIndex) {
-      case 0: setRandomPath('/'); break;
-      case 1: setRandomPath('/purpose'); break;
-      case 2: setRandomPath('/about-me'); break;
-      case 3: setRandomPath('/projects'); break;
-      case 4: setRandomPath('/projects/ride-organizer'); break;
-      case 5: setRandomPath('/projects/fire-detector'); break;
-      case 6: setRandomPath('/projects/portfolio-site'); break;
-      case 7: setRandomPath('/projects/pvz-bb'); break;
-      case 8: setRandomPath('/changelog'); break;
-      case 9: setRandomPath('/contact'); break;
-    }
+    const routeList = [
+      '/', 
+      '/purpose', 
+      '/about-me', 
+      '/contact', 
+      '/projects', 
+      '/projects/ride-organizer', 
+      '/projects/fire-detector', 
+      '/projects/portfolio-site', 
+      '/projects/pvz-bb',
+      '/changelog', 
+      '/thanks', 
+      '/secret', 
+    ]
+    let randomIndex = Math.floor(Math.random() * routeList.length)
+    setRandomPath(routeList[randomIndex])
   }
 
   return (
@@ -46,6 +49,8 @@ const ReferenceFooter = () => {
         <ul>
           <li><h1>Fun</h1></li>
           <li><Link onClick={randomPage} to={randomPath}>Random Page</Link></li>
+          <li><Link to="/changelog" title="Changelog">Changelog</Link></li>
+          <li><Link to="/thanks" title="Special Thanks">Thanks</Link></li>
         </ul>
         <ul>
           <li><h1><Link to="/contact" title="Contact">Contact</Link></h1></li>

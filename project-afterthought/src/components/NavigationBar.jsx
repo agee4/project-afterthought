@@ -27,7 +27,7 @@ const NavigationBar = () => {
         <li className="dropdown">
           About
           <ul className="dropdown-content">
-            <li><Link to="/purpose" title="Purpose">About the Project</Link></li>
+            <li><Link to="/purpose" title="Purpose">About the Site</Link></li>
             <li><Link to="/about-me" title="About Me">About Me</Link></li>
           </ul>
         </li>
@@ -55,7 +55,6 @@ const NavigationBar = () => {
             <li><Link to="/" title="Home"><u>Home</u></Link></li>
             <li><Link to="/purpose" title="Purpose">About the Site</Link></li>
             <li><Link to="/about-me" title="About Me">About Me</Link></li>
-            <li><Link to="/contact" title="Contact">Contact Me</Link></li>
             <li><br /></li>
             <li><Link to="/projects" title="Projects Home"><u>Projects</u></Link></li>
             <li><Link to="/projects/ride-organizer" title="Ride Organizer App">Ride Organizer App</Link></li>
@@ -64,6 +63,7 @@ const NavigationBar = () => {
             <li><Link to="/projects/portfolio-site" title="Portfolio Website">Portfolio Website</Link></li>
             <li><Link to="/projects/pvz-bb" title="Plants vs. Zombies Fangame">PvZ Fangame</Link></li>
             <li><br /></li>
+            <li><Link to="/contact" title="Contact"><u>Contact Me</u></Link></li>
             <li><ResumeButton /></li>
           </ul>
         }

@@ -41,7 +41,7 @@ const AboutMePage = () => {
           title="Aaron Gee standing next to a Dilophosaurus statue. He looks happy."
         />
       </ul>
-      
+      <p><br /></p>
     </div>    
   )
 }
