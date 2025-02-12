@@ -262,6 +262,14 @@ table {
   }
 }
 
+#home-gallery {
+  white-space: nowrap;
+
+  img {
+    max-width: 80%;
+  }
+}
+
 /* Images */
 
 .profile-img {
@@ -321,6 +329,10 @@ table {
     ul {
       text-align: center;
     }
+  }
+
+  #home-gallery {
+    flex-direction: column;
   }
 
   .mobile {

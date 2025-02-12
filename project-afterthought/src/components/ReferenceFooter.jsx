@@ -25,7 +25,7 @@ const ReferenceFooter = () => {
       '/projects/pvz-bb',
       '/changelog', 
       '/thanks', 
-      '/secret', 
+      '/YzJWamNtVjBNZw', 
     ]
     let randomIndex = Math.floor(Math.random() * routeList.length)
     setRandomPath(routeList[randomIndex])

@@ -17,6 +17,7 @@ import PortfolioSitePage from "./pages/projects/PortfolioSitePage"
 import PvZGamePage from "./pages/projects/PvZGamePage"
 import ChangeLogPage from "./pages/about/ChangeLogPage"
 import Secret1Page from "./pages/secret/Secret1"
+import Secret2Page from "./pages/secret/Secret2"
 
 const router = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
       {
         path: "secret",
         element: <Secret1Page />,
+      },
+      {
+        path: "YzJWamNtVjBNZw",
+        element: <Secret2Page />,
       },
     ],
   },
