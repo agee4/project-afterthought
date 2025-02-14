@@ -7,7 +7,7 @@ const Page = () => {
 
   return (
     <div className="page">
-    </div>    
+    </div>
   )
 }
 

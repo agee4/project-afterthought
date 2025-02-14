@@ -25,7 +25,7 @@ const PvZGamePage = () => {
         <li>New zombies (Sign Holder, Unicyclist, Fish Monger)</li>
         <li>New tools (Sprinklers, Sun Magnifier, Phytolite)</li>
       </ul>
-    </div>    
+    </div>
   )
 }
 

@@ -1,6 +1,7 @@
 // RideOrganizerPage.jsx
 import { Link } from "react-router-dom"
 import pageTitle from "../../components/pageTitleFunct"
+import ModalImage from "../../components/Modal/ModalImage"
 import LoggedInHomeImg from "../../assets/rideorganizerapploggedin.png"
 import LoggedOutHomeImg from "../../assets/rideorganizerapploggedout.png"
 
@@ -30,7 +31,7 @@ const RideOrganizerPage = () => {
         assign a large amount of passengers to various drivers, 
         accounting for location and time.
       </p>
-      <img
+      <ModalImage
         className="profile-img"
         src={LoggedInHomeImg}
         alt="A sample screenshot of the Ride Organizer Website, logged in"
@@ -71,7 +72,7 @@ const RideOrganizerPage = () => {
       <h3>
         <Link to="https://ridesprojectfrontend.onrender.com"><button>Project Site</button></Link>
       </h3>
-    </div>    
+    </div>
   )
 }
 

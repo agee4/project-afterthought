@@ -2,7 +2,7 @@
 import { Outlet } from "react-router-dom"
 import NavigationBar from "../components/NavigationBar"
 import ReferenceFooter from "../components/ReferenceFooter"
-import ModalDisplay from "../components/ModalDisplay"
+import ModalDisplay from "../components/Modal/ModalDisplay"
 
 const RootPage = () => {
   return (

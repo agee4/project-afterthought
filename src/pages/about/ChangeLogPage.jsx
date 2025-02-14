@@ -8,6 +8,12 @@ const ChangeLogPage = () => {
     <div className="page">
       <h1>Change Log</h1>
       <ul>
+        <li>2025 February 15</li>
+        <ul>
+          <li>Improved modal images</li>
+          <li>Added Future Features page</li>
+        </ul>
+
         <li>2025 February 14</li>
         <ul>
           <li>Fully implemented modal images</li>
@@ -141,7 +147,7 @@ const ChangeLogPage = () => {
         </ul>
 
       </ul>
-    </div>    
+    </div>
   )
 }
 

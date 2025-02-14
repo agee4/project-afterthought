@@ -17,7 +17,7 @@ const ThanksPage = () => {
       <p>For sending the best cat memes every day at 8:26pm PST</p>
       <h2>W3Schools</h2>
       <p>For providing a lot of helpful web dev tutorials</p>
-    </div>    
+    </div>
   )
 }
 

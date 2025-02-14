@@ -1,5 +1,4 @@
 // ModalImage.jsx
-import GradImg from "../assets/aargeephoto/aargeephoto_grad.jpg"
 
 const ModalImage = (props) => {
 
@@ -16,8 +15,8 @@ const ModalImage = (props) => {
       className={props.className}
       src={props.src}
       alt={props.alt}
-      title={props.title}
-      onClick={() => openModal(props.src, props.title)}
+      title={props.title ? props.title : props.alt}
+      onClick={() => openModal(props.src, props.title ? props.title : props.alt)}
     />
   )
 }

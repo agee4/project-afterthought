@@ -24,6 +24,7 @@ const ReferenceFooter = () => {
       '/projects/portfolio-site', 
       '/projects/pvz-bb',
       '/changelog', 
+      '/future', 
       '/thanks', 
       '/YzJWamNtVjBNZw', 
     ]
@@ -50,6 +51,7 @@ const ReferenceFooter = () => {
           <li><h1>Fun</h1></li>
           <li><Link onClick={randomPage} to={randomPath}>Random Page</Link></li>
           <li><Link to="/changelog" title="Changelog">Changelog</Link></li>
+          <li><Link to="/future" title="Future Features">Future Features</Link></li>
           <li><Link to="/thanks" title="Special Thanks">Thanks</Link></li>
         </ul>
         <ul>

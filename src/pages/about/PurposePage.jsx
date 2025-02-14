@@ -16,7 +16,7 @@ const PurposePage = () => {
         Projects detailed on this site demonstrate various skills, ranging from robust internet 
         application architecture to efficient and functional program design.
       </p>
-    </div>    
+    </div>
   )
 }
 

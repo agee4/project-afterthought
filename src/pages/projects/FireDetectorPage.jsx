@@ -1,6 +1,6 @@
 // FireDetectorPage.jsx
 import pageTitle from "../../components/pageTitleFunct"
-import ModalImage from "../../components/modalImage"
+import ModalImage from "../../components/Modal/ModalImage"
 import DroneFinalImg from "../../assets/firedetectordronefinal.png"
 import SystemDiagramImg from "../../assets/firedetectordronediagram.jpg"
 import PresentationImg from "../../assets/firedetectorpresentation.jpg"
@@ -26,17 +26,14 @@ const FireDetectorPage = () => {
         <ModalImage
           src={DroneFinalImg}
           alt="The final fire detection drone"
-          title="The final fire detection drone"
         />
         <ModalImage
           src={SystemDiagramImg}
           alt="System diagram of the final fire detection drone"
-          title="System diagram of the final fire detection drone"
         />
         <ModalImage
           src={PresentationImg}
-          alt="Me in front of a poster detailing the project"
-          title="Me in front of a poster detailing the project"
+          alt="Me in front of a poster detailing the original project"
         />
       </ul>
       <h2>What did I learn?</h2>
@@ -61,7 +58,7 @@ const FireDetectorPage = () => {
         </ul>
         <li>DJI Tello (RC Drone)</li>
       </ul>
-    </div>    
+    </div>
   )
 }
 

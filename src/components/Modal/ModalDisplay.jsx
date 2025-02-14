@@ -1,6 +1,6 @@
 
 import React, { useRef } from "react"
-import clickOutside from "./clickOutsideFunct"
+import clickOutside from "../clickOutsideFunct"
 
 const ModalDisplay = () => {
   const modalRef = useRef(null)

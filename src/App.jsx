@@ -16,8 +16,9 @@ import FireDetectorPage from "./pages/projects/FireDetectorPage"
 import PortfolioSitePage from "./pages/projects/PortfolioSitePage"
 import PvZGamePage from "./pages/projects/PvZGamePage"
 import ChangeLogPage from "./pages/about/ChangeLogPage"
-import Secret1Page from "./pages/secret/Secret1"
-import Secret2Page from "./pages/secret/Secret2"
+import FutureFeaturesPage from "./pages/about/FutureFeaturesPage"
+import Secret1Page from "./pages/fun/secret/Secret1"
+import Secret2Page from "./pages/fun/secret/Secret2"
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: "changelog",
         element: <ChangeLogPage />,
+      },
+      {
+        path: "future",
+        element: <FutureFeaturesPage />,
       },
       {
         path: "contact",

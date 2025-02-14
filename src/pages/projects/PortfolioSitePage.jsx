@@ -1,5 +1,6 @@
 // PortfolioSitePage.jsx
 import pageTitle from "../../components/pageTitleFunct"
+import ModalImage from "../../components/Modal/ModalImage"
 import PortfolioWebsiteImg from "../../assets/portfoliowebsiterecursive.png"
 
 const PortfolioSitePage = () => {
@@ -25,11 +26,10 @@ const PortfolioSitePage = () => {
         through the documentation of past and present projects, along with demonstrating the ability 
         to design a frontend website using React.
       </p>
-      <img
+      <ModalImage
         className="profile-img"
         src={PortfolioWebsiteImg}
-        alt="A sample screenshot of the Ride Organizer Website, logged in"
-        title="A sample screenshot of the Ride Organizer Website, logged in"
+        alt="A screenshot of the Portfolio Website homepage"
       />
       <h2>What have I learned?</h2>
       <h3>Specific Skills</h3>
@@ -45,7 +45,7 @@ const PortfolioSitePage = () => {
           <li>React<img className="emoji-img" src={ReactIcon} /></li>
         </ul>
       </ul>
-    </div>    
+    </div>
   )
 }
 
