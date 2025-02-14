@@ -5,7 +5,7 @@ import GradImg from "../../assets/aargeephoto/aargeephoto_grad.jpg"
 import TahoeImg from "../../assets/aargeephoto/aargeephoto_tahoe.jpg"
 import HippoImg from "../../assets/aargeephoto/aargeephoto_goldenhippo.jpg"
 import DinoImg from "../../assets/aargeephoto/aargeephoto_retreatdilopho.jpg"
-import ModalImage from "../../components/modalImage"
+/*import ModalImage from "../../components/modalImage"*/
 import clickOutside from "../../components/clickOutsideFunct"
 
 const AboutMePage = () => {
