@@ -8,6 +8,16 @@ const ChangeLogPage = () => {
     <div className="page">
       <h1>Change Log</h1>
       <ul>
+        <li>2025 February 14</li>
+        <ul>
+          <li>Fully implemented modal images</li>
+        </ul>
+
+        <li>2025 February 13</li>
+        <ul>
+          <li>Begun work on implementing modal images</li>
+        </ul>
+
         <li>2025 February 11</li>
         <ul>
           <li>Updated Change Log with most relevant updates</li>
