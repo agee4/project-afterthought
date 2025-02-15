@@ -3,7 +3,7 @@ import pageTitleFunct from "../../components/pageTitleFunct"
 
 const FutureFeaturesPage = () => {
   
-  pageTitleFunct("", false)
+  pageTitleFunct("Future Features")
 
   return (
     <div className="page">
