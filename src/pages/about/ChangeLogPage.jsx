@@ -1,18 +1,27 @@
 // ChangeLogPage.jsx
 import React, { useState, } from "react"
+import { App, Octokit } from "octokit"
 import pageTitle from "../../components/pageTitleFunct"
 
-/*const octokit = new Octokit({
-  auth: 'YOUR-TOKEN'
-})
+let githubcommitcheck = false
 
-await octokit.request('GET /repos/agee4/project-afterthought/commits', {
-  owner: 'OWNER',
-  repo: 'REPO',
-  headers: {
-    'X-GitHub-Api-Version': '2022-11-28'
-  }
-})*/
+try {
+  const githubprivateKey = 'SHA256:3gkkdTEGUQ9sbBiqUBtUgcP1jvxBvg1i/Rn0l0kLSbc='
+  const app = new App({ appId:1150126, privateKey:githubprivateKey })
+  const octokit = await app.getInstallationOctokit(60485625)
+  const githubcommits = await octokit.request('GET /repos/agee4/project-afterthought/commits', {
+    owner: 'agee4',
+    repo: 'project-afterthought'
+  })
+  /*const githubcommits = await octokit.paginate.iterator(octokit.rest.repos., {
+    owner: 'agee4',
+    repo: 'project-afterthought',
+    headers: {
+      'X-GitHub-Api-Version': '2022-11-28'
+    }
+  })*/
+ githubcommitcheck = true
+} catch (error) {}
 
 const ChangeLogPage = () => {
   const [writtenListOn, setWrittenListOn] = useState(true)
@@ -162,16 +171,20 @@ const ChangeLogPage = () => {
         </ul>
       </ul>
     </ul>
-      /*<button onClick={toggleWrittenList}>
-        {writtenListOn ? "Github Commits" : "Written Log"}
-      </button>*/
+
+  const GitHubList = () => {
+
+  }
 
   return (
     <div className="page">
       <h1>Change Log</h1>
+      {githubcommitcheck && <button onClick={toggleWrittenList}>
+        {writtenListOn ? "Github Commits" : "Written Log"}
+      </button>}
       {writtenListOn ?
       <WrittenList /> : 
-      <ul></ul>}
+      <GitHubList />}
     </div>
   )
 }
