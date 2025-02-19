@@ -5,7 +5,6 @@ import pageTitle from "../../components/pageTitleFunct"
 
 const ChangeLogPage = () => {
   const [writtenListOn, setWrittenListOn] = useState(true)
-  const [commitSuccess, setCommitSuccess] = useState(false)
   const toggleWrittenList = () => {
     setWrittenListOn(!writtenListOn)
   }
@@ -14,6 +13,16 @@ const ChangeLogPage = () => {
 
   const WrittenList = () => 
     <ul>
+      <li>2025 February 19</li>
+      <ul>
+        <li>updated email and resume</li>
+      </ul>
+
+      <li>2025 February 18</li>
+      <ul>
+        <li>updated email and resume</li>
+      </ul>
+
       <li>2025 February 15</li>
       <ul>
         <li>Improved modal images</li>
@@ -154,6 +163,7 @@ const ChangeLogPage = () => {
     </ul>
 
   const GitHubList = () => {
+    const [commitSuccess, setCommitSuccess] = useState(false)
     const [commitKey, setCommitKey] = useState('SHA256:3gkkdTEGUQ9sbBiqUBtUgcP1jvxBvg1i/Rn0l0kLSbc=')
     const [appId, setAppId] = useState(1150126)
     const [installationId, setInstallationId] = useState(60485625)
@@ -161,40 +171,37 @@ const ChangeLogPage = () => {
     
     const app = new App({ appId:appId, privateKey:commitKey })
     useEffect(() => {
-      try {
-        const getCommits = async () => {
-          const octokit = await app.getInstallationOctokit(installationId)
-          const commititerator = octokit.paginate.iterator(octokit.rest.repos.listCommits, {
-            owner: 'agee4',
-            repo: 'project-afterthought'
-          })
-          const promisedCommitList = []
-          for await (const promisedcommit of commititerator) {
-            promisedCommitList.push(promisedcommit.commit)
-          }/**/
-          setCommitList(promisedCommitList)
+      const getCommits = async () => {
+        const octokit = await app.getInstallationOctokit(installationId)
+        const commititerator = octokit.paginate.iterator(octokit.rest.repos.listCommits, {
+          owner: 'agee4',
+          repo: 'project-afterthought'
+        })
+        
+        const promisedCommitList = []
+        for await (const promisedcommit of commititerator) {
+          promisedCommitList.push(promisedcommit)
         }
-
-        getCommits()
-      } catch (error) {
-        return (<p>{error}</p>)
+        setCommitList(promisedCommitList)
       }
-        setCommitSuccess(true)
-    }, [installationId, commitList, commitSuccess])
+
+      /*getCommits()
+      setCommitSuccess(true)*/
+  }, [installationId, commitList, commitSuccess])
 
     return (<ul>
-      {commitSuccess && commitList.map((commit, index) => (
+      {commitSuccess ? commitList.map((commit, index) => (
         <li key={index}>{commit}</li>
-      ))}
+      )) : "GitHub Commit fetching fail ):"}
     </ul>)
   }
 
   return (
     <div className="page">
       <h1>Change Log</h1>
-      {commitSuccess && <button onClick={toggleWrittenList}>
+      <button onClick={toggleWrittenList}>
         {writtenListOn ? "Github Commits" : "Written Log"}
-      </button>}
+      </button>
       {writtenListOn ?
       <WrittenList /> : 
       <GitHubList />}
