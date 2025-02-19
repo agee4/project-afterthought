@@ -1,30 +1,11 @@
 // ChangeLogPage.jsx
-import React, { useState, } from "react"
+import React, { useState, useEffect, } from "react"
 import { App, Octokit } from "octokit"
 import pageTitle from "../../components/pageTitleFunct"
 
-let githubcommitcheck = false
-
-try {
-  const githubprivateKey = 'SHA256:3gkkdTEGUQ9sbBiqUBtUgcP1jvxBvg1i/Rn0l0kLSbc='
-  const app = new App({ appId:1150126, privateKey:githubprivateKey })
-  const octokit = await app.getInstallationOctokit(60485625)
-  const githubcommits = await octokit.request('GET /repos/agee4/project-afterthought/commits', {
-    owner: 'agee4',
-    repo: 'project-afterthought'
-  })
-  /*const githubcommits = await octokit.paginate.iterator(octokit.rest.repos., {
-    owner: 'agee4',
-    repo: 'project-afterthought',
-    headers: {
-      'X-GitHub-Api-Version': '2022-11-28'
-    }
-  })*/
- githubcommitcheck = true
-} catch (error) {}
-
 const ChangeLogPage = () => {
   const [writtenListOn, setWrittenListOn] = useState(true)
+  const [commitSuccess, setCommitSuccess] = useState(false)
   const toggleWrittenList = () => {
     setWrittenListOn(!writtenListOn)
   }
@@ -173,13 +154,45 @@ const ChangeLogPage = () => {
     </ul>
 
   const GitHubList = () => {
+    const [commitKey, setCommitKey] = useState('SHA256:3gkkdTEGUQ9sbBiqUBtUgcP1jvxBvg1i/Rn0l0kLSbc=')
+    const [appId, setAppId] = useState(1150126)
+    const [installationId, setInstallationId] = useState(60485625)
+    const [commitList, setCommitList] = useState([])
+    
+    const app = new App({ appId:appId, privateKey:commitKey })
+    useEffect(() => {
+      try {
+        const getCommits = async () => {
+          const octokit = await app.getInstallationOctokit(installationId)
+          const commititerator = octokit.paginate.iterator(octokit.rest.repos.listCommits, {
+            owner: 'agee4',
+            repo: 'project-afterthought'
+          })
+          const promisedCommitList = []
+          for await (const promisedcommit of commititerator) {
+            promisedCommitList.push(promisedcommit.commit)
+          }/**/
+          setCommitList(promisedCommitList)
+        }
 
+        getCommits()
+      } catch (error) {
+        return (<p>{error}</p>)
+      }
+        setCommitSuccess(true)
+    }, [installationId, commitList, commitSuccess])
+
+    return (<ul>
+      {commitSuccess && commitList.map((commit, index) => (
+        <li key={index}>{commit}</li>
+      ))}
+    </ul>)
   }
 
   return (
     <div className="page">
       <h1>Change Log</h1>
-      {githubcommitcheck && <button onClick={toggleWrittenList}>
+      {commitSuccess && <button onClick={toggleWrittenList}>
         {writtenListOn ? "Github Commits" : "Written Log"}
       </button>}
       {writtenListOn ?
