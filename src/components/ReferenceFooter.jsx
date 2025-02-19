@@ -56,9 +56,9 @@ const ReferenceFooter = () => {
         </ul>
         <ul>
           <li><h1><Link to="/contact" title="Contact">Contact</Link></h1></li>
-          <li><Link to="mailto:agee4@uci.edu">agee4@uci.edu</Link></li>
+          <li><Link to="mailto:aarongeenius@gmail.com">aarongeenius@gmail.com</Link></li>
           <li><Link to="https://www.linkedin.com/in/aaron-gee-7350712b9">LinkedIn</Link></li>
-          <li><Link onClick={downloadResume}>Resume</Link></li>
+          <li><Link to="#" onClick={downloadResume}>Resume</Link></li>
         </ul>
       </nav>
       <p>

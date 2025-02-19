@@ -15,7 +15,7 @@ const ContactPage = () => {
         <tbody>
           <tr>
             <th>Email</th>
-            <td><Link to="mailto:agee4@uci.edu">agee4@uci.edu</Link></td>
+            <td><Link to="mailto:aarongeenius@gmail.com">aarongeenius@gmail.com</Link></td>
           </tr>
           <tr>
             <th>Cell</th>
