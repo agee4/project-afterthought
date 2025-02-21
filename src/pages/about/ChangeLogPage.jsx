@@ -1,22 +1,51 @@
 // ChangeLogPage.jsx
 import React, { useState, useEffect, } from "react"
-import { App, Octokit } from "octokit"
+import { App } from "octokit"
 import pageTitle from "../../components/pageTitleFunct"
 
 const ChangeLogPage = () => {
   const [writtenListOn, setWrittenListOn] = useState(true)
+  const [commitKey,setCommitKey] = useState('SHA256:3gkkdTEGUQ9sbBiqUBtUgcP1jvxBvg1i/Rn0l0kLSbc=')
+  const [appId,setAppId] = useState(1150126)
+  const [installationId,setInstallationId] = useState(60485625)
+  const [commitList, setCommitList] = useState([])
   const toggleWrittenList = () => {
     setWrittenListOn(!writtenListOn)
   }
   
+  const app = new App({ appId:appId, privateKey:commitKey })
+  useEffect(() => {
+    const getCommits = async () => {
+      const promisedCommitList = []
+      try {
+        const octokit = await app.getInstallationOctokit(installationId)
+        /*octokit.paginate(octokit.rest.repos.listCommits, {
+          owner: 'agee4',
+          repo: 'project-afterthought'
+        }).then((response) => {
+          console.log(response)
+        }).catch((error) => console.log(error))*/
+        for await (const response of octokit.paginate.iterator(octokit.rest.repos.listCommits, {
+          owner: 'agee4',
+          repo: 'project-afterthought'
+        })) {
+          promisedCommitList.push(response)
+        }
+        setCommitList(promisedCommitList)
+        console.log("test")
+      } catch (error) {
+        promisedCommitList.push("GitHub commit fetching failed ):")
+        promisedCommitList.push(error.status + ": " + error.message)
+        setCommitList(promisedCommitList)
+      }
+    }
+    getCommits()
+  }, [commitKey,appId,installationId])
+  
   pageTitle("Change Log")
 
   const WrittenList = () => 
-    <ul>
-      <li>2025 February 19</li>
-      <ul>
-        <li>updated email and resume</li>
-      </ul>
+    <ul className="change-list">
 
       <li>2025 February 18</li>
       <ul>
@@ -162,45 +191,21 @@ const ChangeLogPage = () => {
       </ul>
     </ul>
 
-  const GitHubList = () => {
-    const [commitSuccess, setCommitSuccess] = useState(false)
-    const [commitKey, setCommitKey] = useState('SHA256:3gkkdTEGUQ9sbBiqUBtUgcP1jvxBvg1i/Rn0l0kLSbc=')
-    const [appId, setAppId] = useState(1150126)
-    const [installationId, setInstallationId] = useState(60485625)
-    const [commitList, setCommitList] = useState([])
-    
-    const app = new App({ appId:appId, privateKey:commitKey })
-    useEffect(() => {
-      const getCommits = async () => {
-        const octokit = await app.getInstallationOctokit(installationId)
-        const commititerator = octokit.paginate.iterator(octokit.rest.repos.listCommits, {
-          owner: 'agee4',
-          repo: 'project-afterthought'
-        })
-        
-        const promisedCommitList = []
-        for await (const promisedcommit of commititerator) {
-          promisedCommitList.push(promisedcommit)
-        }
-        setCommitList(promisedCommitList)
-      }
-
-      /*getCommits()
-      setCommitSuccess(true)*/
-  }, [installationId, commitList, commitSuccess])
-
-    return (<ul>
-      {commitSuccess ? commitList.map((commit, index) => (
-        <li key={index}>{commit}</li>
-      )) : "GitHub Commit fetching fail ):"}
-    </ul>)
-  }
+  const GitHubList = () => 
+    <>
+      <p><em>WARNING: Commit fetching is still WIP</em></p>
+      <ul className="change-list">
+        {commitList.map((value, index) => (
+          <li key={index}>{value}</li>
+        ))}
+      </ul>
+    </>
 
   return (
     <div className="page">
       <h1>Change Log</h1>
       <button onClick={toggleWrittenList}>
-        {writtenListOn ? "Github Commits" : "Written Log"}
+        {writtenListOn ? "Written Log" : "Github Commits"}
       </button>
       {writtenListOn ?
       <WrittenList /> : 

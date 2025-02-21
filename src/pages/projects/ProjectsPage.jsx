@@ -19,10 +19,10 @@ const ProjectsPage = () => {
       <p>
         <Link to="/projects/portfolio-site">Portfolio Website</Link>
       </p>
+      <h2>Future Projects</h2>
       <p>
         <Link to="/projects/pvz-bb">Plants vs. Zombies: Botanical Battles</Link>
       </p>
-      <h2>Future Projects</h2>
       <p>
         Project Afterthought
       </p>

@@ -270,6 +270,13 @@ table {
   }
 }
 
+.change-list {
+  list-style: none;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 5px;
+}
+
 /* Images */
 
 .profile-img {
