@@ -1,6 +1,7 @@
 // HomePage.jsx
 import { Link } from "react-router-dom"
 import pageTitle from "../components/pageTitleFunct"
+import LinkImage from "../components/LinkImage"
 import Logo from "../assets/logo/logo_shadow.png"
 import RideOrganizerImg from "../assets/rideorganizerapploggedin.png"
 import FireDetectorImg from "../assets/firedetectordronefinal.png"
@@ -25,34 +26,31 @@ const HomePage = () => {
       <hr />
       <ul className="gallery" id="home-gallery">
         <li>
-          <Link to="/projects/ride-organizer" title="Ride Organizer App"><h3>Ride Organizer App</h3></Link>
-          <Link to="/projects/ride-organizer" title="Ride Organizer App">
-            <img
-              src={RideOrganizerImg}
-              alt="The final fire detection drone"
-              title="The final fire detection drone"
-            />
-          </Link>
+          <Link to="../projects/ride-organizer" title="Ride Organizer App"><h3>Ride Organizer App</h3></Link>
+          <LinkImage
+            to="../projects/ride-organizer"
+            src={RideOrganizerImg}
+            alt="Screenshot of the final Ride Organizer App"
+            title="We ride together, we organize together!"
+          />
         </li>
         <li>
-          <Link to="/projects/fire-detector" title="Fire Detection Model"><h3>Fire Detector Model</h3></Link>
-          <Link to="/projects/fire-detector" title="Fire Detection Model">
-            <img
-              src={FireDetectorImg}
-              alt="The final fire detection drone"
-              title="The final fire detection drone"
-            />
-          </Link>
+          <Link to="../projects/fire-detector" title="Fire Detection Model"><h3>Fire Detector Model</h3></Link>
+          <LinkImage
+            to="../projects/fire-detector"
+            src={FireDetectorImg}
+            alt="The final fire detection drone"
+            title="Finding fires!"
+          />
         </li>
         <li>
-          <Link to="/projects/portfolio-site" title="Portfolio Website"><h3>Portfolio Website</h3></Link>
-          <Link to="/projects/portfolio-site" title="Portfolio Website">
-            <img
-              src={PortfolioWebsiteImg}
-              alt="The homepage of my portfolio website"
-              title="Recursive!"
-            />
-          </Link>
+          <Link to="../projects/portfolio-site" title="Portfolio Website"><h3>Portfolio Website</h3></Link>
+          <LinkImage
+            to="../projects/portfolio-site"
+            src={PortfolioWebsiteImg}
+            alt="The homepage of my portfolio website"
+            title="Recursive!"
+          />
         </li>
       </ul>
       <br />
