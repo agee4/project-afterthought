@@ -1,5 +1,5 @@
 // ContactPage.jsx
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 import pageTitle from "../components/pageTitleFunct"
 import ResumeButton from "../components/ResumeButton"
 

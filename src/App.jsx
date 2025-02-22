@@ -1,7 +1,7 @@
 import {
   RouterProvider,
   createBrowserRouter
-} from "react-router-dom"
+} from "react-router"
 import "./App.css"
 import RootPage from "./pages/RootPage"
 import ErrorPage from "./pages/ErrorPage"

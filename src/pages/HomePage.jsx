@@ -1,5 +1,5 @@
 // HomePage.jsx
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 import pageTitle from "../components/pageTitleFunct"
 import LinkImage from "../components/LinkImage"
 import Logo from "../assets/logo/logo_shadow.png"

@@ -1,5 +1,5 @@
 // ProjectsPage.jsx
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 import pageTitle from "../../components/pageTitleFunct"
 
 const ProjectsPage = () => {

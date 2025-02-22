@@ -1,6 +1,6 @@
 // pageTitleFunct.jsx
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 
 const pageTitle = (title, addSiteName=true) => {
   const location = useLocation();

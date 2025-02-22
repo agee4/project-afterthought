@@ -1,6 +1,6 @@
 // NavigationBar.js
 import React, { useState, useRef } from "react"
-import { Link, } from "react-router-dom"
+import { Link, } from "react-router"
 import bobLogo from "../assets/logo/logo_shadow.svg"
 import ResumeButton from "./ResumeButton"
 import clickOutside from "./clickOutsideFunct"

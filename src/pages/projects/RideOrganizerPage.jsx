@@ -1,5 +1,5 @@
 // RideOrganizerPage.jsx
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 import pageTitle from "../../components/pageTitleFunct"
 import ModalImage from "../../components/Modal/ModalImage"
 import LoggedInHomeImg from "../../assets/rideorganizerapploggedin.png"
