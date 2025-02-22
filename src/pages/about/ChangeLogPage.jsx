@@ -46,7 +46,8 @@ const ChangeLogPage = () => {
 
   const WrittenList = () => 
     <ul className="change-list">
-
+      <h3>2025</h3>
+      <li><b>February</b></li>
       <li>2025 February 18</li>
       <ul>
         <li>updated email and resume</li>
@@ -135,6 +136,7 @@ const ChangeLogPage = () => {
         <li>First rendition of the portfolio goes live on Render</li>
       </ul>
 
+      <li><b>January</b></li>
       <li>2025 January 29</li>
       <ul>
         <li>Various style/format changes and updates</li>
@@ -157,6 +159,8 @@ const ChangeLogPage = () => {
         <li>Added Photos</li>
       </ul>
 
+      <h3>2024</h3>
+      <li><b>November</b></li>
       <li>2024 November 13</li>
       <ul>
         <li>New Pages</li>

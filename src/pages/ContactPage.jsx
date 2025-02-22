@@ -25,6 +25,10 @@ const ContactPage = () => {
             <th>LinkedIn</th>
             <td><Link to="https://www.linkedin.com/in/aaron-gee-7350712b9">aaron-gee-7350712b9</Link></td>
           </tr>
+          <tr>
+            <th>GitHub</th>
+            <td><Link to="https://github.com/agee4">agee4</Link></td>
+          </tr>
         </tbody>
       </table>
       <p>You can also download and review my resume below!</p>

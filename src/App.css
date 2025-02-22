@@ -82,6 +82,11 @@ table {
   }
 }
 
+embed {
+  width: 50%;
+  height: 75vh;
+}
+
 /* React stuff */
 
 #root {

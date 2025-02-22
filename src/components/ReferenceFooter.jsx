@@ -58,6 +58,7 @@ const ReferenceFooter = () => {
           <li><h1><Link to="/contact" title="Contact">Contact</Link></h1></li>
           <li><Link to="mailto:aarongeenius@gmail.com">aarongeenius@gmail.com</Link></li>
           <li><Link to="https://www.linkedin.com/in/aaron-gee-7350712b9">LinkedIn</Link></li>
+          <li><Link to="https://github.com/agee4">GitHub</Link></li>
           <li><Link to="#" onClick={downloadResume}>Resume</Link></li>
         </ul>
       </nav>

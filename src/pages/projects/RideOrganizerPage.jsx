@@ -14,6 +14,13 @@ const RideOrganizerPage = () => {
   const Auth0Icon = "https://cdn.auth0.com/quantum-assets/dist/latest/logos/auth0/auth0-icon-onlight.svg"
 
   pageTitle("Ride Organizer")
+      /*<Link to="https://ridesprojectfrontend.onrender.com">
+        <img
+          className="profile-img"
+          src={LoggedOutHomeImg}
+          title="Check out the website!"
+        />
+      </Link>*/
 
   return (
     <div className="page">
@@ -62,13 +69,7 @@ const RideOrganizerPage = () => {
         <li>Auth0<img className="emoji-img" src={Auth0Icon} /> (create authentication protocols)</li>
       </ul>
       <h2>Check out the final site!</h2>
-      <Link to="https://ridesprojectfrontend.onrender.com">
-        <img
-          className="profile-img"
-          src={LoggedOutHomeImg}
-          title="Check out the website!"
-        />
-      </Link>
+      <embed src="https://ridesprojectfrontend.onrender.com" />
       <h3>
         <Link to="https://ridesprojectfrontend.onrender.com"><button>Project Site</button></Link>
       </h3>
