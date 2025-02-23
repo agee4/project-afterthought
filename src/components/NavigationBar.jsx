@@ -29,6 +29,7 @@ const NavigationBar = () => {
           <ul className="dropdown-content">
             <li><Link to="../purpose" title="Purpose">About the Site</Link></li>
             <li><Link to="../about-me" title="About Me">About Me</Link></li>
+            <li><Link to="../changelog" title="Change Log">Change Log</Link></li>
           </ul>
         </li>
         <li className="dropdown">
@@ -55,6 +56,7 @@ const NavigationBar = () => {
             <li><Link to="../" title="Home"><u>Home</u></Link></li>
             <li><Link to="../purpose" title="Purpose">About the Site</Link></li>
             <li><Link to="../about-me" title="About Me">About Me</Link></li>
+            <li><Link to="../changelog" title="Change Log">Change Log</Link></li>
             <li><br /></li>
             <li><Link to="../projects" title="Projects Home"><u>Projects</u></Link></li>
             <li><Link to="../projects/ride-organizer" title="Ride Organizer App">Ride Organizer App</Link></li>

@@ -1,5 +1,5 @@
 // ThanksPage.jsx
-import pageTitleFunct from "../components/pageTitleFunct"
+import pageTitleFunct from "../../components/pageTitleFunct"
 
 const ThanksPage = () => {
   

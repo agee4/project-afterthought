@@ -22,10 +22,12 @@ const ReferenceFooter = () => {
       '/projects/ride-organizer', 
       '/projects/fire-detector', 
       '/projects/portfolio-site', 
-      '/projects/pvz-bb',
+      '/projects/pvz-bb', 
       '/changelog', 
       '/future', 
       '/thanks', 
+      '/friends', 
+      '/resume', 
       '/YzJWamNtVjBNZw', 
     ]
     let randomIndex = Math.floor(Math.random() * routeList.length)
@@ -39,6 +41,7 @@ const ReferenceFooter = () => {
           <li><h1><Link to="../" title="Home">Home</Link></h1></li>
           <li><Link to="../purpose" title="Purpose">About the Project</Link></li>
           <li><Link to="../about-me" title="About Me">About Me</Link></li>
+          <li><Link to="../changelog" title="Changelog">Changelog</Link></li>
         </ul>
         <ul>
           <li><h1><Link to="../projects" title="Projects Home">Projects</Link></h1></li>
@@ -50,8 +53,8 @@ const ReferenceFooter = () => {
         <ul>
           <li><h1>Fun</h1></li>
           <li><Link onClick={randomPage} to={randomPath}>Random Page</Link></li>
-          <li><Link to="../changelog" title="Changelog">Changelog</Link></li>
           <li><Link to="../future" title="Future Features">Future Features</Link></li>
+          <li><Link to="../friends" title="Friends">Friends</Link></li>
           <li><Link to="../thanks" title="Special Thanks">Thanks</Link></li>
         </ul>
         <ul>

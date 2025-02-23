@@ -6,8 +6,10 @@ import "./App.css"
 import RootPage from "./pages/RootPage"
 import ErrorPage from "./pages/ErrorPage"
 import HomePage from "./pages/HomePage"
-import ContactPage from "./pages/ContactPage"
-import ThanksPage from "./pages/ThanksPage"
+import ContactPage from "./pages/about/ContactPage"
+import ResumePage from "./pages/about/ResumePage"
+import ChangeLogPage from "./pages/about/ChangeLogPage"
+import FutureFeaturesPage from "./pages/about/FutureFeaturesPage"
 import PurposePage from "./pages/about/PurposePage"
 import AboutMePage from "./pages/about/AboutMePage"
 import ProjectsPage from "./pages/projects/ProjectsPage"
@@ -15,8 +17,8 @@ import RideOrganizerPage from "./pages/projects/RideOrganizerPage"
 import FireDetectorPage from "./pages/projects/FireDetectorPage"
 import PortfolioSitePage from "./pages/projects/PortfolioSitePage"
 import PvZGamePage from "./pages/projects/PvZGamePage"
-import ChangeLogPage from "./pages/about/ChangeLogPage"
-import FutureFeaturesPage from "./pages/about/FutureFeaturesPage"
+import FriendsPage from "./pages/fun/FriendsPage"
+import ThanksPage from "./pages/fun/ThanksPage"
 import Secret1Page from "./pages/fun/secret/Secret1"
 import Secret2Page from "./pages/fun/secret/Secret2"
 
@@ -37,6 +39,18 @@ const router = createBrowserRouter([
       {
         path: "about-me",
         element: <AboutMePage />,
+      },
+      {
+        path: "resume",
+        element: <ResumePage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
+      },
+      {
+        path: "changelog",
+        element: <ChangeLogPage />,
       },
       {
         path: "projects",
@@ -69,16 +83,12 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "changelog",
-        element: <ChangeLogPage />,
-      },
-      {
         path: "future",
         element: <FutureFeaturesPage />,
       },
       {
-        path: "contact",
-        element: <ContactPage />,
+        path: "friends",
+        element: <FriendsPage />,
       },
       {
         path: "thanks",

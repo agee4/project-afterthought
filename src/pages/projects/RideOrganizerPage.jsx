@@ -57,16 +57,16 @@ const RideOrganizerPage = () => {
       <ul>
         <li>Basics of standard web standard languages</li>
         <ul>
-          <li>HTML<img className="emoji-img" src={HTMLIcon} /></li>
-          <li>CSS<img className="emoji-img" src={CSSIcon} /></li>
-          <li>JavaScript<img className="emoji-img" src={JSIcon} /></li>
+          <li>HTML <img className="emoji-img" src={HTMLIcon} /></li>
+          <li>CSS <img className="emoji-img" src={CSSIcon} /></li>
+          <li>JavaScript <img className="emoji-img" src={JSIcon} /></li>
         </ul>
         <li>Basics of web development JavaScript-based libraries and environments</li>
         <ul>
-          <li>React<img className="emoji-img" src={ReactIcon} /></li>
-          <li>NodeJS<img className="emoji-img" src={NodeJSIcon} /></li>
+          <li>React <img className="emoji-img" src={ReactIcon} /></li>
+          <li>NodeJS <img className="emoji-img" src={NodeJSIcon} /></li>
         </ul>
-        <li>Auth0<img className="emoji-img" src={Auth0Icon} /> (create authentication protocols)</li>
+        <li>Auth0 <img className="emoji-img" src={Auth0Icon} /> (create authentication protocols)</li>
       </ul>
       <h2>Check out the final site!</h2>
       <embed src="https://ridesprojectfrontend.onrender.com" />

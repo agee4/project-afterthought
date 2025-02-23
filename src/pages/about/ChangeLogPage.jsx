@@ -9,7 +9,6 @@ const ChangeLogPage = () => {
   const [appId,setAppId] = useState(1150126)
   const [installationId,setInstallationId] = useState(61513690)
   const [commitList, setCommitList] = useState([])
-  const [commitFetchSuccess, setCommitFetchSuccess] = useState(false)
   const toggleWrittenList = () => {
     setWrittenListOn(!writtenListOn)
   }
@@ -20,12 +19,6 @@ const ChangeLogPage = () => {
       const promisedCommitList = []
       try {
         const octokit = await app.getInstallationOctokit(installationId)
-        /*octokit.paginate(octokit.rest.repos.listCommits, {
-          owner: 'agee4',
-          repo: 'project-afterthought'
-        }).then((response) => {
-          console.log(response)
-        }).catch((error) => console.log(error))*/
         for await (const response of octokit.paginate.iterator(octokit.rest.repos.listCommits, {
           owner: 'agee4',
           repo: 'project-afterthought'
