@@ -5,10 +5,11 @@ import pageTitle from "../../components/pageTitleFunct"
 
 const ChangeLogPage = () => {
   const [writtenListOn, setWrittenListOn] = useState(true)
-  const [commitKey,setCommitKey] = useState('SHA256:3gkkdTEGUQ9sbBiqUBtUgcP1jvxBvg1i/Rn0l0kLSbc=')
+  const [commitKey,setCommitKey] = useState("-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3lcO7ZY09GseV\nCSk4DuohbbsPofTQ2RopqzDJ4mBBsVq+VZKtAPMmHthgd1x/65Ir5tb5mcKLAZxC\nGEJNEpEb/hOyeR6yppNOzGlr1GZJklbpfg/jEvL4Er7l6nfIEoKc1fkFOE38AJ/h\nRuhELBiB1E7U9BjKUpFXkSjFwQ+kR4Y809cv9yHfGNQlvWts8n1Zg08mDttmoz97\nEeRm0p0CfH/pdRMV1ykDvtEDFDmG/neudEVltMp5WmBgEOWb1i3QJMskSOagbxa0\nf9qE1nh828+JzhZX3ouR6g/1EPqfaM/bgitha8DQZucNBN05xWt2FopVePaXWJK/\nAVanX+vTAgMBAAECggEAbFrXuM56a1tX+w36Jx0ecXaLlvF3RqEtAPUKic20FHHy\nZi6psLTDznccLOumS9YlYwYPUii/mz3rFVOuJkFUJlpzE77LMJSCk1qwyjUF3lyi\nMZP3GoY/o82koJ0f75WFQ75DCSKvXJKdyuAIDNyd5lsB4EzmKNxM7os9rmKBseqI\nYH91z1MXe+EPxhOY/UOAtWp73xJ/sJx9xZo+feADDFAMNqvzjRPDPuaM6j1zPHdE\nGFdJuP0usGAez5ceUNQCgK8e3Tu8h9u+gBOwizgDQzT43dzVcjJ9U4WevtMIHtgo\n+owARPc4aXO4nwDtv1nZubCmNUFfmSjAPDb4DKS1OQKBgQDsafTjsWn6DGc1CE1M\ncDHvFHDaWwm28CmOpQxguVmOWAp/1c9O6D9RqPN3FBoA/spSA6PSUwjiyhfRiOTw\nvSOYk9UALNgR57rY/IaY5XuwLcjPh5FwXAguHX97dM1wNTS6gEaPNsq4fpK3yfEh\n9OfskBv47miihkLLmW/5oLqvVQKBgQDGy1+e8PEPIW1o4KxpqWsv8n697XBn4Bua\ndzwse0iQ5ARHmhUpumaQ+oN6fXBtDg+SMGacOSnufbeWRlNQ2AmY6tf8Y6NouJ9x\nuCT8TAwU8lTRYmUu2vOnZnV1bOuSSpfIHevw36DAhUPQXW1gjr9L0mSXwbkgogWq\noQXm89uehwKBgQDTCUqHrqmRglzm5EBMSaLpbm/HG5kyanROV1sTRKGDBWhp8Oyb\n3YoYVR7wX0tPNCJaz9D/QQwflpNogjEMDWqnGt/6xg0i/p62b8We2sts25H0X2oe\nyKissbxI8l0pGvW0vik+UoTn6GUEFwpfa4VUkNfHgNp6qisaIB/qz+WV+QKBgA02\nj1B9K0iaLC+AX3VWcW1qbMoq8gG1f6AwtKswNo6K2U35C9cOMKsKO5r0o3hcKuTI\nmslfc04KxR0T543EDj8/vMNlzAK14sMoPi0W0ObDhKe2JouKug8yXDRF3RKIKrZ+\nZqRH+ONS+ELtMsvsMQLVJSKBGdD1c/L3aPEE3GAZAoGAZSAKtLegScO/bEXq/0Aw\n0at93e3TtVdmYwg0zanKXxe5vUNn6Bl7ETIgfcnMPwQVt8FIuTj/OoBMdYYaL3sZ\n6i6QtxY+f/ZUMLMWof7N3LvLPw+tuK5xmcigpA21FaGkGYIBpmUxOugl//jUzVnI\nbR9B9DE1BorrjBZHh/2vpOc=\n-----END PRIVATE KEY-----\n")
   const [appId,setAppId] = useState(1150126)
-  const [installationId,setInstallationId] = useState(60485625)
+  const [installationId,setInstallationId] = useState(61513690)
   const [commitList, setCommitList] = useState([])
+  const [commitFetchSuccess, setCommitFetchSuccess] = useState(false)
   const toggleWrittenList = () => {
     setWrittenListOn(!writtenListOn)
   }
@@ -29,13 +30,17 @@ const ChangeLogPage = () => {
           owner: 'agee4',
           repo: 'project-afterthought'
         })) {
-          promisedCommitList.push(response)
+          for (const message of response.data) {
+            const commitdate = new Date(message.commit.committer.date)
+            promisedCommitList.push(commitdate.toLocaleString())
+            promisedCommitList.push(<ul><li>{message.commit.message}</li></ul>)
+          }
         }
         setCommitList(promisedCommitList)
-        console.log("test")
+        setCommitFetchSuccess(true)
       } catch (error) {
         promisedCommitList.push("GitHub commit fetching failed ):")
-        promisedCommitList.push(error.status + ": " + error.message)
+        promisedCommitList.push(<ul><li>{error.status + ": " + error.message}</li></ul>)
         setCommitList(promisedCommitList)
       }
     }
@@ -48,6 +53,17 @@ const ChangeLogPage = () => {
     <ul className="change-list">
       <h3>2025</h3>
       <li><b>February</b></li>
+      <li>2025 February 22</li>
+      <ul>
+        <li>Got Github Commit fetching in Changelog to function</li>
+      </ul>
+
+      <li>2025 February 21</li>
+      <ul>
+        <li>Upgraded React Router to v7</li>
+        <li>replaced ImageLink in RideOrganizer page with site embed</li>
+      </ul>
+
       <li>2025 February 18</li>
       <ul>
         <li>updated email and resume</li>
@@ -196,14 +212,11 @@ const ChangeLogPage = () => {
     </ul>
 
   const GitHubList = () => 
-    <>
-      <p><em>WARNING: Commit fetching is still WIP</em></p>
-      <ul className="change-list">
-        {commitList.map((value, index) => (
-          <li key={index}>{value}</li>
-        ))}
-      </ul>
-    </>
+    <ul className="change-list">
+      {commitList.map((value, index) => (
+        <li key={index}>{value}</li>
+      ))}
+    </ul>
 
   return (
     <div className="page">
