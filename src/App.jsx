@@ -104,16 +104,12 @@ const router = createBrowserRouter([
       },
     ],
   },
-],{
-  future: {
-    v7_relativeSplatPath: true,
-  },
-})
+])
 
 function App() {
   
   return (
-    <div className="App">
+    <div className="App flex flex-col m-0 justify-items-stretch min-w-full min-h-screen">
       <RouterProvider router={router} />
     </div>
   )

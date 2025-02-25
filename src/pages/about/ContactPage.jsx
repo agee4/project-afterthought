@@ -7,33 +7,33 @@ const ContactPage = () => {
   pageTitle("Contact")
 
   return (
-    <div className="page">
-      <h1>Talk to me!</h1>
+    <>
+      <h1 className="font-bold text-5xl m-5">Talk to me!</h1>
       <p>Interested in hiring me? Contact me through one of the following!</p>
-      <table>
+      <table className="mx-auto text-center border-2 border-gray-300 border-collapse">
         <caption>Contact Links</caption>
         <tbody>
           <tr>
-            <th>Email</th>
-            <td><Link to="mailto:aarongeenius@gmail.com">aarongeenius@gmail.com</Link></td>
+            <th className="border border-gray-300 py-2 px-4">Email</th>
+            <td className="border border-gray-300 py-2 px-4"><Link to="mailto:aarongeenius@gmail.com">aarongeenius@gmail.com</Link></td>
           </tr>
           <tr>
-            <th>Cell</th>
-            <td><Link to="tel:+1916-385-7559">+1 (916) 385-7559</Link></td>
+            <th className="border border-gray-300 py-2 px-4">Cell</th>
+            <td className="border border-gray-300 py-2 px-4"><Link to="tel:+1916-385-7559">+1 (916) 385-7559</Link></td>
           </tr>
           <tr>
-            <th>LinkedIn</th>
-            <td><Link to="https://www.linkedin.com/in/aaron-gee-7350712b9">aaron-gee-7350712b9</Link></td>
+            <th className="border border-gray-300 py-2 px-4">LinkedIn</th>
+            <td className="border border-gray-300 py-2 px-4"><Link to="https://www.linkedin.com/in/aaron-gee-7350712b9">aaron-gee-7350712b9</Link></td>
           </tr>
           <tr>
-            <th>GitHub</th>
-            <td><Link to="https://github.com/agee4">agee4</Link></td>
+            <th className="border border-gray-300 py-2 px-4">GitHub</th>
+            <td className="border border-gray-300 py-2 px-4"><Link to="https://github.com/agee4">agee4</Link></td>
           </tr>
         </tbody>
       </table>
       <p>You can also download and review my resume below!</p>
       <p> ---&gt; <ResumeButton /> &lt;---</p>
-    </div>
+    </>
   )
 }
 

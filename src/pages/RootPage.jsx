@@ -8,7 +8,9 @@ const RootPage = () => {
   return (
     <>
       <NavigationBar />
-      <Outlet />
+      <main className="flex-1">
+        <Outlet />
+      </main>
       <ModalDisplay />
       <ReferenceFooter />
     </>

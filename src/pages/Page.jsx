@@ -6,8 +6,9 @@ const Page = () => {
   pageTitleFunct("", false)
 
   return (
-    <div className="page">
-    </div>
+    <>
+      <h1 className="font-bold text-5xl m-5">Page</h1>
+    </>
   )
 }
 

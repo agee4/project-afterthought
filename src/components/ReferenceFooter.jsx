@@ -4,6 +4,7 @@ import { Link, } from "react-router"
 import downloadFile from "./downloadFileFunct"
 import bobLogo from "../assets/logo/logo.svg"
 import resumePDF from "../assets/aarongeeresume.pdf"
+import ResumeButton from "./ResumeButton"
 
 const ReferenceFooter = () => {
   const [randomPath, setRandomPath] = useState('/')
@@ -35,40 +36,41 @@ const ReferenceFooter = () => {
   }
 
   return (
-    <footer id="reference">
-      <nav id="reference-nav">
-        <ul>
-          <li><h1><Link to="../" title="Home">Home</Link></h1></li>
-          <li><Link to="../purpose" title="Purpose">About the Project</Link></li>
-          <li><Link to="../about-me" title="About Me">About Me</Link></li>
-          <li><Link to="../changelog" title="Changelog">Changelog</Link></li>
-        </ul>
-        <ul>
-          <li><h1><Link to="../projects" title="Projects Home">Projects</Link></h1></li>
-          <li><Link to="../projects/ride-organizer" title="Ride Organizer App">Ride Organizer App</Link></li>
-          <li><Link to="../projects/fire-detector" title="Fire Detection Model">Fire Detection Model</Link></li>
-          <li><Link to="../projects/portfolio-site" title="Portfolio Website">Portfolio Website</Link></li>
-          <li><Link to="../projects/pvz-bb" title="Plants vs. Zombies Fangame">PvZ Fangame</Link></li>
-        </ul>
-        <ul>
-          <li><h1>Fun</h1></li>
-          <li><Link onClick={randomPage} to={randomPath}>Random Page</Link></li>
-          <li><Link to="../future" title="Future Features">Future Features</Link></li>
-          <li><Link to="../friends" title="Friends">Friends</Link></li>
-          <li><Link to="../thanks" title="Special Thanks">Thanks</Link></li>
-        </ul>
-        <ul>
-          <li><h1><Link to="../contact" title="Contact">Contact</Link></h1></li>
-          <li><Link to="mailto:aarongeenius@gmail.com">aarongeenius@gmail.com</Link></li>
-          <li><Link to="https://www.linkedin.com/in/aaron-gee-7350712b9">LinkedIn</Link></li>
-          <li><Link to="https://github.com/agee4">GitHub</Link></li>
-          <li><Link to="#" onClick={downloadResume}>Resume</Link></li>
-        </ul>
+    <footer className="bg-white dark:bg-black text-neutral-700 dark:text-neutral-300 justify-between text-sm shadow-md py-2">
+      <nav className="flex flex-col sm:flex-row justify-evenly">
+        <menu>
+          <li><h1><Link to="../" title="Home" className="font-bold text-black dark:text-white hover:text-indigo-500">Home</Link></h1></li>
+          <li><Link to="../purpose" title="Purpose" className="hover:text-indigo-500">About the Project</Link></li>
+          <li><Link to="../about-me" title="About Me" className="hover:text-indigo-500">About Me</Link></li>
+          <li><Link to="../changelog" title="Changelog" className="hover:text-indigo-500">Changelog</Link></li>
+        </menu>
+        <menu>
+          <li><h1><Link to="../projects" title="Projects Home" className="font-bold text-black dark:text-white hover:text-indigo-500">Projects</Link></h1></li>
+          <li><Link to="../projects/ride-organizer" title="Ride Organizer App" className="hover:text-indigo-500">Ride Organizer App</Link></li>
+          <li><Link to="../projects/fire-detector" title="Fire Detection Model" className="hover:text-indigo-500">Fire Detection Model</Link></li>
+          <li><Link to="../projects/portfolio-site" title="Portfolio Website" className="hover:text-indigo-500">Portfolio Website</Link></li>
+          <li><Link to="../projects/pvz-bb" title="Plants vs. Zombies Fangame" className="hover:text-indigo-500">PvZ Fangame</Link></li>
+        </menu>
+        <menu>
+          <li><h1 className="font-bold text-black dark:text-white">Fun</h1></li>
+          <li><Link onClick={randomPage} to={randomPath} className="hover:text-indigo-500">Random Page</Link></li>
+          <li><Link to="../future" title="Future Features" className="hover:text-indigo-500">Future Features</Link></li>
+          <li><Link to="../friends" title="Friends" className="hover:text-indigo-500">Friends</Link></li>
+          <li><Link to="../thanks" title="Special Thanks" className="hover:text-indigo-500">Thanks</Link></li>
+        </menu>
+        <menu>
+          <li><h1><Link to="../contact" title="Contact" className="font-bold text-black dark:text-white hover:text-indigo-500">Contact</Link></h1></li>
+          <li><Link to="mailto:aarongeenius@gmail.com" className="hover:text-indigo-500">aarongeenius@gmail.com</Link></li>
+          <li><Link to="https://www.linkedin.com/in/aaron-gee-7350712b9" className="hover:text-indigo-500">LinkedIn</Link></li>
+          <li><Link to="https://github.com/agee4" className="hover:text-indigo-500">GitHub</Link></li>
+          <li><ResumeButton className="hover:text-indigo-500 cursor-pointer"/></li>
+        </menu>
       </nav>
-      <p>
+      <br />
+      <p className="text-neutral-500">
         <b>This site was designed by Aaron Gee</b>
         <br />
-        Copypaste 2025. idk what rights are reserved <img className="emoji-img" src={bobLogo} alt=":D" />
+        Copypaste 2025. idk what rights are reserved <img className="emoji h-[0.75rem] inline-block align-baseline" src={bobLogo} alt=":D" />
       </p>
     </footer>
   )

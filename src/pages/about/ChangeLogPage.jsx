@@ -43,7 +43,7 @@ const ChangeLogPage = () => {
   pageTitle("Change Log")
 
   const WrittenList = () => 
-    <ul className="change-list">
+    <ul className="border border-gray-400 rounded p-1">
       <h3>2025</h3>
       <li><b>February</b></li>
       <li>2025 February 22</li>
@@ -205,22 +205,22 @@ const ChangeLogPage = () => {
     </ul>
 
   const GitHubList = () => 
-    <ul className="change-list">
+    <ul className="border border-gray-400 rounded p-1">
       {commitList.map((value, index) => (
         <li key={index}>{value}</li>
       ))}
     </ul>
 
   return (
-    <div className="page">
-      <h1>Change Log</h1>
+    <>
+      <h1 className="font-bold text-5xl m-5">Change Log</h1>
       <button onClick={toggleWrittenList}>
         {writtenListOn ? "Written Log" : "Github Commits"}
       </button>
       {writtenListOn ?
       <WrittenList /> : 
       <GitHubList />}
-    </div>
+    </>
   )
 }
 

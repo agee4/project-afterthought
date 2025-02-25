@@ -13,11 +13,11 @@ const ErrorPage = () => {
   return (
     <>
       <NavigationBar />
-      <div className="page">
-        <h1>Uh oh!</h1>
+      <main className="flex-1">
+        <h1 className="font-bold text-5xl m-5">Uh oh!</h1>
         <p><i>{error.status + ": " + (error.statusText || error.message)}</i></p>
         <sub>how did you even get here lol</sub>
-      </div>
+      </main>
       <ReferenceFooter />
     </>
   )

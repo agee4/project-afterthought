@@ -23,12 +23,12 @@ const RideOrganizerPage = () => {
       </Link>*/
 
   return (
-    <div className="page">
-      <h1>Ride Organizer Application</h1>
+    <>
+      <h1 className="font-bold text-5xl m-5">Ride Organizer Application</h1>
       <p>
         <i>A first step into fullstack application development.</i>
       </p>
-      <h2>What is this project?</h2>
+      <h2 className="font-bold text-3xl m-3">What is this project?</h2>
       <p>
         The <b>Berean Community Church College Ride Organizer</b> was a programming project 
         for <abbr title="University of California, Irvine">UCI</abbr>'s CompSci 137 class (Internet Applications Engineering). 
@@ -39,7 +39,7 @@ const RideOrganizerPage = () => {
         accounting for location and time.
       </p>
       <ModalImage
-        className="profile-img"
+        className="img/profile m-auto max-w-1/2"
         src={LoggedInHomeImg}
         alt="A sample screenshot of the Ride Organizer Website, logged in"
         title="A sample screenshot of the Ride Organizer Website, logged in"
@@ -47,33 +47,36 @@ const RideOrganizerPage = () => {
       <p>
         The application supported authentication, ride list creation, and ride list saving/loading.
       </p>
-      <h2>What did I learn?</h2>
-      <h3>General</h3>
+      <h2 className="font-bold text-3xl m-3">What did I learn?</h2>
+      <h3 className="font-bold text-xl m-1">General</h3>
       <ul>
         <li>principles of web development (frontend & backend)</li>
         <li>delegation of responsibilities and tasks</li>
       </ul>
-      <h3>Specific Skills</h3>
+      <h3 className="font-bold text-xl m-1">Specific Skills</h3>
       <ul>
         <li>Basics of standard web standard languages</li>
         <ul>
-          <li>HTML <img className="emoji-img" src={HTMLIcon} /></li>
-          <li>CSS <img className="emoji-img" src={CSSIcon} /></li>
-          <li>JavaScript <img className="emoji-img" src={JSIcon} /></li>
+          <li>HTML <img className="emoji h-[0.75rem] inline-block align-baseline" src={HTMLIcon} /></li>
+          <li>CSS <img className="emoji h-[0.75rem] inline-block align-baseline" src={CSSIcon} /></li>
+          <li>JavaScript <img className="emoji h-[0.75rem] inline-block align-baseline" src={JSIcon} /></li>
         </ul>
         <li>Basics of web development JavaScript-based libraries and environments</li>
         <ul>
-          <li>React <img className="emoji-img" src={ReactIcon} /></li>
-          <li>NodeJS <img className="emoji-img" src={NodeJSIcon} /></li>
+          <li>React <img className="emoji h-[0.75rem] inline-block align-baseline" src={ReactIcon} /></li>
+          <li>NodeJS <img className="emoji h-[0.75rem] inline-block align-baseline" src={NodeJSIcon} /></li>
         </ul>
-        <li>Auth0 <img className="emoji-img" src={Auth0Icon} /> (create authentication protocols)</li>
+        <li>Auth0 <img className="emoji h-[0.75rem] inline-block align-baseline" src={Auth0Icon} /> (create authentication protocols)</li>
       </ul>
-      <h2>Check out the final site!</h2>
-      <embed src="https://ridesprojectfrontend.onrender.com" />
+      <h2 className="font-bold text-3xl m-3">Check out the final site!</h2>
+      <embed
+        className="m-auto w-[75%] h-[75vh]"
+        src="https://ridesprojectfrontend.onrender.com"
+      />
       <h3>
         <Link to="https://ridesprojectfrontend.onrender.com"><button>Project Site</button></Link>
       </h3>
-    </div>
+    </>
   )
 }
 

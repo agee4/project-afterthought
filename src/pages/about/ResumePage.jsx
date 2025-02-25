@@ -1,5 +1,6 @@
 // ResumePage.jsx
 import pageTitleFunct from "../../components/pageTitleFunct"
+import ResumeButton from "../../components/ResumeButton"
 
 const ResumePage = () => {
   const PythonIcon = "https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg"
@@ -13,30 +14,31 @@ const ResumePage = () => {
   pageTitleFunct("Digital Resume")
 
   return (
-    <div className="page">
-      <h1>Resume</h1>
+    <>
+      <h1 className="font-bold text-5xl m-5">Resume</h1>
       <h2>Projects</h2>
       <h2>Education</h2>
       <h2>Skills</h2>
       <ul>
         <li>Computer Languages</li>
         <ul>
-          <li>Python <img className="emoji-img" src={PythonIcon} /></li>
-          <li>C++ <img className="emoji-img" src={CPPIcon} /></li>
+          <li>Python <img className="emoji h-[0.75rem] inline-block align-baseline" src={PythonIcon} /></li>
+          <li>C++ <img className="emoji h-[0.75rem] inline-block align-baseline" src={CPPIcon} /></li>
           <li>Java</li>
-          <li>C <img className="emoji-img" src={CIcon} /></li>
+          <li>C <img className="emoji h-[0.75rem] inline-block align-baseline" src={CIcon} /></li>
           <li>Assembly</li>
-          <li>HTML <img className="emoji-img" src={HTMLIcon} /></li>
-          <li>CSS <img className="emoji-img" src={CSSIcon} /></li>
-          <li>JavaScript <img className="emoji-img" src={JSIcon} /></li>
+          <li>HTML <img className="emoji h-[0.75rem] inline-block align-baseline" src={HTMLIcon} /></li>
+          <li>CSS <img className="emoji h-[0.75rem] inline-block align-baseline" src={CSSIcon} /></li>
+          <li>JavaScript <img className="emoji h-[0.75rem] inline-block align-baseline" src={JSIcon} /></li>
         </ul>
         <li>Tools, Frameworks, & Libraries</li>
         <ul>
-          <li>GitHub <img className="emoji-img" src={GitHubIcon} /></li>
-          <li>React <img className="emoji-img" src={ReactIcon} /></li>
+          <li>GitHub <img className="emoji h-[0.75rem] inline-block align-baseline" src={GitHubIcon} /></li>
+          <li>React <img className="emoji h-[0.75rem] inline-block align-baseline" src={ReactIcon} /></li>
         </ul>
       </ul>
-    </div>
+      <ResumeButton />
+    </>
   )
 }
 

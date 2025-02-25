@@ -9,12 +9,12 @@ const FireDetectorPage = () => {
   pageTitle("Fire Detector")
   
   return (
-    <div className="page">
-      <h1>Fire Detector Drone</h1>
+    <>
+      <h1 className="font-bold text-5xl m-5">Fire Detector Drone</h1>
       <p>
         <i>The culmination of my undergraduate CSE skills.</i><br />
       </p>
-      <h2>What is this project?</h2>
+      <h2 className="font-bold text-3xl m-3">What is this project?</h2>
       <p>
         The <b>Fire Detecting Drone</b> was a CSE undergraduate Capstone project 
         that begun Spring of 2023 and was completed Winter of 2024. 
@@ -22,21 +22,24 @@ const FireDetectorPage = () => {
         that it could use to identify fires.
         Undergraduate capstone project<br/>
       </p>
-      <ul className="gallery">
+      <ul className="gallery flex flex-row justify-evenly p-0 m-0 list-none text-center">
         <ModalImage
+          className="mx-auto max-w-[20%]"
           src={DroneFinalImg}
           alt="The final fire detection drone"
         />
         <ModalImage
+          className="mx-auto max-w-[20%]"
           src={SystemDiagramImg}
           alt="System diagram of the final fire detection drone"
         />
         <ModalImage
+          className="mx-auto max-w-[20%]"
           src={PresentationImg}
           alt="Me in front of a poster detailing the original project"
         />
       </ul>
-      <h2>What did I learn?</h2>
+      <h2 className="font-bold text-3xl m-3">What did I learn?</h2>
       <ul>
         <li>Python</li>
         <ul>
@@ -48,7 +51,7 @@ const FireDetectorPage = () => {
         <li>How to create a classical object detection algorithm</li>
         <li>How to present an engineering project succinctly and understandably to others via presentation</li>
       </ul>
-      <h2>Resources Used</h2>
+      <h2 className="font-bold text-3xl m-3">Resources Used</h2>
       <ul>
         <li>Python</li>
         <ul>
@@ -58,7 +61,7 @@ const FireDetectorPage = () => {
         </ul>
         <li>DJI Tello (RC Drone)</li>
       </ul>
-    </div>
+    </>
   )
 }
 

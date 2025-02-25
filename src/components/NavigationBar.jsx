@@ -18,41 +18,41 @@ const NavigationBar = () => {
   clickOutside(navRef, disableMobNav)
 
   return (
-    <header id="navigation">
-      <Link to="../" id="site-title" title="Return Home">
-        <img id="title-img" src={bobLogo} />
-        <div id="title-text">Aaron Gee's Portfolio</div>
+    <header className="navbar bg-white dark:bg-black text-neutral-700 dark:text-neutral-300 sticky top-0 flex justify-between items-stretch gap-8 shadow-md pr-5">
+      <Link to="../" title="Return Home" className="logo h-8 flex items-center">
+        <img src={bobLogo} className="logo/image h-8 border-0 hover:shadow-none"/>
+        <h1 className="logo/text text-2xl font-semibold truncate hidden sm:block">Aaron Gee's Portfolio</h1>
       </Link>
-      <ul className="laptop">
-        <li className="dropdown">
+      <menu className="navbar/desktop p-0 m-0 list-none items-center gap-4 hidden sm:flex">
+        <li className="group/dropdown relative inline-block">
           About
-          <ul className="dropdown-content">
+          <menu className="absolute right-0 bg-white dark:bg-black shadow-md p-3 whitespace-nowrap text-right hidden group-hover/dropdown:block">
             <li><Link to="../purpose" title="Purpose">About the Site</Link></li>
             <li><Link to="../about-me" title="About Me">About Me</Link></li>
             <li><Link to="../changelog" title="Change Log">Change Log</Link></li>
-          </ul>
+          </menu>
         </li>
-        <li className="dropdown">
+        <li className="group/dropdown relative inline-block">
           <Link to="../projects" title="Projects Home">Projects</Link>
-          <ul className="dropdown-content">
+          <menu className="absolute right-0 bg-white dark:bg-black shadow-md p-3 whitespace-nowrap text-right hidden group-hover/dropdown:block">
             <li><Link to="../projects/ride-organizer" title="Ride Organizer App">Ride Organizer App</Link></li>
             <li><Link to="../projects/fire-detector" title="Fire Detection Model">Fire Detection Model</Link></li>
             <li><hr /></li>
             <li><Link to="../projects/portfolio-site" title="Portfolio Website">Portfolio Website</Link></li>
             <li><Link to="../projects/pvz-bb" title="Plants vs. Zombies Fangame">PvZ Fangame</Link></li>
-          </ul>
+          </menu>
         </li>
-        <li className="dropdown">
+        <li className="group/dropdown relative inline-block">
           <Link to="../contact" title="Contact">Contact</Link>
-          <ul className="dropdown-content">
+          <menu className="absolute right-0 bg-white dark:bg-black shadow-md p-3 hidden group-hover/dropdown:block">
             <li><ResumeButton /></li>
-          </ul>
+          </menu>
         </li>
-      </ul>
-      <div className="mobile" ref={navRef}>
+      </menu>
+      <div className="navbar/mobile p-0 m-0 list-none flex items-center gap-4 sm:hidden" ref={navRef}>
         <button onClick={toggleMobNav}>{mobileNavOff ? "≡" : "⨯"}</button>
         { !mobileNavOff &&
-          <ul className="dropdown-mobile">
+          <menu className="absolute right-0 bg-white dark:bg-black shadow-md p-3 whitespace-nowrap text-right top-[2rem]">
             <li><Link to="../" title="Home"><u>Home</u></Link></li>
             <li><Link to="../purpose" title="Purpose">About the Site</Link></li>
             <li><Link to="../about-me" title="About Me">About Me</Link></li>
@@ -67,7 +67,7 @@ const NavigationBar = () => {
             <li><br /></li>
             <li><Link to="../contact" title="Contact"><u>Contact Me</u></Link></li>
             <li><ResumeButton /></li>
-          </ul>
+          </menu>
         }
       </div>
       

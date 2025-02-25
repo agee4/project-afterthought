@@ -9,11 +9,11 @@ import ModalImage from "../../components/Modal/ModalImage"
 const AboutMePage = () => {
   pageTitle("About Me")
   return (
-    <div className="page">
-      <h1>Who are you?</h1>
+    <>
+      <h1 className="font-bold text-5xl m-5">Who are you?</h1>
       <p>Hi there! My name is <b>Aaron Gee</b>!</p>
       <ModalImage
-        className="profile-img"
+        className="img/profile m-auto max-w-1/2"
         src={GradImg}
         alt="Imagine a really cool photo of Aaron Gee, the site creator, here!"
         title="Aaron Gee dressed in college graduation attire. He looks happy."
@@ -24,25 +24,28 @@ const AboutMePage = () => {
         from coding to building them. I hope to use the skills God has given me 
         to glorify His name and improve the lives of others around me!
       </p>
-      <ul className="gallery">
+      <ul className="gallery flex flex-row justify-evenly p-0 m-0 list-none text-center">
         <ModalImage
+          className="mx-auto max-w-[20%]"
           src={TahoeImg}
           alt="Imagine a really cool photo of Aaron Gee overlooking Lake Tahoe here!"
           title="Aaron Gee overlooking Lake Tahoe from Mount Tallac. He looks happy."
         />
         <ModalImage
+          className="mx-auto max-w-[20%]"
           src={HippoImg}
           alt="Imagine a really cool photo of Aaron Gee dressed like a mustached yellow hippopotomas here!"
           title="Aaron Gee dressed like a mustached yellow hippopotomas. He looks happy."
         />
         <ModalImage
+          className="mx-auto max-w-[20%]"
           src={DinoImg}
           alt="Imagine a really cool photo of Aaron Gee next to a Dilophosaurus statue here!"
           title="Aaron Gee standing next to a Dilophosaurus statue. He looks happy."
         />
       </ul>
       <p><br /></p>
-    </div>
+    </>
   )
 }
 

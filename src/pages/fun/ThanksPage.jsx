@@ -6,8 +6,8 @@ const ThanksPage = () => {
   pageTitleFunct("Special Thanks", false)
 
   return (
-    <div className="page">
-      <h1>Special Thanks!</h1>
+    <>
+      <h1 className="font-bold text-5xl m-5">Special Thanks!</h1>
       <p><i>For all the organizations and people that helped me make this site a reality!</i></p>
       <h2>Jesus Christ</h2>
       <p>For dying and rising again for my sins</p>
@@ -17,7 +17,7 @@ const ThanksPage = () => {
       <p>For sending the best cat memes every day at 8:26pm PST</p>
       <h2>W3Schools</h2>
       <p>For providing a lot of helpful web dev tutorials</p>
-    </div>
+    </>
   )
 }
 

@@ -14,6 +14,7 @@ const LinkImage = (props) => {
   return (
     <Link to={props.to}>
       <img
+        className={props.className}
         src={props.src}
         alt={props.alt}
         title={props.title ? props.title : props.alt}

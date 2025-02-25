@@ -6,9 +6,9 @@ const FunPage = () => {
   pageTitleFunct("", false)
 
   return (
-    <div className="page">
-      <h1>Minigame?</h1>
-    </div>
+    <>
+      <h1 className="font-bold text-5xl m-5">Minigame?</h1>
+    </>
   )
 }
 
