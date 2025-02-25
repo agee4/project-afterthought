@@ -19,11 +19,11 @@ const NavigationBar = () => {
 
   return (
     <header className="navbar bg-white dark:bg-black text-neutral-700 dark:text-neutral-300 sticky top-0 flex justify-between items-stretch gap-8 shadow-md pr-5">
-      <Link to="../" title="Return Home" className="logo h-8 flex items-center">
-        <img src={bobLogo} className="logo/image h-8 border-0 hover:shadow-none"/>
+      <Link to="../" title="Return Home" className="logo m-3 h-8 flex items-center active:invert">
+        <img src={bobLogo} className="logo/image h-8 border-0"/>
         <h1 className="logo/text text-2xl font-semibold truncate hidden sm:block">Aaron Gee's Portfolio</h1>
       </Link>
-      <menu className="navbar/desktop p-0 m-0 list-none items-center gap-4 hidden sm:flex">
+      <menu className="navbar/desktop items-center gap-4 hidden sm:flex">
         <li className="group/dropdown relative inline-block">
           About
           <menu className="absolute right-0 bg-white dark:bg-black shadow-md p-3 whitespace-nowrap text-right hidden group-hover/dropdown:block">
@@ -49,10 +49,10 @@ const NavigationBar = () => {
           </menu>
         </li>
       </menu>
-      <div className="navbar/mobile p-0 m-0 list-none flex items-center gap-4 sm:hidden" ref={navRef}>
+      <div className="navbar/mobile flex items-center gap-4 sm:hidden" ref={navRef}>
         <button onClick={toggleMobNav}>{mobileNavOff ? "≡" : "⨯"}</button>
         { !mobileNavOff &&
-          <menu className="absolute right-0 bg-white dark:bg-black shadow-md p-3 whitespace-nowrap text-right top-[2rem]">
+          <menu className="absolute right-0 bg-white dark:bg-black shadow-md p-3 whitespace-nowrap text-right top-[3rem]">
             <li><Link to="../" title="Home"><u>Home</u></Link></li>
             <li><Link to="../purpose" title="Purpose">About the Site</Link></li>
             <li><Link to="../about-me" title="About Me">About Me</Link></li>

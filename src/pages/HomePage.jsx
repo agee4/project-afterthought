@@ -23,7 +23,7 @@ const HomePage = () => {
         Welcome to my site! Check out my work and learn what I might be able to do for you!
       </p>
       <h2 className="text-xl m-3"><Link 
-        className="rounded-lg border border-transparent py-2 px-4 font-medium text-white bg-gray-900 cursor-pointer transition-colors duration-200 hover:text-indigo-500 hover:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500"
+        className="rounded-lg border border-transparent py-2 px-4 font-medium text-white dark:text-black bg-gray-900 dark:bg-gray-100  cursor-pointer transition-colors duration-200 hover:text-indigo-500 hover:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500"
         to="/resume" 
         title="Digital Resume">Resume</Link></h2>
       <h2><Link to="/projects" title="Projects Home">Projects</Link></h2>

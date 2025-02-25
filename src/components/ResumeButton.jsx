@@ -11,7 +11,7 @@ const ResumeButton = (props) => {
     <button
       className={props.className ? 
         props.className : 
-        "rounded-lg border border-transparent py-2 px-4 font-medium text-white bg-gray-900 cursor-pointer transition-colors duration-200 hover:text-indigo-500 hover:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500"}
+        "rounded-lg border border-transparent py-2 px-4 font-medium text-white dark:text-black bg-gray-900 dark:bg-gray-100 cursor-pointer transition-colors duration-200 hover:text-indigo-500 hover:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500"}
       onClick={downloadResume}
       title="Download my Resume!"
     >

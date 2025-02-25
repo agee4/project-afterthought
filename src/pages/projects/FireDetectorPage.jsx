@@ -6,6 +6,7 @@ import SystemDiagramImg from "../../assets/firedetectordronediagram.jpg"
 import PresentationImg from "../../assets/firedetectorpresentation.jpg"
 
 const FireDetectorPage = () => {
+  const PythonIcon = "https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg"
   pageTitle("Fire Detector")
   
   return (
@@ -41,7 +42,7 @@ const FireDetectorPage = () => {
       </ul>
       <h2 className="font-bold text-3xl m-3">What did I learn?</h2>
       <ul>
-        <li>Python</li>
+        <li>Python <img className="emoji h-[0.75rem] inline-block align-baseline" src={PythonIcon} /></li>
         <ul>
           <li>OpenCV</li>
           <li>NumPy</li>
@@ -53,7 +54,7 @@ const FireDetectorPage = () => {
       </ul>
       <h2 className="font-bold text-3xl m-3">Resources Used</h2>
       <ul>
-        <li>Python</li>
+        <li>Python <img className="emoji h-[0.75rem] inline-block align-baseline" src={PythonIcon} /></li>
         <ul>
           <li>OpenCV</li>
           <li>NumPy</li>
