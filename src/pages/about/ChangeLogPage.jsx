@@ -1,7 +1,7 @@
 // ChangeLogPage.jsx
 import React, { useState, useEffect, } from "react"
 import { App } from "octokit"
-import pageTitle from "../../components/pageTitleFunct"
+import pageTitle from "../../components/Functions/pageTitleFunct"
 
 const ChangeLogPage = () => {
   const [writtenListOn, setWrittenListOn] = useState(false)

@@ -1,5 +1,5 @@
 // FutureFeaturesPage.jsx
-import pageTitleFunct from "../../components/pageTitleFunct"
+import pageTitleFunct from "../../components/Functions/pageTitleFunct"
 
 const FutureFeaturesPage = () => {
   

@@ -1,5 +1,5 @@
 // PortfolioSitePage.jsx
-import pageTitle from "../../components/pageTitleFunct"
+import pageTitle from "../../components/Functions/pageTitleFunct"
 import ModalImage from "../../components/Modal/ModalImage"
 import PortfolioWebsiteImg from "../../assets/portfoliowebsiterecursive.png"
 import ViteIcon from "../../../public/vite.svg"

@@ -1,6 +1,6 @@
 // HomePage.jsx
 import { Link } from "react-router"
-import pageTitle from "../components/pageTitleFunct"
+import pageTitle from "../components/Functions/pageTitleFunct"
 import LinkImage from "../components/LinkImage"
 import Logo from "../assets/logo/logo_shadow.png"
 import RideOrganizerImg from "../assets/rideorganizerapploggedin.png"

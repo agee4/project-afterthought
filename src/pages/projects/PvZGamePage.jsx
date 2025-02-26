@@ -1,5 +1,5 @@
 // PvZGamePage.jsx
-import pageTitle from "../../components/pageTitleFunct"
+import pageTitle from "../../components/Functions/pageTitleFunct"
 
 const PvZGamePage = () => {
   pageTitle("Plants vs. Zombies Fan Game")

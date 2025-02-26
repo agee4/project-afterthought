@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react"
 import { Link, } from "react-router"
 import bobLogo from "../assets/logo/logo_shadow.svg"
 import ResumeButton from "./ResumeButton"
-import clickOutside from "./clickOutsideFunct"
+import clickOutside from "./Functions/clickOutsideFunct"
 
 const NavigationBar = () => {
   const [mobileNavOff, setMobileNavOff] = useState(true)

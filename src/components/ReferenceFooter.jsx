@@ -1,7 +1,7 @@
 // ReferenceFooter.jsx
 import React, { useState } from "react"
 import { Link, } from "react-router"
-import downloadFile from "./downloadFileFunct"
+import downloadFile from "./Functions/downloadFileFunct"
 import bobLogo from "../assets/logo/logo.svg"
 import resumePDF from "../assets/aarongeeresume.pdf"
 import ResumeButton from "./ResumeButton"

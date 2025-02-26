@@ -1,7 +1,7 @@
 // ErrorPage.jsx
 import React from "react"
 import { useRouteError } from "react-router"
-import pageTitle from "../components/pageTitleFunct"
+import pageTitle from "../components/Functions/pageTitleFunct"
 import NavigationBar from "../components/NavigationBar"
 import ReferenceFooter from "../components/ReferenceFooter"
 

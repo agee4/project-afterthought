@@ -1,6 +1,6 @@
 // ResumeButton.jsx
 import resumePDF from "../assets/aarongeeresume.pdf"
-import downloadFile from "./downloadFileFunct"
+import downloadFile from "./Functions/downloadFileFunct"
 
 const ResumeButton = (props) => {
   const downloadResume = () => {

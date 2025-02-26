@@ -1,6 +1,6 @@
 // ContactPage.jsx
 import { Link } from "react-router"
-import pageTitle from "../../components/pageTitleFunct"
+import pageTitle from "../../components/Functions/pageTitleFunct"
 import ResumeButton from "../../components/ResumeButton"
 
 const ContactPage = () => {

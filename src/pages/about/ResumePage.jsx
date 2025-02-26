@@ -1,5 +1,5 @@
 // ResumePage.jsx
-import pageTitleFunct from "../../components/pageTitleFunct"
+import pageTitleFunct from "../../components/Functions/pageTitleFunct"
 import ResumeButton from "../../components/ResumeButton"
 import ViteIcon from "../../../public/vite.svg"
 

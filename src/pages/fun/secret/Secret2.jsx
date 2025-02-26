@@ -1,5 +1,5 @@
 // Page.jsx
-import pageTitleFunct from "../../../components/pageTitleFunct"
+import pageTitleFunct from "../../../components/Functions/pageTitleFunct"
 import bobLogo from "../../../assets/logo/logo.svg"
 
 const Secret2Page = () => {

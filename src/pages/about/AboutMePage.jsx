@@ -1,5 +1,5 @@
 // AboutMePage.jsx
-import pageTitle from "../../components/pageTitleFunct"
+import pageTitle from "../../components/Functions/pageTitleFunct"
 import GradImg from "../../assets/aargeephoto/aargeephoto_grad.jpg"
 import TahoeImg from "../../assets/aargeephoto/aargeephoto_tahoe.jpg"
 import HippoImg from "../../assets/aargeephoto/aargeephoto_goldenhippo.jpg"

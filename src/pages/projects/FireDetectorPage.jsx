@@ -1,5 +1,5 @@
 // FireDetectorPage.jsx
-import pageTitle from "../../components/pageTitleFunct"
+import pageTitle from "../../components/Functions/pageTitleFunct"
 import ModalImage from "../../components/Modal/ModalImage"
 import DroneFinalImg from "../../assets/firedetectordronefinal.png"
 import SystemDiagramImg from "../../assets/firedetectordronediagram.jpg"

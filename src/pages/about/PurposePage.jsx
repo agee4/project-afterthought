@@ -1,5 +1,5 @@
 // PurposePage.jsx
-import pageTitle from "../../components/pageTitleFunct"
+import pageTitle from "../../components/Functions/pageTitleFunct"
 
 const PurposePage = () => {
   pageTitle("Site Purpose")

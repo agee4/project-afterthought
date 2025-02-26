@@ -1,6 +1,6 @@
 // ProjectsPage.jsx
 import { Link } from "react-router"
-import pageTitle from "../../components/pageTitleFunct"
+import pageTitle from "../../components/Functions/pageTitleFunct"
 
 const ProjectsPage = () => {
   pageTitle("Projects Home")
