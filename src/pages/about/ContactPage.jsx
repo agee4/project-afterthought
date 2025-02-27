@@ -23,7 +23,7 @@ const ContactPage = () => {
           </tr>
           <tr>
             <th className="border border-gray-300 py-2 px-4">LinkedIn</th>
-            <td className="border border-gray-300 py-2 px-4"><Link to="https://www.linkedin.com/in/aaron-gee-7350712b9">aaron-gee-7350712b9</Link></td>
+            <td className="border border-gray-300 py-2 px-4"><Link to="https://www.linkedin.com/in/aarongee0925">aarongee0925</Link></td>
           </tr>
           <tr>
             <th className="border border-gray-300 py-2 px-4">GitHub</th>

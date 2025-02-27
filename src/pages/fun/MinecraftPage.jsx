@@ -3,11 +3,12 @@ import pageTitleFunct from "../../components/Functions/pageTitleFunct"
 
 const FunPage = () => {
   
-  pageTitleFunct("", false)
+  pageTitleFunct("")
 
   return (
     <>
-      <h1 className="font-bold text-5xl m-5">Minigame?</h1>
+      <h1 className="font-bold text-5xl m-5">Minceraft</h1>
+      <p></p>
     </>
   )
 }

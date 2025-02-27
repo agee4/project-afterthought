@@ -50,7 +50,7 @@ const NavigationBar = () => {
         </li>
       </menu>
       <div className="navbar/mobile flex items-center gap-4 sm:hidden" ref={navRef}>
-        <button onClick={toggleMobNav}>{mobileNavOff ? "≡" : "⨯"}</button>
+        <button className="text-3xl" onClick={toggleMobNav}>{mobileNavOff ? "≡" : "⨯"}</button>
         { !mobileNavOff &&
           <menu className="absolute right-0 bg-white dark:bg-black shadow-md p-3 whitespace-nowrap text-right top-[3rem]">
             <li><Link to="../" title="Home"><u>Home</u></Link></li>

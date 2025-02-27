@@ -3,7 +3,7 @@ import pageTitleFunct from "../components/Functions/pageTitleFunct"
 
 const Page = () => {
   
-  pageTitleFunct("", false)
+  pageTitleFunct("")
 
   return (
     <>

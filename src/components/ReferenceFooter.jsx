@@ -1,17 +1,11 @@
 // ReferenceFooter.jsx
 import React, { useState } from "react"
 import { Link, } from "react-router"
-import downloadFile from "./Functions/downloadFileFunct"
 import bobLogo from "../assets/logo/logo.svg"
-import resumePDF from "../assets/aarongeeresume.pdf"
 import ResumeButton from "./ResumeButton"
 
 const ReferenceFooter = () => {
   const [randomPath, setRandomPath] = useState('/')
-
-  const downloadResume = () => {
-    downloadFile(resumePDF, "aarongee-resume.pdf")
-  }
 
   const randomPage = () => {
     const routeList = [
@@ -61,7 +55,7 @@ const ReferenceFooter = () => {
         <menu>
           <li><h1><Link to="../contact" title="Contact" className="font-bold text-black dark:text-white hover:text-indigo-500">Contact</Link></h1></li>
           <li><Link to="mailto:aarongeenius@gmail.com" className="hover:text-indigo-500">aarongeenius@gmail.com</Link></li>
-          <li><Link to="https://www.linkedin.com/in/aaron-gee-7350712b9" className="hover:text-indigo-500">LinkedIn</Link></li>
+          <li><Link to="https://www.linkedin.com/in/aarongee0925" className="hover:text-indigo-500">LinkedIn</Link></li>
           <li><Link to="https://github.com/agee4" className="hover:text-indigo-500">GitHub</Link></li>
           <li><ResumeButton className="hover:text-indigo-500 cursor-pointer"/></li>
         </menu>
