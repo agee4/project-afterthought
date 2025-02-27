@@ -1,17 +1,19 @@
 // AboutMePage.jsx
-import pageTitle from "../../components/Functions/pageTitleFunct"
-import GradImg from "../../assets/aargeephoto/aargeephoto_grad.jpg"
-import TahoeImg from "../../assets/aargeephoto/aargeephoto_tahoe.jpg"
-import HippoImg from "../../assets/aargeephoto/aargeephoto_goldenhippo.jpg"
-import DinoImg from "../../assets/aargeephoto/aargeephoto_retreatdilopho.jpg"
-import ModalImage from "../../components/Modal/ModalImage"
+import pageTitle from '../../components/Functions/pageTitleFunct'
+import GradImg from '../../assets/aargeephoto/aargeephoto_grad.jpg'
+import TahoeImg from '../../assets/aargeephoto/aargeephoto_tahoe.jpg'
+import HippoImg from '../../assets/aargeephoto/aargeephoto_goldenhippo.jpg'
+import DinoImg from '../../assets/aargeephoto/aargeephoto_retreatdilopho.jpg'
+import ModalImage from '../../components/Modal/ModalImage'
 
 const AboutMePage = () => {
-  pageTitle("About Me")
+  pageTitle('About Me')
   return (
     <>
-      <h1 className="font-bold text-5xl m-5">Who are you?</h1>
-      <p>Hi there! My name is <b>Aaron Gee</b>!</p>
+      <h1 className="m-5 text-5xl font-bold">Who are you?</h1>
+      <p>
+        Hi there! My name is <b>Aaron Gee</b>!
+      </p>
       <ModalImage
         className="img/profile m-auto max-w-1/2"
         src={GradImg}
@@ -19,12 +21,13 @@ const AboutMePage = () => {
         title="Aaron Gee dressed in college graduation attire. He looks happy."
       />
       <p>
-        I am a Computer Science & Engineering graduate from University of California, Irvine.
-        I enjoy learning, practicing, and teaching others the wonders of computers, 
-        from coding to building them. I hope to use the skills God has given me 
-        to glorify His name and improve the lives of others around me!
+        I am a Computer Science & Engineering graduate from University of
+        California, Irvine. I enjoy learning, practicing, and teaching others
+        the wonders of computers, from coding to building them. I hope to use
+        the skills God has given me to glorify His name and improve the lives of
+        others around me!
       </p>
-      <ul className="gallery flex flex-row justify-evenly p-0 m-0 list-none text-center">
+      <ul className="gallery m-0 flex list-none flex-row justify-evenly p-0 text-center">
         <ModalImage
           className="mx-auto max-w-[20%]"
           src={TahoeImg}
@@ -44,7 +47,9 @@ const AboutMePage = () => {
           title="Aaron Gee standing next to a Dilophosaurus statue. He looks happy."
         />
       </ul>
-      <p><br /></p>
+      <p>
+        <br />
+      </p>
     </>
   )
 }

@@ -1,5 +1,5 @@
 // clickOutsideFunct.jsx
-import { useEffect } from "react"
+import { useEffect } from 'react'
 
 const clickOutside = (ref, callback) => {
   useEffect(() => {
@@ -9,9 +9,9 @@ const clickOutside = (ref, callback) => {
       }
     }
 
-    document.addEventListener("mousedown", clickOutsideCaller)
+    document.addEventListener('mousedown', clickOutsideCaller)
     return () => {
-      document.removeEventListener("mousedown", clickOutsideCaller)
+      document.removeEventListener('mousedown', clickOutsideCaller)
     }
   }, [ref, callback])
 }

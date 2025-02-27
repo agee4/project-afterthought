@@ -1,13 +1,14 @@
 // Page.jsx
-import pageTitleFunct from "../../components/Functions/pageTitleFunct"
+import pageTitleFunct from '../../components/Functions/pageTitleFunct'
 
 const Page = () => {
-  
-  pageTitleFunct("MCConnect")
+  pageTitleFunct('MCConnect')
 
   return (
     <>
-      <h1 className="font-bold text-5xl m-5">MicroController Connect Project idk</h1>
+      <h1 className="m-5 text-5xl font-bold">
+        MicroController Connect Project idk
+      </h1>
       <p>workin on it</p>
     </>
   )

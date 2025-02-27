@@ -1,30 +1,27 @@
-import {
-  RouterProvider,
-  createBrowserRouter
-} from "react-router"
-import "./App.css"
-import RootPage from "./pages/RootPage"
-import ErrorPage from "./pages/ErrorPage"
-import HomePage from "./pages/HomePage"
-import ContactPage from "./pages/about/ContactPage"
-import ResumePage from "./pages/about/ResumePage"
-import ChangeLogPage from "./pages/about/ChangeLogPage"
-import FutureFeaturesPage from "./pages/about/FutureFeaturesPage"
-import PurposePage from "./pages/about/PurposePage"
-import AboutMePage from "./pages/about/AboutMePage"
-import ProjectsPage from "./pages/projects/ProjectsPage"
-import RideOrganizerPage from "./pages/projects/RideOrganizerPage"
-import FireDetectorPage from "./pages/projects/FireDetectorPage"
-import PortfolioSitePage from "./pages/projects/PortfolioSitePage"
-import PvZGamePage from "./pages/projects/PvZGamePage"
-import FriendsPage from "./pages/fun/FriendsPage"
-import ThanksPage from "./pages/fun/ThanksPage"
-import Secret1Page from "./pages/fun/secret/Secret1"
-import Secret2Page from "./pages/fun/secret/Secret2"
+import { RouterProvider, createBrowserRouter } from 'react-router'
+import './App.css'
+import RootPage from './pages/RootPage'
+import ErrorPage from './pages/ErrorPage'
+import HomePage from './pages/HomePage'
+import ContactPage from './pages/about/ContactPage'
+import ResumePage from './pages/about/ResumePage'
+import ChangeLogPage from './pages/about/ChangeLogPage'
+import FutureFeaturesPage from './pages/about/FutureFeaturesPage'
+import PurposePage from './pages/about/PurposePage'
+import AboutMePage from './pages/about/AboutMePage'
+import ProjectsPage from './pages/projects/ProjectsPage'
+import RideOrganizerPage from './pages/projects/RideOrganizerPage'
+import FireDetectorPage from './pages/projects/FireDetectorPage'
+import PortfolioSitePage from './pages/projects/PortfolioSitePage'
+import PvZGamePage from './pages/projects/PvZGamePage'
+import FriendsPage from './pages/fun/FriendsPage'
+import ThanksPage from './pages/fun/ThanksPage'
+import Secret1Page from './pages/fun/secret/Secret1'
+import Secret2Page from './pages/fun/secret/Secret2'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <RootPage />,
     errorElement: <ErrorPage />,
     children: [
@@ -33,27 +30,27 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "purpose",
+        path: 'purpose',
         element: <PurposePage />,
       },
       {
-        path: "about-me",
+        path: 'about-me',
         element: <AboutMePage />,
       },
       {
-        path: "resume",
+        path: 'resume',
         element: <ResumePage />,
       },
       {
-        path: "contact",
+        path: 'contact',
         element: <ContactPage />,
       },
       {
-        path: "changelog",
+        path: 'changelog',
         element: <ChangeLogPage />,
       },
       {
-        path: "projects",
+        path: 'projects',
         errorElement: <ErrorPage />,
         children: [
           {
@@ -61,45 +58,45 @@ const router = createBrowserRouter([
             element: <ProjectsPage />,
           },
           {
-            path: "ride-organizer",
+            path: 'ride-organizer',
             element: <RideOrganizerPage />,
           },
           {
-            path: "fire-detector",
+            path: 'fire-detector',
             element: <FireDetectorPage />,
           },
           {
-            path: "portfolio-site",
+            path: 'portfolio-site',
             element: <PortfolioSitePage />,
           },
           {
-            path: "pvz-bb",
+            path: 'pvz-bb',
             element: <PvZGamePage />,
           },
           {
-            path: "storyboard",
+            path: 'storyboard',
             element: <ProjectsPage />,
           },
         ],
       },
       {
-        path: "future",
+        path: 'future',
         element: <FutureFeaturesPage />,
       },
       {
-        path: "friends",
+        path: 'friends',
         element: <FriendsPage />,
       },
       {
-        path: "thanks",
+        path: 'thanks',
         element: <ThanksPage />,
       },
       {
-        path: "secret",
+        path: 'secret',
         element: <Secret1Page />,
       },
       {
-        path: "YzJWamNtVjBNZw",
+        path: 'YzJWamNtVjBNZw',
         element: <Secret2Page />,
       },
     ],
@@ -107,9 +104,8 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  
   return (
-    <div className="App flex flex-col m-0 justify-items-stretch min-w-full min-h-screen">
+    <div className="App m-0 flex min-h-screen min-w-full flex-col justify-items-stretch">
       <RouterProvider router={router} />
     </div>
   )

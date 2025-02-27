@@ -22,7 +22,7 @@ a {
   }
 
   &:active {
-    color: #B3B3B3;
+    color: #b3b3b3;
   }
 
   img {
@@ -55,7 +55,7 @@ button {
     color: #646cff;
     border-color: #646cff;
   }
-  
+
   &:focus,
   &:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
@@ -74,7 +74,8 @@ table {
   border: 2px solid #ddd;
   border-collapse: collapse;
 
-  th, td {
+  th,
+  td {
     border: 1px solid #ddd;
     padding: 8px;
   }
@@ -120,24 +121,24 @@ embed {
     color: inherit;
     text-decoration: none;
     height: 100%;
-    padding: .25rem;
+    padding: 0.25rem;
 
     &:hover {
-      color: #4B86C2;
+      color: #4b86c2;
     }
 
     &:active {
-      color: #B3B3B3;
+      color: #b3b3b3;
     }
   }
-  
+
   ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   #site-title {
@@ -165,7 +166,7 @@ embed {
       }
     }
   }
-  
+
   .dropdown {
     position: relative;
     display: inline-block;
@@ -180,7 +181,7 @@ embed {
     text-align: right;
     overflow: hidden;
     background-color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
   }
@@ -200,7 +201,7 @@ embed {
     overflow: hidden;
     background-color: white;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
   }
@@ -222,10 +223,10 @@ embed {
 
     h1 {
       font-size: 1rem;
-      
+
       a {
-        color: white
-      };
+        color: white;
+      }
     }
 
     a {
@@ -294,7 +295,7 @@ embed {
 }
 
 .emoji-img {
-  height: .75rem;
+  height: 0.75rem;
   display: inline-block;
   vertical-align: baseline;
 }
@@ -315,8 +316,8 @@ embed {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
 
   #modal-image {
     max-height: 80%;
@@ -392,6 +393,6 @@ embed {
   }
 
   embed {
-    width: 90%
+    width: 90%;
   }
 }
