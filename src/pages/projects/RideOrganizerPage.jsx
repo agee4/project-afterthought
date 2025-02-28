@@ -2,30 +2,12 @@
 import { Link } from 'react-router'
 import pageTitle from '../../components/Functions/pageTitleFunct'
 import ModalImage from '../../components/Modal/ModalImage'
+import IconItem from '../../components/IconItem'
 import LoggedInHomeImg from '../../assets/rideorganizerapploggedin.png'
 import LoggedOutHomeImg from '../../assets/rideorganizerapploggedout.png'
 
 const RideOrganizerPage = () => {
-  const HTMLIcon =
-    'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg'
-  const CSSIcon =
-    'https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg'
-  const JSIcon =
-    'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg'
-  const ReactIcon =
-    'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg'
-  const NodeJSIcon = 'https://nodejs.org/static/logos/jsIconGreen.svg'
-  const Auth0Icon =
-    'https://cdn.auth0.com/quantum-assets/dist/latest/logos/auth0/auth0-icon-onlight.svg'
-
-  pageTitle('Ride Organizer')
-  /*<Link to="https://ridesprojectfrontend.onrender.com">
-        <img
-          className="profile-img"
-          src={LoggedOutHomeImg}
-          title="Check out the website!"
-        />
-      </Link>*/
+  pageTitle("Ride Organizer")
 
   return (
     <>
@@ -36,7 +18,7 @@ const RideOrganizerPage = () => {
       <h2 className="m-3 text-3xl font-bold">What is this project?</h2>
       <p>
         The <b>Berean Community Church College Ride Organizer</b> was a
-        programming project for{' '}
+        programming project for{" "}
         <abbr title="University of California, Irvine">UCI</abbr>'s CompSci 137
         class (Internet Applications Engineering). It was completed as a group
         alongside 3 other students during the UCI 2024 Spring Quarter. The goal
@@ -63,67 +45,30 @@ const RideOrganizerPage = () => {
       <h3 className="m-1 text-xl font-bold">Specific Skills</h3>
       <ul>
         <li>Basics of standard web standard languages</li>
-        <ul>
-          <li>
-            HTML{' '}
-            <img
-              className="emoji inline-block h-[0.75rem] align-baseline"
-              src={HTMLIcon}
-            />
-          </li>
-          <li>
-            CSS{' '}
-            <img
-              className="emoji inline-block h-[0.75rem] align-baseline"
-              src={CSSIcon}
-            />
-          </li>
-          <li>
-            JavaScript{' '}
-            <img
-              className="emoji inline-block h-[0.75rem] align-baseline"
-              src={JSIcon}
-            />
-          </li>
-        </ul>
+        <div className="flex flex-row flex-wrap place-content-center">
+          <IconItem name="HTML" />
+          <IconItem name="CSS" />
+          <IconItem name="JavaScript" />
+        </div>
         <li>
           Basics of web development JavaScript-based libraries and environments
         </li>
-        <ul>
-          <li>
-            React{' '}
-            <img
-              className="emoji inline-block h-[0.75rem] align-baseline"
-              src={ReactIcon}
-            />
-          </li>
-          <li>
-            NodeJS{' '}
-            <img
-              className="emoji inline-block h-[0.75rem] align-baseline"
-              src={NodeJSIcon}
-            />
-          </li>
-        </ul>
-        <li>
-          Auth0{' '}
-          <img
-            className="emoji inline-block h-[0.75rem] align-baseline"
-            src={Auth0Icon}
-          />{' '}
-          (create authentication protocols)
-        </li>
+        <div className="flex flex-row flex-wrap place-content-center">
+          <IconItem name="React" />
+          <IconItem name="NodeJS" />
+          <IconItem name="Auth0" />
+        </div>
       </ul>
-      <h2 className="m-3 text-3xl font-bold">Check out the final site!</h2>
+      <h2 className="m-3 text-3xl font-bold hover:text-indigo-500">
+        <Link to="https://ridesprojectfrontend.onrender.com">
+          Check out the final site!
+        </Link>
+      </h2>
       <embed
-        className="m-auto h-[75vh] w-[75%]"
+        className="m-auto h-[75vh] w-[75%] rounded-sm border-5 border-indigo-500 p-2"
         src="https://ridesprojectfrontend.onrender.com"
       />
-      <h3>
-        <Link to="https://ridesprojectfrontend.onrender.com">
-          <button>Project Site</button>
-        </Link>
-      </h3>
+      <br />
     </>
   )
 }

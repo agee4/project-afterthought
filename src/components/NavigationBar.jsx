@@ -18,7 +18,7 @@ const NavigationBar = () => {
   clickOutside(navRef, disableMobNav)
 
   return (
-    <header className="navbar sticky top-0 flex items-stretch justify-between gap-8 bg-white pr-5 text-neutral-700 shadow-md dark:bg-black dark:text-neutral-300">
+    <header className="navbar sticky top-0 z-1 flex items-stretch justify-between gap-8 bg-white pr-5 text-neutral-700 shadow-md dark:bg-black dark:text-neutral-300">
       <Link
         to="../"
         title="Return Home"
@@ -30,6 +30,11 @@ const NavigationBar = () => {
         </h1>
       </Link>
       <menu className="navbar/desktop hidden items-center gap-4 sm:flex">
+        <li className="group/dropdown relative inline-block font-bold hover:text-indigo-500">
+            <Link to="../resume" title="Overview">
+              Overview
+            </Link>
+        </li>
         <li className="group/dropdown relative inline-block">
           About
           <menu className="absolute right-0 hidden bg-white p-3 text-right whitespace-nowrap shadow-md group-hover/dropdown:block dark:bg-black">
@@ -101,9 +106,9 @@ const NavigationBar = () => {
         {!mobileNavOff && (
           <menu className="absolute top-[3rem] right-0 bg-white p-3 text-right whitespace-nowrap shadow-md dark:bg-black">
             <li>
-              <Link to="../" title="Home">
-                <u>Home</u>
-              </Link>
+            <Link to="../resume" title="Overview">
+              <u><b>Overview</b></u>
+            </Link>
             </li>
             <li>
               <Link to="../purpose" title="Purpose">

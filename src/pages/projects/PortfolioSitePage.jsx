@@ -1,22 +1,12 @@
 // PortfolioSitePage.jsx
 import pageTitle from '../../components/Functions/pageTitleFunct'
 import ModalImage from '../../components/Modal/ModalImage'
+import IconItem from '../../components/IconItem'
 import PortfolioWebsiteImg from '../../assets/portfoliowebsiterecursive.png'
-import ViteIcon from '../../../public/vite.svg'
 
 const PortfolioSitePage = () => {
-  const HTMLIcon =
-    'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg'
-  const CSSIcon =
-    'https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg'
-  const JSIcon =
-    'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg'
-  const ReactIcon =
-    'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg'
-  const TailwindIcon =
-    'https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg'
 
-  pageTitle('Digital Portfolio Website')
+  pageTitle("Digital Portfolio Website")
 
   return (
     <>
@@ -35,7 +25,7 @@ const PortfolioSitePage = () => {
         React.
       </p>
       <ModalImage
-        className="profile-img"
+        className="img/profile m-auto max-w-1/2"
         src={PortfolioWebsiteImg}
         alt="A screenshot of the Portfolio Website homepage"
       />
@@ -43,56 +33,22 @@ const PortfolioSitePage = () => {
       <h3 className="m-1 text-xl font-bold">Specific Skills</h3>
       <ul>
         <li>Basics of standard web standard languages</li>
-        <ul>
-          <li>
-            HTML{' '}
-            <img
-              className="emoji inline-block h-[0.75rem] align-baseline"
-              src={HTMLIcon}
-            />
-          </li>
-          <li>
-            CSS{' '}
-            <img
-              className="emoji inline-block h-[0.75rem] align-baseline"
-              src={CSSIcon}
-            />
-          </li>
-          <li>
-            JavaScript{' '}
-            <img
-              className="emoji inline-block h-[0.75rem] align-baseline"
-              src={JSIcon}
-            />
-          </li>
-        </ul>
+        <div className="flex flex-row flex-wrap place-content-center">
+          <IconItem name="HTML" />
+          <IconItem name="CSS" />
+          <IconItem name="JavaScript" />
+        </div>
         <li>
           Basics of web development JavaScript-based libraries and environments
         </li>
-        <ul>
-          <li>
-            React{' '}
-            <img
-              className="emoji inline-block h-[0.75rem] align-baseline"
-              src={ReactIcon}
-            />
-          </li>
-          <li>
-            Vite{' '}
-            <img
-              className="emoji inline-block h-[0.75rem] align-baseline"
-              src={ViteIcon}
-            />
-          </li>
-          <li>
-            Tailwind{' '}
-            <img
-              className="emoji inline-block h-[0.75rem] align-baseline"
-              src={TailwindIcon}
-            />
-          </li>
-        </ul>
+        <div className="flex flex-row flex-wrap place-content-center">
+          <IconItem name="React" />
+          <IconItem name="Vite" />
+          <IconItem name="GitHub" />
+          <IconItem name="Tailwind" />
+        </div>
       </ul>
+      <br />
     </>
   )
 }

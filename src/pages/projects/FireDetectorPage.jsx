@@ -1,14 +1,13 @@
 // FireDetectorPage.jsx
 import pageTitle from '../../components/Functions/pageTitleFunct'
 import ModalImage from '../../components/Modal/ModalImage'
+import IconItem from '../../components/IconItem'
 import DroneFinalImg from '../../assets/firedetectordronefinal.png'
 import SystemDiagramImg from '../../assets/firedetectordronediagram.jpg'
 import PresentationImg from '../../assets/firedetectorpresentation.jpg'
 
 const FireDetectorPage = () => {
-  const PythonIcon =
-    'https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg'
-  pageTitle('Fire Detector')
+  pageTitle("Fire Detector")
 
   return (
     <>
@@ -44,18 +43,6 @@ const FireDetectorPage = () => {
       </ul>
       <h2 className="m-3 text-3xl font-bold">What did I learn?</h2>
       <ul>
-        <li>
-          Python{' '}
-          <img
-            className="emoji inline-block h-[0.75rem] align-baseline"
-            src={PythonIcon}
-          />
-        </li>
-        <ul>
-          <li>OpenCV</li>
-          <li>NumPy</li>
-          <li>DJITello</li>
-        </ul>
         <li>How to work on an engineering project with a limited budget</li>
         <li>How to create a classical object detection algorithm</li>
         <li>
@@ -64,21 +51,14 @@ const FireDetectorPage = () => {
         </li>
       </ul>
       <h2 className="m-3 text-3xl font-bold">Resources Used</h2>
-      <ul>
-        <li>
-          Python{' '}
-          <img
-            className="emoji inline-block h-[0.75rem] align-baseline"
-            src={PythonIcon}
-          />
-        </li>
-        <ul>
-          <li>OpenCV</li>
-          <li>NumPy</li>
-          <li>DJITelloPy</li>
-        </ul>
-        <li>DJI Tello (RC Drone)</li>
-      </ul>
+      <div className="flex flex-row flex-wrap place-content-center">
+        <IconItem name="Python" />
+        <IconItem name="OpenCV" />
+        <IconItem name="NumPy" />
+        <IconItem name="DJITelloPy" />
+        <IconItem name="DJI Tello (Drone)" />
+      </div>
+      <br />
     </>
   )
 }

@@ -46,11 +46,20 @@ const ReferenceFooter = () => {
           </li>
           <li>
             <Link
+              to="../resume"
+              title="Overview"
+              className="hover:text-indigo-500"
+            >
+              Overview
+            </Link>
+          </li>
+          <li>
+            <Link
               to="../purpose"
               title="Purpose"
               className="hover:text-indigo-500"
             >
-              About the Project
+              About the Site
             </Link>
           </li>
           <li>
@@ -65,10 +74,10 @@ const ReferenceFooter = () => {
           <li>
             <Link
               to="../changelog"
-              title="Changelog"
+              title="Change Log"
               className="hover:text-indigo-500"
             >
-              Changelog
+              Change Log
             </Link>
           </li>
         </menu>
