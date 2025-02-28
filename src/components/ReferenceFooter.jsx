@@ -10,6 +10,7 @@ const ReferenceFooter = () => {
   const randomPage = () => {
     const routeList = [
       "/",
+      "/overview",
       "/purpose",
       "/about-me",
       "/contact",
@@ -20,9 +21,8 @@ const ReferenceFooter = () => {
       "/projects/pvz-bb",
       "/changelog",
       "/future",
-      "/thanks",
       "/friends",
-      "/resume",
+      "/thanks",
       "/YzJWamNtVjBNZw",
     ]
     let randomIndex = Math.floor(Math.random() * routeList.length)
@@ -46,7 +46,7 @@ const ReferenceFooter = () => {
           </li>
           <li>
             <Link
-              to="../resume"
+              to="../overview"
               title="Overview"
               className="hover:text-indigo-500"
             >

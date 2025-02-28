@@ -4,7 +4,7 @@ import RootPage from "./pages/RootPage"
 import ErrorPage from "./pages/ErrorPage"
 import HomePage from "./pages/HomePage"
 import ContactPage from "./pages/about/ContactPage"
-import ResumePage from "./pages/about/ResumePage"
+import OverviewPage from "./pages/about/OverviewPage"
 import ChangeLogPage from "./pages/about/ChangeLogPage"
 import FutureFeaturesPage from "./pages/about/FutureFeaturesPage"
 import PurposePage from "./pages/about/PurposePage"
@@ -38,8 +38,8 @@ const router = createBrowserRouter([
         element: <AboutMePage />,
       },
       {
-        path: "resume",
-        element: <ResumePage />,
+        path: "overview",
+        element: <OverviewPage />,
       },
       {
         path: "contact",

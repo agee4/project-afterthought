@@ -30,10 +30,10 @@ const HomePage = () => {
       <h2 className="m-3 text-xl">
         <Link
           className="cursor-pointer rounded-lg border border-transparent bg-gray-900 px-4 py-2 font-medium text-white transition-colors duration-200 hover:border-indigo-500 hover:text-indigo-500 focus:ring-4 focus:ring-indigo-500 focus:outline-none dark:bg-gray-100 dark:text-black"
-          to="/resume"
-          title="Digital Resume"
+          to="/overview"
+          title="Overview"
         >
-          Digital Resume
+          Overview
         </Link>
       </h2>
       <h2 className="m-3 text-3xl font-bold hover:text-indigo-500">

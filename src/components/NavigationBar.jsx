@@ -31,7 +31,7 @@ const NavigationBar = () => {
       </Link>
       <menu className="navbar/desktop hidden items-center gap-4 sm:flex">
         <li className="group/dropdown relative inline-block font-bold hover:text-indigo-500">
-          <Link to="../resume" title="Overview">
+          <Link to="../overview" title="Overview">
             Overview
           </Link>
         </li>
@@ -106,7 +106,7 @@ const NavigationBar = () => {
         {!mobileNavOff && (
           <menu className="absolute top-[3rem] right-0 bg-white p-3 text-right whitespace-nowrap shadow-md dark:bg-black">
             <li>
-              <Link to="../resume" title="Overview">
+              <Link to="../overview" title="Overview">
                 <u>
                   <b>Overview</b>
                 </u>
