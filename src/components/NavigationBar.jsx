@@ -1,9 +1,9 @@
 // NavigationBar.js
-import React, { useState, useRef } from 'react'
-import { Link } from 'react-router'
-import bobLogo from '../assets/logo/logo_shadow.svg'
-import ResumeButton from './ResumeButton'
-import clickOutside from './Functions/clickOutsideFunct'
+import React, { useState, useRef } from "react"
+import { Link } from "react-router"
+import bobLogo from "../assets/logo/logo_shadow.svg"
+import ResumeButton from "./ResumeButton"
+import clickOutside from "./Functions/clickOutsideFunct"
 
 const NavigationBar = () => {
   const [mobileNavOff, setMobileNavOff] = useState(true)
@@ -31,9 +31,9 @@ const NavigationBar = () => {
       </Link>
       <menu className="navbar/desktop hidden items-center gap-4 sm:flex">
         <li className="group/dropdown relative inline-block font-bold hover:text-indigo-500">
-            <Link to="../resume" title="Overview">
-              Overview
-            </Link>
+          <Link to="../resume" title="Overview">
+            Overview
+          </Link>
         </li>
         <li className="group/dropdown relative inline-block">
           About
@@ -101,14 +101,16 @@ const NavigationBar = () => {
         ref={navRef}
       >
         <button className="text-3xl" onClick={toggleMobNav}>
-          {mobileNavOff ? '≡' : '⨯'}
+          {mobileNavOff ? "≡" : "⨯"}
         </button>
         {!mobileNavOff && (
           <menu className="absolute top-[3rem] right-0 bg-white p-3 text-right whitespace-nowrap shadow-md dark:bg-black">
             <li>
-            <Link to="../resume" title="Overview">
-              <u><b>Overview</b></u>
-            </Link>
+              <Link to="../resume" title="Overview">
+                <u>
+                  <b>Overview</b>
+                </u>
+              </Link>
             </li>
             <li>
               <Link to="../purpose" title="Purpose">

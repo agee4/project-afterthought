@@ -1,11 +1,11 @@
-import React, { useRef } from 'react'
-import clickOutside from '../Functions/clickOutsideFunct'
+import React, { useRef } from "react"
+import clickOutside from "../Functions/clickOutsideFunct"
 
 const ModalDisplay = () => {
   const modalRef = useRef(null)
 
   const closeModal = () => {
-    document.getElementById('modal').style.display = 'none'
+    document.getElementById("modal").style.display = "none"
   }
 
   clickOutside(modalRef, closeModal)

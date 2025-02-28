@@ -1,29 +1,29 @@
 // ReferenceFooter.jsx
-import React, { useState } from 'react'
-import { Link } from 'react-router'
-import bobLogo from '../assets/logo/logo.svg'
-import ResumeButton from './ResumeButton'
+import React, { useState } from "react"
+import { Link } from "react-router"
+import bobLogo from "../assets/logo/logo.svg"
+import ResumeButton from "./ResumeButton"
 
 const ReferenceFooter = () => {
-  const [randomPath, setRandomPath] = useState('/')
+  const [randomPath, setRandomPath] = useState("/")
 
   const randomPage = () => {
     const routeList = [
-      '/',
-      '/purpose',
-      '/about-me',
-      '/contact',
-      '/projects',
-      '/projects/ride-organizer',
-      '/projects/fire-detector',
-      '/projects/portfolio-site',
-      '/projects/pvz-bb',
-      '/changelog',
-      '/future',
-      '/thanks',
-      '/friends',
-      '/resume',
-      '/YzJWamNtVjBNZw',
+      "/",
+      "/purpose",
+      "/about-me",
+      "/contact",
+      "/projects",
+      "/projects/ride-organizer",
+      "/projects/fire-detector",
+      "/projects/portfolio-site",
+      "/projects/pvz-bb",
+      "/changelog",
+      "/future",
+      "/thanks",
+      "/friends",
+      "/resume",
+      "/YzJWamNtVjBNZw",
     ]
     let randomIndex = Math.floor(Math.random() * routeList.length)
     setRandomPath(routeList[randomIndex])
@@ -216,7 +216,7 @@ const ReferenceFooter = () => {
       <p className="text-neutral-500">
         <b>This site was designed by Aaron Gee</b>
         <br />
-        Copypaste 2025. idk what rights are reserved{' '}
+        Copypaste 2025. idk what rights are reserved{" "}
         <img
           className="emoji inline-block h-[0.75rem] align-baseline"
           src={bobLogo}

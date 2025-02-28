@@ -1,9 +1,9 @@
 // FriendsPage.jsx
-import { Link } from 'react-router'
-import pageTitleFunct from '../../components/Functions/pageTitleFunct'
+import { Link } from "react-router"
+import pageTitleFunct from "../../components/Functions/pageTitleFunct"
 
 const FriendsPage = () => {
-  pageTitleFunct('Friends')
+  pageTitleFunct("Friends")
 
   return (
     <>

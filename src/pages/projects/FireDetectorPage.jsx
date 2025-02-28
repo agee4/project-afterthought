@@ -1,10 +1,10 @@
 // FireDetectorPage.jsx
-import pageTitle from '../../components/Functions/pageTitleFunct'
-import ModalImage from '../../components/Modal/ModalImage'
-import IconItem from '../../components/IconItem'
-import DroneFinalImg from '../../assets/firedetectordronefinal.png'
-import SystemDiagramImg from '../../assets/firedetectordronediagram.jpg'
-import PresentationImg from '../../assets/firedetectorpresentation.jpg'
+import pageTitle from "../../components/Functions/pageTitleFunct"
+import ModalImage from "../../components/Modal/ModalImage"
+import IconItem from "../../components/IconItem"
+import DroneFinalImg from "../../assets/firedetectordronefinal.png"
+import SystemDiagramImg from "../../assets/firedetectordronediagram.jpg"
+import PresentationImg from "../../assets/firedetectorpresentation.jpg"
 
 const FireDetectorPage = () => {
   pageTitle("Fire Detector")

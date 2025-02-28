@@ -1,12 +1,12 @@
 // ChangeLogPage.jsx
-import React, { useState, useEffect } from 'react'
-import { App } from 'octokit'
-import pageTitle from '../../components/Functions/pageTitleFunct'
+import React, { useState, useEffect } from "react"
+import { App } from "octokit"
+import pageTitle from "../../components/Functions/pageTitleFunct"
 
 const ChangeLogPage = () => {
   const [writtenListOn, setWrittenListOn] = useState(false)
   const [commitKey, setCommitKey] = useState(
-    '-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3lcO7ZY09GseV\nCSk4DuohbbsPofTQ2RopqzDJ4mBBsVq+VZKtAPMmHthgd1x/65Ir5tb5mcKLAZxC\nGEJNEpEb/hOyeR6yppNOzGlr1GZJklbpfg/jEvL4Er7l6nfIEoKc1fkFOE38AJ/h\nRuhELBiB1E7U9BjKUpFXkSjFwQ+kR4Y809cv9yHfGNQlvWts8n1Zg08mDttmoz97\nEeRm0p0CfH/pdRMV1ykDvtEDFDmG/neudEVltMp5WmBgEOWb1i3QJMskSOagbxa0\nf9qE1nh828+JzhZX3ouR6g/1EPqfaM/bgitha8DQZucNBN05xWt2FopVePaXWJK/\nAVanX+vTAgMBAAECggEAbFrXuM56a1tX+w36Jx0ecXaLlvF3RqEtAPUKic20FHHy\nZi6psLTDznccLOumS9YlYwYPUii/mz3rFVOuJkFUJlpzE77LMJSCk1qwyjUF3lyi\nMZP3GoY/o82koJ0f75WFQ75DCSKvXJKdyuAIDNyd5lsB4EzmKNxM7os9rmKBseqI\nYH91z1MXe+EPxhOY/UOAtWp73xJ/sJx9xZo+feADDFAMNqvzjRPDPuaM6j1zPHdE\nGFdJuP0usGAez5ceUNQCgK8e3Tu8h9u+gBOwizgDQzT43dzVcjJ9U4WevtMIHtgo\n+owARPc4aXO4nwDtv1nZubCmNUFfmSjAPDb4DKS1OQKBgQDsafTjsWn6DGc1CE1M\ncDHvFHDaWwm28CmOpQxguVmOWAp/1c9O6D9RqPN3FBoA/spSA6PSUwjiyhfRiOTw\nvSOYk9UALNgR57rY/IaY5XuwLcjPh5FwXAguHX97dM1wNTS6gEaPNsq4fpK3yfEh\n9OfskBv47miihkLLmW/5oLqvVQKBgQDGy1+e8PEPIW1o4KxpqWsv8n697XBn4Bua\ndzwse0iQ5ARHmhUpumaQ+oN6fXBtDg+SMGacOSnufbeWRlNQ2AmY6tf8Y6NouJ9x\nuCT8TAwU8lTRYmUu2vOnZnV1bOuSSpfIHevw36DAhUPQXW1gjr9L0mSXwbkgogWq\noQXm89uehwKBgQDTCUqHrqmRglzm5EBMSaLpbm/HG5kyanROV1sTRKGDBWhp8Oyb\n3YoYVR7wX0tPNCJaz9D/QQwflpNogjEMDWqnGt/6xg0i/p62b8We2sts25H0X2oe\nyKissbxI8l0pGvW0vik+UoTn6GUEFwpfa4VUkNfHgNp6qisaIB/qz+WV+QKBgA02\nj1B9K0iaLC+AX3VWcW1qbMoq8gG1f6AwtKswNo6K2U35C9cOMKsKO5r0o3hcKuTI\nmslfc04KxR0T543EDj8/vMNlzAK14sMoPi0W0ObDhKe2JouKug8yXDRF3RKIKrZ+\nZqRH+ONS+ELtMsvsMQLVJSKBGdD1c/L3aPEE3GAZAoGAZSAKtLegScO/bEXq/0Aw\n0at93e3TtVdmYwg0zanKXxe5vUNn6Bl7ETIgfcnMPwQVt8FIuTj/OoBMdYYaL3sZ\n6i6QtxY+f/ZUMLMWof7N3LvLPw+tuK5xmcigpA21FaGkGYIBpmUxOugl//jUzVnI\nbR9B9DE1BorrjBZHh/2vpOc=\n-----END PRIVATE KEY-----\n'
+    "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3lcO7ZY09GseV\nCSk4DuohbbsPofTQ2RopqzDJ4mBBsVq+VZKtAPMmHthgd1x/65Ir5tb5mcKLAZxC\nGEJNEpEb/hOyeR6yppNOzGlr1GZJklbpfg/jEvL4Er7l6nfIEoKc1fkFOE38AJ/h\nRuhELBiB1E7U9BjKUpFXkSjFwQ+kR4Y809cv9yHfGNQlvWts8n1Zg08mDttmoz97\nEeRm0p0CfH/pdRMV1ykDvtEDFDmG/neudEVltMp5WmBgEOWb1i3QJMskSOagbxa0\nf9qE1nh828+JzhZX3ouR6g/1EPqfaM/bgitha8DQZucNBN05xWt2FopVePaXWJK/\nAVanX+vTAgMBAAECggEAbFrXuM56a1tX+w36Jx0ecXaLlvF3RqEtAPUKic20FHHy\nZi6psLTDznccLOumS9YlYwYPUii/mz3rFVOuJkFUJlpzE77LMJSCk1qwyjUF3lyi\nMZP3GoY/o82koJ0f75WFQ75DCSKvXJKdyuAIDNyd5lsB4EzmKNxM7os9rmKBseqI\nYH91z1MXe+EPxhOY/UOAtWp73xJ/sJx9xZo+feADDFAMNqvzjRPDPuaM6j1zPHdE\nGFdJuP0usGAez5ceUNQCgK8e3Tu8h9u+gBOwizgDQzT43dzVcjJ9U4WevtMIHtgo\n+owARPc4aXO4nwDtv1nZubCmNUFfmSjAPDb4DKS1OQKBgQDsafTjsWn6DGc1CE1M\ncDHvFHDaWwm28CmOpQxguVmOWAp/1c9O6D9RqPN3FBoA/spSA6PSUwjiyhfRiOTw\nvSOYk9UALNgR57rY/IaY5XuwLcjPh5FwXAguHX97dM1wNTS6gEaPNsq4fpK3yfEh\n9OfskBv47miihkLLmW/5oLqvVQKBgQDGy1+e8PEPIW1o4KxpqWsv8n697XBn4Bua\ndzwse0iQ5ARHmhUpumaQ+oN6fXBtDg+SMGacOSnufbeWRlNQ2AmY6tf8Y6NouJ9x\nuCT8TAwU8lTRYmUu2vOnZnV1bOuSSpfIHevw36DAhUPQXW1gjr9L0mSXwbkgogWq\noQXm89uehwKBgQDTCUqHrqmRglzm5EBMSaLpbm/HG5kyanROV1sTRKGDBWhp8Oyb\n3YoYVR7wX0tPNCJaz9D/QQwflpNogjEMDWqnGt/6xg0i/p62b8We2sts25H0X2oe\nyKissbxI8l0pGvW0vik+UoTn6GUEFwpfa4VUkNfHgNp6qisaIB/qz+WV+QKBgA02\nj1B9K0iaLC+AX3VWcW1qbMoq8gG1f6AwtKswNo6K2U35C9cOMKsKO5r0o3hcKuTI\nmslfc04KxR0T543EDj8/vMNlzAK14sMoPi0W0ObDhKe2JouKug8yXDRF3RKIKrZ+\nZqRH+ONS+ELtMsvsMQLVJSKBGdD1c/L3aPEE3GAZAoGAZSAKtLegScO/bEXq/0Aw\n0at93e3TtVdmYwg0zanKXxe5vUNn6Bl7ETIgfcnMPwQVt8FIuTj/OoBMdYYaL3sZ\n6i6QtxY+f/ZUMLMWof7N3LvLPw+tuK5xmcigpA21FaGkGYIBpmUxOugl//jUzVnI\nbR9B9DE1BorrjBZHh/2vpOc=\n-----END PRIVATE KEY-----\n"
   )
   const [appId, setAppId] = useState(1150126)
   const [installationId, setInstallationId] = useState(61513690)
@@ -32,8 +32,8 @@ const ChangeLogPage = () => {
         for await (const response of octokit.paginate.iterator(
           octokit.rest.repos.listCommits,
           {
-            owner: 'agee4',
-            repo: 'project-afterthought',
+            owner: "agee4",
+            repo: "project-afterthought",
           }
         )) {
           for (const message of response.data) {
@@ -47,7 +47,7 @@ const ChangeLogPage = () => {
             let commitmessagebody = commitmessage
               .substring(committitleend)
               .trim()
-              .split('\n')
+              .split("\n")
             promisedCommitList.push(
               <Log
                 title={committitle}
@@ -67,10 +67,10 @@ const ChangeLogPage = () => {
         }
         setCommitList(promisedCommitList)
       } catch (error) {
-        promisedCommitList.push('GitHub commit fetching failed ):')
+        promisedCommitList.push("GitHub commit fetching failed ):")
         promisedCommitList.push(
           <ul>
-            <li>{error.status + ': ' + error.message}</li>
+            <li>{error.status + ": " + error.message}</li>
           </ul>
         )
         setCommitList(promisedCommitList)
@@ -79,7 +79,7 @@ const ChangeLogPage = () => {
     getCommits()
   }, [commitKey, appId, installationId])
 
-  pageTitle('Change Log')
+  pageTitle("Change Log")
 
   const WrittenList = () => (
     <>
@@ -359,7 +359,7 @@ const ChangeLogPage = () => {
         onClick={toggleWrittenList}
         className="cursor-pointer rounded-lg border border-transparent bg-gray-900 px-4 py-2 font-medium text-white transition-colors duration-200 hover:border-indigo-500 hover:text-indigo-500 focus:ring-4 focus:ring-indigo-500 focus:outline-none"
       >
-        {writtenListOn ? 'Written Log' : 'Github Commits'}
+        {writtenListOn ? "Written Log" : "Github Commits"}
       </button>
       <ul className="m-5 rounded border border-gray-400 p-1">
         {writtenListOn ? <WrittenList /> : <GitHubList />}

@@ -1,8 +1,8 @@
 // PvZGamePage.jsx
-import pageTitle from '../../components/Functions/pageTitleFunct'
+import pageTitle from "../../components/Functions/pageTitleFunct"
 
 const PvZGamePage = () => {
-  pageTitle('Plants vs. Zombies Fan Game')
+  pageTitle("Plants vs. Zombies Fan Game")
 
   return (
     <>
@@ -12,7 +12,7 @@ const PvZGamePage = () => {
       </p>
       <h2 className="m-3 text-3xl font-bold">What is this project?</h2>
       <p>
-        <b className="text-lime-400">Project Chloroville</b>, also known as{' '}
+        <b className="text-lime-400">Project Chloroville</b>, also known as{" "}
         <b className="text-lime-400">Plants vs. Zombies: Botanical Battles</b>,
         is a video game project designed to recreate and expand upon the
         gameplay of the 2009 tower defense game Plants vs. Zombies. It

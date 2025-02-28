@@ -1,7 +1,7 @@
 // ResumePage.jsx
-import pageTitleFunct from '../../components/Functions/pageTitleFunct'
-import ResumeButton from '../../components/ResumeButton'
-import IconItem from '../../components/IconItem'
+import pageTitleFunct from "../../components/Functions/pageTitleFunct"
+import ResumeButton from "../../components/ResumeButton"
+import IconItem from "../../components/IconItem"
 
 const ResumePage = () => {
   pageTitleFunct("Overview")

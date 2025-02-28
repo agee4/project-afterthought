@@ -1,13 +1,13 @@
 // LinkImage.jsx
-import { Link } from 'react-router'
+import { Link } from "react-router"
 
 const LinkImage = (props) => {
   const openModal = (src, title) => {
-    var modalimg = document.getElementById('modal-image')
+    var modalimg = document.getElementById("modal-image")
     modalimg.src = src
-    var modalcap = document.getElementById('modal-caption')
+    var modalcap = document.getElementById("modal-caption")
     modalcap.innerHTML = title
-    document.getElementById('modal').style.display = 'block'
+    document.getElementById("modal").style.display = "block"
   }
 
   return (

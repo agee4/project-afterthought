@@ -1,8 +1,8 @@
 // Page.jsx
-import pageTitleFunct from '../components/Functions/pageTitleFunct'
+import pageTitleFunct from "../components/Functions/pageTitleFunct"
 
 const Page = () => {
-  pageTitleFunct('')
+  pageTitleFunct("")
 
   return (
     <>

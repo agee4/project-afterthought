@@ -1,11 +1,10 @@
 // PortfolioSitePage.jsx
-import pageTitle from '../../components/Functions/pageTitleFunct'
-import ModalImage from '../../components/Modal/ModalImage'
-import IconItem from '../../components/IconItem'
-import PortfolioWebsiteImg from '../../assets/portfoliowebsiterecursive.png'
+import pageTitle from "../../components/Functions/pageTitleFunct"
+import ModalImage from "../../components/Modal/ModalImage"
+import IconItem from "../../components/IconItem"
+import PortfolioWebsiteImg from "../../assets/portfoliowebsiterecursive.png"
 
 const PortfolioSitePage = () => {
-
   pageTitle("Digital Portfolio Website")
 
   return (

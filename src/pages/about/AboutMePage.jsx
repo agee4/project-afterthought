@@ -1,13 +1,13 @@
 // AboutMePage.jsx
-import pageTitle from '../../components/Functions/pageTitleFunct'
-import GradImg from '../../assets/aargeephoto/aargeephoto_grad.jpg'
-import TahoeImg from '../../assets/aargeephoto/aargeephoto_tahoe.jpg'
-import HippoImg from '../../assets/aargeephoto/aargeephoto_goldenhippo.jpg'
-import DinoImg from '../../assets/aargeephoto/aargeephoto_retreatdilopho.jpg'
-import ModalImage from '../../components/Modal/ModalImage'
+import pageTitle from "../../components/Functions/pageTitleFunct"
+import GradImg from "../../assets/aargeephoto/aargeephoto_grad.jpg"
+import TahoeImg from "../../assets/aargeephoto/aargeephoto_tahoe.jpg"
+import HippoImg from "../../assets/aargeephoto/aargeephoto_goldenhippo.jpg"
+import DinoImg from "../../assets/aargeephoto/aargeephoto_retreatdilopho.jpg"
+import ModalImage from "../../components/Modal/ModalImage"
 
 const AboutMePage = () => {
-  pageTitle('About Me')
+  pageTitle("About Me")
   return (
     <>
       <h1 className="m-5 text-5xl font-bold">Who are you?</h1>

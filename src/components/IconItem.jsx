@@ -1,8 +1,7 @@
 // IconItem.jsx
 import React_Color from "../assets/react.svg"
 import Vite_Color from "../../public/vite.svg"
-const Python_Color =
-  "https://www.svgrepo.com/show/354238/python.svg"
+const Python_Color = "https://www.svgrepo.com/show/354238/python.svg"
 const Python_Mono =
   "https://upload.wikimedia.org/wikipedia/commons/d/d3/Python_icon_%28black_and_white%29.svg"
 const CPPIcon =
@@ -24,8 +23,7 @@ const Tailwind_Color =
   "https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg"
 const Auth0_Mono =
   "https://cdn.auth0.com/quantum-assets/dist/latest/logos/auth0/auth0-icon-onlight.svg"
-const OpenCV_Color =
-  "https://www.svgrepo.com/show/354139/opencv.svg"
+const OpenCV_Color = "https://www.svgrepo.com/show/354139/opencv.svg"
 const OpenCV_Mono = "https://www.svgrepo.com/show/518318/opencvmanager.svg"
 
 const Color_Img = (props) => (
@@ -49,7 +47,11 @@ const IconItem = (props) => {
   let icon
   switch (props.name.toLowerCase()) {
     case "python":
-      icon = (props.mono) ? <Mono_Img src={Python_Mono} /> : <Color_Img src={Python_Color} />
+      icon = props.mono ? (
+        <Mono_Img src={Python_Mono} />
+      ) : (
+        <Color_Img src={Python_Color} />
+      )
       break
     case "cpp":
     case "c++":
@@ -62,14 +64,26 @@ const IconItem = (props) => {
       icon = <Color_Img src={CIcon} />
       break
     case "html":
-      icon = (props.mono) ? <Mono_Img src={HTML_Mono} /> : <Color_Img src={HTML_Color} />
+      icon = props.mono ? (
+        <Mono_Img src={HTML_Mono} />
+      ) : (
+        <Color_Img src={HTML_Color} />
+      )
       break
     case "css":
-      icon = (props.mono) ? <Mono_Img src={CSS_Mono} /> : <Color_Img src={CSS_Color} />
+      icon = props.mono ? (
+        <Mono_Img src={CSS_Mono} />
+      ) : (
+        <Color_Img src={CSS_Color} />
+      )
       break
     case "js":
     case "javascript":
-      icon = (props.mono) ? <Mono_Img src={JS_Mono} /> : <Color_Img src={JS_Color} />
+      icon = props.mono ? (
+        <Mono_Img src={JS_Mono} />
+      ) : (
+        <Color_Img src={JS_Color} />
+      )
       break
     case "react":
       icon = <Color_Img src={React_Color} />
@@ -79,7 +93,11 @@ const IconItem = (props) => {
       break
     case "nodejs":
     case "node_js":
-      icon = (props.mono) ? <Mono_Img src={NodeJS_Mono} /> : <Color_Img src={NodeJS_Color} />
+      icon = props.mono ? (
+        <Mono_Img src={NodeJS_Mono} />
+      ) : (
+        <Color_Img src={NodeJS_Color} />
+      )
       break
     case "tailwind":
       icon = <Color_Img src={Tailwind_Color} />
@@ -92,7 +110,11 @@ const IconItem = (props) => {
       break
     case "opencv":
     case "open_cv":
-      icon = (props.mono) ? <Mono_Img src={OpenCV_Mono} /> : <Color_Img src={OpenCV_Color} />
+      icon = props.mono ? (
+        <Mono_Img src={OpenCV_Mono} />
+      ) : (
+        <Color_Img src={OpenCV_Color} />
+      )
       break
   }
   if (props.img) {

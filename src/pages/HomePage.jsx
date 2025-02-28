@@ -1,11 +1,11 @@
 // HomePage.jsx
-import { Link } from 'react-router'
-import pageTitle from '../components/Functions/pageTitleFunct'
-import LinkImage from '../components/LinkImage'
-import Logo from '../assets/logo/logo_shadow.png'
-import RideOrganizerImg from '../assets/rideorganizerapploggedin.png'
-import FireDetectorImg from '../assets/firedetectordronefinal.png'
-import PortfolioWebsiteImg from '../assets/portfoliowebsiterecursive.png'
+import { Link } from "react-router"
+import pageTitle from "../components/Functions/pageTitleFunct"
+import LinkImage from "../components/LinkImage"
+import Logo from "../assets/logo/logo_shadow.png"
+import RideOrganizerImg from "../assets/rideorganizerapploggedin.png"
+import FireDetectorImg from "../assets/firedetectordronefinal.png"
+import PortfolioWebsiteImg from "../assets/portfoliowebsiterecursive.png"
 
 const HomePage = () => {
   pageTitle()
@@ -43,7 +43,7 @@ const HomePage = () => {
       </h2>
       <hr />
       <ul className="gallery/home m-0 flex list-none flex-col justify-evenly p-0 text-center whitespace-nowrap sm:flex-row">
-        <li className=" hover:text-indigo-500">
+        <li className="hover:text-indigo-500">
           <Link to="../projects/ride-organizer" title="Ride Organizer App">
             <h3>Ride Organizer App</h3>
           </Link>
@@ -55,7 +55,7 @@ const HomePage = () => {
             title="We ride together, we organize together!"
           />
         </li>
-        <li className=" hover:text-indigo-500">
+        <li className="hover:text-indigo-500">
           <Link to="../projects/fire-detector" title="Fire Detection Model">
             <h3>Fire Detector Model</h3>
           </Link>
@@ -67,7 +67,7 @@ const HomePage = () => {
             title="Finding fires!"
           />
         </li>
-        <li className=" hover:text-indigo-500">
+        <li className="hover:text-indigo-500">
           <Link to="../projects/portfolio-site" title="Portfolio Website">
             <h3>Portfolio Website</h3>
           </Link>

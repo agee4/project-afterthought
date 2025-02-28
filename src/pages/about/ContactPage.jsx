@@ -1,10 +1,10 @@
 // ContactPage.jsx
-import { Link } from 'react-router'
-import pageTitle from '../../components/Functions/pageTitleFunct'
-import ResumeButton from '../../components/ResumeButton'
+import { Link } from "react-router"
+import pageTitle from "../../components/Functions/pageTitleFunct"
+import ResumeButton from "../../components/ResumeButton"
 
 const ContactPage = () => {
-  pageTitle('Contact')
+  pageTitle("Contact")
 
   return (
     <>
@@ -45,7 +45,7 @@ const ContactPage = () => {
       </table>
       <p>You can also download and review my resume below!</p>
       <p>
-        {' '}
+        {" "}
         ---&gt; <ResumeButton /> &lt;---
       </p>
     </>
