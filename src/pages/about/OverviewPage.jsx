@@ -7,7 +7,7 @@ const ResumePage = () => {
   pageTitleFunct("Overview")
 
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">Overview</h1>
       <ResumeButton />
       <h2 className="m-3 text-3xl font-bold">Projects</h2>
@@ -22,26 +22,26 @@ const ResumePage = () => {
       <ul>
         <li>Computer Languages</li>
         <div className="flex flex-row flex-wrap place-content-center">
-          <IconItem name="Python" />
+          <IconItem name="Python" mono />
           <IconItem name="C++" />
           <IconItem name="Java" />
           <IconItem name="C" />
           <IconItem name="Assembly" />
-          <IconItem name="HTML" />
-          <IconItem name="CSS" />
-          <IconItem name="JavaScript" />
+          <IconItem name="HTML" mono />
+          <IconItem name="CSS" mono />
+          <IconItem name="JavaScript" mono />
         </div>
         <li>Tools, Frameworks, & Libraries</li>
         <div className="flex flex-row flex-wrap place-content-center">
           <IconItem name="GitHub" />
-          <IconItem name="React" />
-          <IconItem name="NodeJS" />
+          <IconItem name="React" mono />
+          <IconItem name="NodeJS" mono />
           <IconItem name="Vite" />
           <IconItem name="Tailwind" />
         </div>
       </ul>
       <br />
-    </>
+    </main>
   )
 }
 

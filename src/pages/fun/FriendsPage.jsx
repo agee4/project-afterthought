@@ -6,7 +6,7 @@ const FriendsPage = () => {
   pageTitleFunct("Friends")
 
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">Friends!</h1>
       <ul>
         <li>
@@ -25,7 +25,7 @@ const FriendsPage = () => {
           </Link>
         </li>
       </ul>
-    </>
+    </main>
   )
 }
 

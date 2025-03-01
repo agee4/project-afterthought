@@ -10,7 +10,7 @@ import PortfolioWebsiteImg from "../assets/portfoliowebsiterecursive.png"
 const HomePage = () => {
   pageTitle()
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">
         Aaron Gee's Amazing Digital Portfolio
       </h1>
@@ -81,7 +81,7 @@ const HomePage = () => {
         </li>
       </ul>
       <br />
-    </>
+    </main>
   )
 }
 

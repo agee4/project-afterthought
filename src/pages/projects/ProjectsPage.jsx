@@ -6,7 +6,7 @@ const ProjectsPage = () => {
   pageTitle("Projects Home")
 
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">
         Past, Present, and Pfuture Projects!
       </h1>
@@ -28,7 +28,7 @@ const ProjectsPage = () => {
         </Link>
       </p>
       <p>Project Afterthought</p>
-    </>
+    </main>
   )
 }
 

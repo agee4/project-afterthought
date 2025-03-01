@@ -10,7 +10,7 @@ const RideOrganizerPage = () => {
   pageTitle("Ride Organizer")
 
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">Ride Organizer Application</h1>
       <p>
         <i>A first step into fullstack application development.</i>
@@ -69,7 +69,7 @@ const RideOrganizerPage = () => {
         src="https://ridesprojectfrontend.onrender.com"
       />
       <br />
-    </>
+    </main>
   )
 }
 

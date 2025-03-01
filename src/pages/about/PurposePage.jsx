@@ -5,7 +5,7 @@ const PurposePage = () => {
   pageTitle("Site Purpose")
 
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">Why does this site exist?</h1>
       <p>
         <b>Aaron Gee's Digital Portfolio</b> is intended to be a small
@@ -18,7 +18,7 @@ const PurposePage = () => {
         robust internet application architecture to efficient and functional
         program design.
       </p>
-    </>
+    </main>
   )
 }
 

@@ -5,7 +5,7 @@ const PvZGamePage = () => {
   pageTitle("Plants vs. Zombies Fan Game")
 
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">Project Chloroville</h1>
       <p>
         <i>A spin on the 2009 classic.</i>
@@ -45,7 +45,7 @@ const PvZGamePage = () => {
           already on your lawn!
         </li>
       </ul>
-    </>
+    </main>
   )
 }
 

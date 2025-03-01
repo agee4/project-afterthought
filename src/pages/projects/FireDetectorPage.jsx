@@ -10,7 +10,7 @@ const FireDetectorPage = () => {
   pageTitle("Fire Detector")
 
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">Fire Detector Drone</h1>
       <p>
         <i>The culmination of my undergraduate CSE skills.</i>
@@ -59,7 +59,7 @@ const FireDetectorPage = () => {
         <IconItem name="DJI Tello (Drone)" />
       </div>
       <br />
-    </>
+    </main>
   )
 }
 

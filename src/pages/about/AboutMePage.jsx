@@ -9,7 +9,7 @@ import ModalImage from "../../components/Modal/ModalImage"
 const AboutMePage = () => {
   pageTitle("About Me")
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">Who are you?</h1>
       <p>
         Hi there! My name is <b>Aaron Gee</b>!
@@ -50,7 +50,7 @@ const AboutMePage = () => {
       <p>
         <br />
       </p>
-    </>
+    </main>
   )
 }
 

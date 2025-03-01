@@ -5,7 +5,7 @@ const ThanksPage = () => {
   pageTitleFunct("Special Thanks", false)
 
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">Special Thanks!</h1>
       <p>
         <i>
@@ -21,7 +21,7 @@ const ThanksPage = () => {
       <p>For sending the best cat memes every day at 8:26pm PST</p>
       <h2 className="m-3 text-3xl font-bold">W3Schools</h2>
       <p>For providing a lot of helpful web dev tutorials</p>
-    </>
+    </main>
   )
 }
 

@@ -7,7 +7,7 @@ const ContactPage = () => {
   pageTitle("Contact")
 
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">Talk to me!</h1>
       <p>Interested in hiring me? Contact me through one of the following!</p>
       <table className="mx-auto border-collapse border-2 border-gray-300 text-center">
@@ -48,7 +48,7 @@ const ContactPage = () => {
         {" "}
         ---&gt; <ResumeButton /> &lt;---
       </p>
-    </>
+    </main>
   )
 }
 

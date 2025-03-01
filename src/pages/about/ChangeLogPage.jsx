@@ -353,7 +353,7 @@ const ChangeLogPage = () => {
   )
 
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">Change Log</h1>
       <button
         onClick={toggleWrittenList}
@@ -364,7 +364,7 @@ const ChangeLogPage = () => {
       <ul className="m-5 rounded border border-gray-400 p-1">
         {writtenListOn ? <WrittenList /> : <GitHubList />}
       </ul>
-    </>
+    </main>
   )
 }
 

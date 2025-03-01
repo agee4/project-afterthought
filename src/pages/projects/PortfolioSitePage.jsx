@@ -8,7 +8,7 @@ const PortfolioSitePage = () => {
   pageTitle("Digital Portfolio Website")
 
   return (
-    <>
+    <main className="flex-1 animate-fadein">
       <h1 className="m-5 text-5xl font-bold">Digital Portfolio Website</h1>
       <p>
         <i>Showcasing my computer science skills in more ways than one.</i>
@@ -48,7 +48,7 @@ const PortfolioSitePage = () => {
         </div>
       </ul>
       <br />
-    </>
+    </main>
   )
 }
 
