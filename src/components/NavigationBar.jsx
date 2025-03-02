@@ -1,12 +1,14 @@
 // NavigationBar.js
 import React, { useState, useRef } from "react"
 import { Link } from "react-router"
-import bobLogo from "../assets/logo/logo_shadow.svg"
+import bobLogo from "../assets/logo/logo.svg"
+import bobLogoClick from "../assets/logo/logo_oh.svg"
 import ResumeButton from "./ResumeButton"
 import clickOutside from "./Functions/clickOutsideFunct"
 
 const NavigationBar = () => {
   const [mobileNavOff, setMobileNavOff] = useState(true)
+  const [logo, setLogo] = useState(bobLogo)
   const navRef = useRef(null)
   const toggleMobNav = () => {
     setMobileNavOff(!mobileNavOff)
@@ -14,23 +16,29 @@ const NavigationBar = () => {
   const disableMobNav = () => {
     setMobileNavOff(true)
   }
+  const logoClick = () => {
+    setLogo(bobLogoClick)
+    setTimeout(() => {
+      setLogo(bobLogo)
+    }, 500)
+  }
 
   clickOutside(navRef, disableMobNav)
 
   return (
-    <header className="navbar sticky top-0 z-1 flex items-stretch justify-between gap-8 bg-white pr-5 text-neutral-700 shadow-md dark:bg-black dark:text-neutral-300">
+    <header className="navbar sticky top-0 z-1 flex items-stretch justify-between gap-8 bg-neutral-100 pr-5 text-neutral-700 shadow-md dark:bg-neutral-900 dark:text-neutral-300">
       <Link
         to="../"
         title="Return Home"
-        className="logo m-3 flex h-8 items-center active:invert"
+        className="logo m-3 flex h-8 items-center"
       >
-        <img src={bobLogo} className="logo/image h-8 border-0" />
+        <img src={logo} className="logo/image h-8 border-0" id="logo" onClick={logoClick}/>
         <h1 className="logo/text hidden truncate text-2xl font-semibold sm:block">
           Aaron Gee's Portfolio
         </h1>
       </Link>
       <menu className="navbar/desktop hidden items-center gap-4 sm:flex">
-        <li className="group/dropdown relative inline-block font-bold hover:text-indigo-500">
+        <li className="group/dropdown relative inline-block font-bold text-shadow-portfolio hover:text-shadow-portfolio-hover animate-shadowpulse hover:animate-none shadow-indigo-500 text-indigo-500 hover:text-indigo-500">
           <Link to="../overview" title="Overview">
             Overview
           </Link>
@@ -105,11 +113,9 @@ const NavigationBar = () => {
         </button>
         {!mobileNavOff && (
           <menu className="absolute top-[3rem] right-0 bg-white p-3 text-right whitespace-nowrap shadow-md dark:bg-black">
-            <li>
+            <li className="font-bold text-shadow-portfolio hover:text-shadow-portfolio-hover animate-shadowpulse hover:animate-none shadow-indigo-500 text-indigo-500 hover:text-indigo-500">
               <Link to="../overview" title="Overview">
-                <u>
-                  <b>Overview</b>
-                </u>
+                Overview
               </Link>
             </li>
             <li>
@@ -130,9 +136,9 @@ const NavigationBar = () => {
             <li>
               <br />
             </li>
-            <li>
+            <li className="font-bold underline">
               <Link to="../projects" title="Projects Home">
-                <u>Projects</u>
+                Projects
               </Link>
             </li>
             <li>
@@ -161,9 +167,9 @@ const NavigationBar = () => {
             <li>
               <br />
             </li>
-            <li>
+            <li className="font-bold underline">
               <Link to="../contact" title="Contact">
-                <u>Contact Me</u>
+                Contact Me
               </Link>
             </li>
             <li>

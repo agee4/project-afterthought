@@ -15,7 +15,6 @@ const FutureFeaturesPage = () => {
       </p>
       <ul>
         <li>More fleshed out content in project pages</li>
-        <li>Scrollable & looping image galleries/carousels</li>
         <li>
           More graphic design (better website layout/design, ability to change
           website appearance and theme)

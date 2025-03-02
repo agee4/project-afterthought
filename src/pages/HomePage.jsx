@@ -7,6 +7,19 @@ import RideOrganizerImg from "../assets/rideorganizerapploggedin.png"
 import FireDetectorImg from "../assets/firedetectordronefinal.png"
 import PortfolioWebsiteImg from "../assets/portfoliowebsiterecursive.png"
 
+const HomeCycleGallery = (props) => {
+  return (
+    <div className="group/gallery flex flex-row justify-end overflow-hidden whitespace-nowrap">
+      <div className="gallery/home m-0 flex list-none flex-row justify-evenly p-0 animate-loopscroll group-hover/gallery:animation-pause min-w-full">
+        {props.children}
+      </div>
+      <div className="gallery/home-facade m-0 flex list-none flex-row justify-evenly p-0 animate-loopscroll group-hover/gallery:animation-pause min-w-full">
+        {props.children}
+      </div>
+    </div>
+  )
+}
+
 const HomePage = () => {
   pageTitle()
   return (
@@ -36,50 +49,35 @@ const HomePage = () => {
           Overview
         </Link>
       </h2>
-      <h2 className="m-3 text-3xl font-bold hover:text-indigo-500">
-        <Link to="/projects" title="Projects Home">
+      <h2 className="m-3">
+        <Link className="text-3xl font-bold hover:text-indigo-500" to="/projects" title="Projects Home">
           Projects
         </Link>
       </h2>
       <hr />
-      <ul className="gallery/home m-0 flex list-none flex-col justify-evenly p-0 text-center whitespace-nowrap sm:flex-row">
-        <li className="hover:text-indigo-500">
-          <Link to="../projects/ride-organizer" title="Ride Organizer App">
-            <h3>Ride Organizer App</h3>
-          </Link>
-          <LinkImage
-            className="m-auto max-w-[80%]"
-            to="../projects/ride-organizer"
-            src={RideOrganizerImg}
-            alt="Screenshot of the final Ride Organizer App"
-            title="We ride together, we organize together!"
-          />
-        </li>
-        <li className="hover:text-indigo-500">
-          <Link to="../projects/fire-detector" title="Fire Detection Model">
-            <h3>Fire Detector Model</h3>
-          </Link>
-          <LinkImage
-            className="m-auto max-w-[80%]"
-            to="../projects/fire-detector"
-            src={FireDetectorImg}
-            alt="The final fire detection drone"
-            title="Finding fires!"
-          />
-        </li>
-        <li className="hover:text-indigo-500">
-          <Link to="../projects/portfolio-site" title="Portfolio Website">
-            <h3>Portfolio Website</h3>
-          </Link>
-          <LinkImage
-            className="m-auto max-w-[80%]"
-            to="../projects/portfolio-site"
-            src={PortfolioWebsiteImg}
-            alt="The homepage of my portfolio website"
-            title="Recursive!"
-          />
-        </li>
-      </ul>
+      <HomeCycleGallery>
+        <LinkImage
+          to="../projects/ride-organizer"
+          src={RideOrganizerImg}
+          alt="Screenshot of the final Ride Organizer App"
+          title="Ride Organizer"
+          caption="We ride together, we organize together!"
+        />
+        <LinkImage
+          to="../projects/fire-detector"
+          src={FireDetectorImg}
+          alt="The final fire detection drone"
+          title="Fire Detector"
+          caption="Finding fires!"
+        />
+        <LinkImage
+          to="../projects/portfolio-site"
+          src={PortfolioWebsiteImg}
+          alt="The homepage of my portfolio website"
+          title="Portfolio Website"
+          caption="Recursive!"
+        />
+      </HomeCycleGallery>
       <br />
     </main>
   )

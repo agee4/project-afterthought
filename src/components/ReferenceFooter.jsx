@@ -30,7 +30,7 @@ const ReferenceFooter = () => {
   }
 
   return (
-    <footer className="justify-between bg-white py-2 text-sm text-neutral-700 shadow-md dark:bg-black dark:text-neutral-300">
+    <footer className="justify-between bg-neutral-100 py-2 text-sm text-neutral-700 shadow-md dark:bg-neutral-900 dark:text-neutral-300">
       <nav className="flex flex-col justify-evenly sm:flex-row">
         <menu>
           <li>

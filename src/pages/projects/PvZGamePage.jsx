@@ -6,7 +6,7 @@ const PvZGamePage = () => {
 
   return (
     <main className="flex-1 animate-fadein">
-      <h1 className="m-5 text-5xl font-bold">Project Chloroville</h1>
+      <h1 className="m-5 text-5xl font-bold text-green-500">Project Chloroville</h1>
       <p>
         <i>A spin on the 2009 classic.</i>
       </p>
@@ -31,18 +31,30 @@ const PvZGamePage = () => {
         <li>
           Expensive plants won't just require you to find a way to obtain Sun;
           they also require you to keep a healthy amount of "Sun Storage" plants
-          alive in order to hold that Sun in the first place!
+          alive in order to hold that Sun in the first place! Better start growing
+          some Cachevas.
         </li>
-        <li></li>
-        <li className="m-1 text-xl font-bold">Plant upgrading</li>
         <li>
-          With a little extra Sun, you can directly alter and upgrade plants
-          already on your lawn!
+          <span className="m-auto px-2 py-1 text-xl font-bold text-lime-400 not-dark:bg-green-600">
+            Greenhouse Growing
+          </span>
         </li>
-        <li className="m-1 text-xl font-bold">New synergies</li>
         <li>
-          With a little extra Sun, you can directly alter and upgrade plants
-          already on your lawn!
+          No longer will you have to risk growing your precious plants out on the dangerous battlefield!
+          Plants can now be directly grown in a zombie-free greenhouse, allowing you to further plan out
+          your dendritic defenses in advance!
+        </li>
+        <li className="m-1 text-xl font-bold">New Plants to grow!</li>
+        <li>
+          Alongside fan favorites like Peashooters, Sunflowers, and Chompers, a whole new cast
+          of botanical buddies are waiting to help keep your brains in your head!{" "}
+          <span className="text-orange-500">Bow n Carrow</span> shoot pointy carrots at the highest-health zombie in their lane,
+          taking out slow and bulky targets. <span className="text-yellow-500 bg-green-700">Effreesiant</span> speed
+          up surrounding plants, making them attack and produce faster! And of course,{" "}
+          <span className="font-bold">Bloom Blaster</span> can decimate zombies while more flower plants
+          are planted!
+
+          These plants and more are just a few of the new faces to get to meet in this game!
         </li>
       </ul>
     </main>

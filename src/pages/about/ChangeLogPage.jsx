@@ -85,8 +85,76 @@ const ChangeLogPage = () => {
     <>
       <h3>2025</h3>
       <li>
+        <b>March</b>
+      </li>
+
+      <Log
+        message={
+          <ul>
+            <li>Added more animations</li>
+            <li>Added more info</li>
+          </ul>
+        }
+        date="2025 March 1"
+      />
+
+      <li>
         <b>February</b>
       </li>
+
+      <Log
+        message={
+          <ul>
+            <li>Added small page transition animations</li>
+          </ul>
+        }
+        date="2025 February 28"
+      />
+      
+      <Log
+        message={
+          <ul>
+            <li>Added and utilized Prettier to standardize code</li>
+            <li>Added and implemented IconItems for Changelog</li>
+            <li>Renamed Resume into Overview</li>
+          </ul>
+        }
+        date="2025 February 27"
+      />
+      
+      <Log
+        message={
+          <ul>
+            <li>Further TailwindCSS implementation</li>
+            <li>Small restyles & refactoring</li>
+          </ul>
+        }
+        date="2025 February 25"
+      />
+
+      <Log
+        message={
+          <ul>
+            <li>Added and implemented TailwindCSS</li>
+          </ul>
+        }
+        date="2025 February 24"
+      />
+      
+      <Log
+        message={
+          <ul>
+            <li>New Pages</li>
+            <ul>
+              <li>Resume (Digital version of Resume)</li>
+              <li>Friends</li>
+            </ul>
+            <li>Reformatted embeds</li>
+          </ul>
+        }
+        date="2025 February 23"
+      />
+
       <Log
         message={
           <ul>

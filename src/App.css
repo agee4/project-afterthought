@@ -1,8 +1,32 @@
 /* App.css */
 @import "tailwindcss";
 
+@utility text-shadow-portfolio {
+  text-shadow: 0 0 16px var(--tw-shadow-color), 0 0 16px var(--tw-shadow-color);
+}
+@utility text-shadow-portfolio-hover {
+  text-shadow: 0 0 16px var(--tw-shadow-color), 0 0 16px var(--tw-shadow-color), 0 0 16px var(--tw-shadow-color);
+}
+@utility animation-pause {
+  animation-play-state: paused;
+}
+/*
+@utility text-shadow-* {
+  text-shadow: 0 0 --value(--text-shadow-*);
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}*/
+
 @theme {
   --animate-fadein: fadein 0.3s;
+  --animate-loopscroll: loopscroll 30s linear infinite;
+  --animate-shadowpulse: shadowpulse 2s infinite;
+  /*--text-shadow-sm: 2px var(--tw-shadow-color);
+  --text-shadow-md: 4px var(--tw-shadow-color);
+  --text-shadow-lg: 16px var(--tw-shadow-color);*/
 
   @keyframes fadein {
     0% {
@@ -10,6 +34,18 @@
     }
     100% {
       opacity: 1;
+    }
+  }
+
+  @keyframes shadowpulse {
+    50% {
+      text-shadow: 0 0 16px var(--tw-shadow-color);
+    }
+  }
+
+  @keyframes loopscroll {
+    to {
+      transform: translateX(100%);
     }
   }
 }
