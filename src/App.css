@@ -2,7 +2,10 @@
 @import "tailwindcss";
 
 @utility text-shadow-portfolio {
-  text-shadow: 0 0 16px var(--tw-shadow-color), 0 0 16px var(--tw-shadow-color), 0 0 16px var(--tw-shadow-color);
+  text-shadow:
+    0 0 16px var(--tw-shadow-color),
+    0 0 16px var(--tw-shadow-color),
+    0 0 16px var(--tw-shadow-color);
 }
 @utility animation-pause {
   animation-play-state: paused;
@@ -35,11 +38,14 @@
   }
 
   @keyframes shadowpulse {
-    0%,100% {
+    0%,
+    100% {
       text-shadow: 0 0 16px var(--tw-shadow-color);
     }
     50% {
-      text-shadow: 0 0 16px var(--tw-shadow-color), 0 0 16px var(--tw-shadow-color);
+      text-shadow:
+        0 0 16px var(--tw-shadow-color),
+        0 0 16px var(--tw-shadow-color);
     }
   }
 

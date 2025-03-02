@@ -10,10 +10,10 @@ import PortfolioWebsiteImg from "../assets/portfoliowebsiterecursive.png"
 const HomeCycleGallery = (props) => {
   return (
     <div className="group/gallery flex flex-row justify-end overflow-hidden whitespace-nowrap">
-      <div className="gallery/home m-0 flex list-none flex-row justify-evenly p-0 animate-loopscroll group-hover/gallery:animation-pause min-w-full">
+      <div className="gallery/home m-0 flex min-w-full animate-loopscroll list-none flex-row justify-evenly p-0 group-hover/gallery:animation-pause">
         {props.children}
       </div>
-      <div className="gallery/home-facade m-0 flex list-none flex-row justify-evenly p-0 animate-loopscroll group-hover/gallery:animation-pause min-w-full">
+      <div className="gallery/home-facade m-0 flex min-w-full animate-loopscroll list-none flex-row justify-evenly p-0 group-hover/gallery:animation-pause">
         {props.children}
       </div>
     </div>
@@ -42,7 +42,7 @@ const HomePage = () => {
       </p>
       <h2 className="m-3 text-xl">
         <Link
-          className="cursor-pointer rounded-lg border border-transparent bg-gray-900 px-4 py-2 font-bold text-indigo-500 transition-colors duration-200 hover:text-shadow-portfolio animate-shadowpulse hover:animate-none shadow-indigo-500 focus:ring-4 focus:ring-indigo-500 focus:outline-none dark:bg-gray-100"
+          className="animate-shadowpulse cursor-pointer rounded-lg border border-transparent bg-gray-900 px-4 py-2 font-bold text-indigo-500 shadow-indigo-500 transition-colors duration-200 hover:animate-none hover:text-shadow-portfolio focus:ring-4 focus:ring-indigo-500 focus:outline-none dark:bg-gray-100"
           to="/overview"
           title="Overview"
         >
@@ -50,7 +50,11 @@ const HomePage = () => {
         </Link>
       </h2>
       <h2 className="m-3">
-        <Link className="text-3xl font-bold hover:text-indigo-500" to="/projects" title="Projects Home">
+        <Link
+          className="text-3xl font-bold hover:text-indigo-500"
+          to="/projects"
+          title="Projects Home"
+        >
           Projects
         </Link>
       </h2>

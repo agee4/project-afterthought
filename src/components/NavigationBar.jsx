@@ -32,13 +32,18 @@ const NavigationBar = () => {
         title="Return Home"
         className="logo m-3 flex h-8 items-center"
       >
-        <img src={logo} className="logo/image h-8 border-0" id="logo" onClick={logoClick}/>
+        <img
+          src={logo}
+          className="logo/image h-8 border-0"
+          id="logo"
+          onClick={logoClick}
+        />
         <h1 className="logo/text hidden truncate text-2xl font-semibold sm:block">
           Aaron Gee's Portfolio
         </h1>
       </Link>
       <menu className="navbar/desktop hidden items-center gap-4 sm:flex">
-        <li className="group/dropdown relative inline-block font-bold hover:text-shadow-portfolio animate-shadowpulse hover:animate-none shadow-indigo-500 text-indigo-500 hover:text-indigo-500">
+        <li className="group/dropdown relative inline-block animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
           <Link to="../overview" title="Overview">
             Overview
           </Link>
@@ -113,7 +118,7 @@ const NavigationBar = () => {
         </button>
         {!mobileNavOff && (
           <menu className="absolute top-[3rem] right-0 bg-white p-3 text-right whitespace-nowrap shadow-md dark:bg-black">
-            <li className="font-bold hover:text-shadow-portfolio animate-shadowpulse hover:animate-none shadow-indigo-500 text-indigo-500 hover:text-indigo-500">
+            <li className="animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
               <Link to="../overview" title="Overview">
                 Overview
               </Link>
