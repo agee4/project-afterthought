@@ -38,7 +38,7 @@ const NavigationBar = () => {
         </h1>
       </Link>
       <menu className="navbar/desktop hidden items-center gap-4 sm:flex">
-        <li className="group/dropdown relative inline-block font-bold text-shadow-portfolio hover:text-shadow-portfolio-hover animate-shadowpulse hover:animate-none shadow-indigo-500 text-indigo-500 hover:text-indigo-500">
+        <li className="group/dropdown relative inline-block font-bold hover:text-shadow-portfolio animate-shadowpulse hover:animate-none shadow-indigo-500 text-indigo-500 hover:text-indigo-500">
           <Link to="../overview" title="Overview">
             Overview
           </Link>
@@ -113,7 +113,7 @@ const NavigationBar = () => {
         </button>
         {!mobileNavOff && (
           <menu className="absolute top-[3rem] right-0 bg-white p-3 text-right whitespace-nowrap shadow-md dark:bg-black">
-            <li className="font-bold text-shadow-portfolio hover:text-shadow-portfolio-hover animate-shadowpulse hover:animate-none shadow-indigo-500 text-indigo-500 hover:text-indigo-500">
+            <li className="font-bold hover:text-shadow-portfolio animate-shadowpulse hover:animate-none shadow-indigo-500 text-indigo-500 hover:text-indigo-500">
               <Link to="../overview" title="Overview">
                 Overview
               </Link>

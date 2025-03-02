@@ -8,7 +8,7 @@ const ResumePage = () => {
 
   return (
     <main className="flex-1 animate-fadein">
-      <h1 className="m-5 text-5xl font-bold">Overview</h1>
+      <h1 className="m-5 text-5xl font-bold text-indigo-500">Overview</h1>
       <ResumeButton />
       <h2 className="m-3 text-3xl font-bold">Projects</h2>
       <ul>
