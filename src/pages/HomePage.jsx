@@ -58,7 +58,6 @@ const HomePage = () => {
           Projects
         </Link>
       </h2>
-      <hr />
       <HomeCycleGallery>
         <LinkImage
           to="../projects/ride-organizer"
@@ -68,6 +67,7 @@ const HomePage = () => {
           caption="We ride together, we organize together!"
         />
         <LinkImage
+          className="group/linkimg relative m-auto min-w-[27%]"
           to="../projects/fire-detector"
           src={FireDetectorImg}
           alt="The final fire detection drone"

@@ -3,6 +3,18 @@ import React, { useState } from "react"
 import { Link } from "react-router"
 import bobLogo from "../assets/logo/logo.svg"
 import ResumeButton from "./ResumeButton"
+import Emoji from "./Emoji"
+
+const EmailIcon =
+  "https://www.svgrepo.com/show/370975/email.svg"
+const PhoneIcon =
+  "https://www.svgrepo.com/show/491468/phone.svg"
+const GitHubIcon =
+  "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
+const LinkedInIcon =
+  "https://www.svgrepo.com/show/306342/linkedin.svg"
+const DownloadIcon =
+  "https://www.svgrepo.com/show/532746/file-arrow-down-alt.svg"
 
 const ReferenceFooter = () => {
   const [randomPath, setRandomPath] = useState("/")
@@ -188,7 +200,8 @@ const ReferenceFooter = () => {
               to="mailto:aarongeenius@gmail.com"
               className="hover:text-indigo-500"
             >
-              aarongeenius@gmail.com
+              <Emoji mono src={EmailIcon} />
+              <span className="ml-1">aarongeenius@gmail.com</span>
             </Link>
           </li>
           <li>
@@ -196,7 +209,8 @@ const ReferenceFooter = () => {
               to="https://www.linkedin.com/in/aarongee0925"
               className="hover:text-indigo-500"
             >
-              LinkedIn
+              <Emoji mono src={LinkedInIcon} />
+              <span className="ml-1" />LinkedIn
             </Link>
           </li>
           <li>
@@ -204,10 +218,13 @@ const ReferenceFooter = () => {
               to="https://github.com/agee4"
               className="hover:text-indigo-500"
             >
-              GitHub
+              <Emoji mono src={GitHubIcon} />
+              <span className="ml-1" />GitHub
             </Link>
           </li>
           <li>
+              <Emoji mono src={DownloadIcon} />
+              <span className="ml-1" />
             <ResumeButton className="cursor-pointer hover:text-indigo-500" />
           </li>
         </menu>
@@ -217,8 +234,7 @@ const ReferenceFooter = () => {
         <b>This site was designed by Aaron Gee</b>
         <br />
         Copypaste 2025. idk what rights are reserved{" "}
-        <img
-          className="emoji inline-block h-[0.75rem] align-baseline"
+        <Emoji
           src={bobLogo}
           alt=":D"
         />

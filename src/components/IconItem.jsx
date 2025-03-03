@@ -1,4 +1,5 @@
 // IconItem.jsx
+import Emoji from "./Emoji"
 import React_Color from "../assets/react.svg"
 import Vite_Color from "../../public/vite.svg"
 const Python_Color = "https://www.svgrepo.com/show/354238/python.svg"
@@ -61,20 +62,6 @@ const Auth0_Mono =
 const OpenCV_Color = "https://www.svgrepo.com/show/354139/opencv.svg"
 const OpenCV_Mono = "https://www.svgrepo.com/show/518318/opencvmanager.svg"
 
-const Color_Img = (props) => (
-  <img
-    className="emoji mr-1 inline-block h-[0.75rem] align-baseline"
-    src={props.src}
-  />
-)
-
-const Mono_Img = (props) => (
-  <img
-    className="emoji -z-10 mr-1 inline-block h-[0.75rem] align-baseline dark:invert"
-    src={props.src}
-  />
-)
-
 const IconItem = (props) => {
   {
     props.emoji && <span className="mr-1">{props.emoji}</span>
@@ -83,83 +70,82 @@ const IconItem = (props) => {
   switch (props.name.toLowerCase()) {
     case "python":
       icon = props.mono ? (
-        <Mono_Img src={Python_Mono} />
+        <Emoji mono src={Python_Mono} />
       ) : (
-        <Color_Img src={Python_Color} />
+        <Emoji src={Python_Color} />
       )
       break
     case "cpp":
     case "c++":
-      icon = <Color_Img src={CPPIcon} />
+      icon = <Emoji src={CPPIcon} />
       break
     case "java":
-      icon = <Mono_Img src={Java_Mono} />
+      icon = <Emoji mono src={Java_Mono} />
       break
     case "c":
-      icon = <Color_Img src={CIcon} />
+      icon = <Emoji src={CIcon} />
       break
     case "html":
       icon = props.mono ? (
-        <Mono_Img src={HTML_Mono} />
+        <Emoji mono src={HTML_Mono} />
       ) : (
-        <Color_Img src={HTML_Color} />
+        <Emoji src={HTML_Color} />
       )
       break
     case "css":
       icon = props.mono ? (
-        <Mono_Img src={CSS_Mono} />
+        <Emoji mono src={CSS_Mono} />
       ) : (
-        <Color_Img src={CSS_Color} />
+        <Emoji src={CSS_Color} />
       )
       break
     case "js":
     case "javascript":
       icon = props.mono ? (
-        <Mono_Img src={JS_Mono} />
+        <Emoji mono src={JS_Mono} />
       ) : (
-        <Color_Img src={JS_Color} />
+        <Emoji src={JS_Color} />
       )
       break
     case "react":
       icon = icon = props.mono ? (
-        <Mono_Img src={React_Mono} />
+        <Emoji mono src={React_Mono} />
       ) : (
-        <Color_Img src={React_Color} />
+        <Emoji src={React_Color} />
       )
       break
     case "vite":
-      icon = <Color_Img src={Vite_Color} />
+      icon = <Emoji src={Vite_Color} />
       break
     case "nodejs":
     case "node_js":
       icon = props.mono ? (
-        <Mono_Img src={NodeJS_Mono} />
+        <Emoji mono src={NodeJS_Mono} />
       ) : (
-        <Color_Img src={NodeJS_Color} />
+        <Emoji src={NodeJS_Color} />
       )
       break
     case "tailwind":
-      icon = <Color_Img src={Tailwind_Color} />
+      icon = <Emoji src={Tailwind_Color} />
       break
     case "github":
-      icon = <Mono_Img src={GitHub_Mono} />
+      icon = <Emoji mono src={GitHub_Mono} />
       break
     case "auth0":
-      icon = <Mono_Img src={Auth0_Mono} />
+      icon = <Emoji mono src={Auth0_Mono} />
       break
     case "opencv":
     case "open_cv":
       icon = props.mono ? (
-        <Mono_Img src={OpenCV_Mono} />
+        <Emoji mono src={OpenCV_Mono} />
       ) : (
-        <Color_Img src={OpenCV_Color} />
+        <Emoji src={OpenCV_Color} />
       )
       break
   }
   if (props.img) {
     icon = (
-      <img
-        className="emoji mr-1 inline-block h-[0.75rem] align-baseline"
+      <Emoji
         src={props.img}
       />
     )
@@ -167,7 +153,7 @@ const IconItem = (props) => {
   return (
     <div className="m-1 rounded-lg border border-transparent bg-neutral-300 p-2 font-bold dark:bg-neutral-700">
       {icon}
-      <span className="text-neutral-700 dark:text-neutral-300">
+      <span className={(icon ? "ml-1 " : "") + "text-neutral-700 dark:text-neutral-300"}>
         {props.name}
       </span>
     </div>

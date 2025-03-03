@@ -1,6 +1,8 @@
 // ResumeButton.jsx
 import resumePDF from "../assets/aarongeeresume.pdf"
 import downloadFile from "./Functions/downloadFileFunct"
+const DownloadIcon =
+  "https://www.svgrepo.com/show/532746/file-arrow-down-alt.svg"
 
 const ResumeButton = (props) => {
   const downloadResume = () => {
@@ -17,6 +19,10 @@ const ResumeButton = (props) => {
       onClick={downloadResume}
       title="Download my Resume!"
     >
+      {!props.className && <img
+        className="emoji -z-10 mr-1 inline-block h-[0.75rem] align-baseline not-dark:invert"
+        src={DownloadIcon}
+      />}
       Resume
     </button>
   )

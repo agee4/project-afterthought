@@ -6,7 +6,7 @@ const LinkImage = (props) => (
     className={
       props.className
         ? props.className
-        : "group/linkimg relative m-auto max-w-1/3"
+        : "group/linkimg relative m-auto"
     }
   >
     <Link to={props.to} title={props.title}>

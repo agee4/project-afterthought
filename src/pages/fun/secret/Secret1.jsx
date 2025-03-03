@@ -1,6 +1,7 @@
 // Page.jsx
 import pageTitleFunct from "../../../components/Functions/pageTitleFunct"
 import bobLogo from "../../../assets/logo/logo.svg"
+import Emoji from "../../../components/Emoji"
 
 const Secret1Page = () => {
   pageTitleFunct("A Secret ??")
@@ -11,8 +12,7 @@ const Secret1Page = () => {
       <p>Wow, you managed to find this hidden page!</p>
       <p>
         Have a bob! --&gt;{" "}
-        <img
-          className="emoji inline-block h-[0.75rem] align-baseline"
+        <Emoji
           src={bobLogo}
           alt=":D"
         />
