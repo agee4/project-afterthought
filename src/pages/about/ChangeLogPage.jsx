@@ -1,8 +1,16 @@
 // ChangeLogPage.jsx
 import React, { useState, useEffect } from "react"
 import { App } from "octokit"
-import pageTitle from "../../components/Functions/pageTitleFunct"
+import Page from "../../components/Page"
 import githubkey from "../../../changelogcommitkey.txt"
+
+const Log = (props) => (
+  <div className="m-5 rounded-lg border border-transparent bg-neutral-400 p-2 text-left dark:bg-neutral-600">
+    {props.title && <h3 className="py-3 text-xl font-bold">{props.title}</h3>}
+    {props.message}
+    {props.date && <i>{props.date}</i>}
+  </div>
+)
 
 const ChangeLogPage = () => {
   const [writtenListOn, setWrittenListOn] = useState(false)
@@ -14,14 +22,6 @@ const ChangeLogPage = () => {
   const toggleWrittenList = () => {
     setWrittenListOn(!writtenListOn)
   }
-
-  const Log = (props) => (
-    <div className="m-5 rounded-lg border border-transparent bg-neutral-400 p-2 text-left dark:bg-neutral-600">
-      {props.title && <h3 className="py-3 text-xl font-bold">{props.title}</h3>}
-      {props.message}
-      {props.date && <i>{props.date}</i>}
-    </div>
-  )
 
   useEffect(() => {
     const getCommits = async () => {
@@ -85,8 +85,6 @@ const ChangeLogPage = () => {
       .then(setCommitReadAttempted(true))
     if (commitReadAttempted) getCommits()
   }, [commitKey, appId, installationId])
-
-  pageTitle("Change Log")
 
   const WrittenList = () => (
     <>
@@ -427,20 +425,18 @@ const ChangeLogPage = () => {
     </>
   )
 
-  return (
-    <main className="flex-1 animate-fadein">
-      <h1 className="m-5 text-5xl font-bold">Change Log</h1>
-      <button
-        onClick={toggleWrittenList}
-        className="cursor-pointer rounded-lg border border-transparent bg-gray-900 px-4 py-2 font-medium text-white transition-colors duration-200 hover:border-indigo-500 hover:text-indigo-500 focus:ring-4 focus:ring-indigo-500 focus:outline-none"
-      >
-        {writtenListOn ? "Written Log" : "Github Commits"}
-      </button>
-      <ul className="m-5 rounded border border-gray-400 p-1">
-        {writtenListOn ? <WrittenList /> : <GitHubList />}
-      </ul>
-    </main>
-  )
+  return <Page title="Change Log">
+    <h1 className="m-5 text-5xl font-bold">Change Log</h1>
+    <button
+      onClick={toggleWrittenList}
+      className="cursor-pointer rounded-lg border border-transparent bg-gray-900 px-4 py-2 font-medium text-white transition-colors duration-200 hover:border-indigo-500 hover:text-indigo-500 focus:ring-4 focus:ring-indigo-500 focus:outline-none"
+    >
+      {writtenListOn ? "Written Log" : "Github Commits"}
+    </button>
+    <ul className="m-5 rounded border border-gray-400 p-1">
+      {writtenListOn ? <WrittenList /> : <GitHubList />}
+    </ul>
+  </Page>
 }
 
 export default ChangeLogPage

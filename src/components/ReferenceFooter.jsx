@@ -20,7 +20,7 @@ const ReferenceFooter = () => {
     const routeList = [
       "/",
       "/overview",
-      "/purpose",
+      "/about-site",
       "/about-me",
       "/contact",
       "/projects",
@@ -64,8 +64,8 @@ const ReferenceFooter = () => {
           </li>
           <li>
             <Link
-              to="../purpose"
-              title="Purpose"
+              to="../about-site"
+              title="About the Site"
               className="hover:text-indigo-500"
             >
               About the Site

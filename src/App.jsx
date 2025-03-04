@@ -7,7 +7,7 @@ import ContactPage from "./pages/about/ContactPage"
 import OverviewPage from "./pages/about/OverviewPage"
 import ChangeLogPage from "./pages/about/ChangeLogPage"
 import FutureFeaturesPage from "./pages/about/FutureFeaturesPage"
-import PurposePage from "./pages/about/PurposePage"
+import AboutSitePage from "./pages/about/AboutSitePage"
 import AboutMePage from "./pages/about/AboutMePage"
 import ProjectsPage from "./pages/projects/ProjectsPage"
 import RideOrganizerPage from "./pages/projects/RideOrganizerPage"
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "purpose",
-        element: <PurposePage />,
+        path: "about-site",
+        element: <AboutSitePage />,
       },
       {
         path: "about-me",

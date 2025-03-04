@@ -52,7 +52,7 @@ const NavigationBar = () => {
           About
           <menu className="absolute right-0 hidden bg-white p-3 text-right whitespace-nowrap shadow-md group-hover/dropdown:block dark:bg-black">
             <li>
-              <Link to="../purpose" title="Purpose">
+              <Link to="../about-site" title="About the Site">
                 About the Site
               </Link>
             </li>
