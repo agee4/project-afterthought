@@ -5,14 +5,11 @@ import bobLogo from "../assets/logo/logo.svg"
 import ResumeButton from "./ResumeButton"
 import Emoji from "./Emoji"
 
-const EmailIcon =
-  "https://www.svgrepo.com/show/370975/email.svg"
-const PhoneIcon =
-  "https://www.svgrepo.com/show/491468/phone.svg"
+const EmailIcon = "https://www.svgrepo.com/show/370975/email.svg"
+const PhoneIcon = "https://www.svgrepo.com/show/491468/phone.svg"
 const GitHubIcon =
   "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
-const LinkedInIcon =
-  "https://www.svgrepo.com/show/306342/linkedin.svg"
+const LinkedInIcon = "https://www.svgrepo.com/show/306342/linkedin.svg"
 const DownloadIcon =
   "https://www.svgrepo.com/show/532746/file-arrow-down-alt.svg"
 
@@ -210,7 +207,8 @@ const ReferenceFooter = () => {
               className="hover:text-indigo-500"
             >
               <Emoji mono src={LinkedInIcon} />
-              <span className="ml-1" />LinkedIn
+              <span className="ml-1" />
+              LinkedIn
             </Link>
           </li>
           <li>
@@ -219,12 +217,13 @@ const ReferenceFooter = () => {
               className="hover:text-indigo-500"
             >
               <Emoji mono src={GitHubIcon} />
-              <span className="ml-1" />GitHub
+              <span className="ml-1" />
+              GitHub
             </Link>
           </li>
           <li>
-              <Emoji mono src={DownloadIcon} />
-              <span className="ml-1" />
+            <Emoji mono src={DownloadIcon} />
+            <span className="ml-1" />
             <ResumeButton className="cursor-pointer hover:text-indigo-500" />
           </li>
         </menu>
@@ -234,10 +233,7 @@ const ReferenceFooter = () => {
         <b>This site was designed by Aaron Gee</b>
         <br />
         Copypaste 2025. idk what rights are reserved{" "}
-        <Emoji
-          src={bobLogo}
-          alt=":D"
-        />
+        <Emoji src={bobLogo} alt=":D" />
       </p>
     </footer>
   )

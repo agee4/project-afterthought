@@ -77,9 +77,12 @@ const ChangeLogPage = () => {
         setCommitList(promisedCommitList)
       }
     }
-    
+
     setCommitList(["Attempting to retrieve GitHub commits..."])
-    fetch(githubkey).then(response => response.text()).then(data => setCommitKey(data)).then(setCommitReadAttempted(true))
+    fetch(githubkey)
+      .then((response) => response.text())
+      .then((data) => setCommitKey(data))
+      .then(setCommitReadAttempted(true))
     if (commitReadAttempted) getCommits()
   }, [commitKey, appId, installationId])
 
@@ -114,7 +117,7 @@ const ChangeLogPage = () => {
         }
         date="2025 February 28"
       />
-      
+
       <Log
         message={
           <ul>
@@ -125,7 +128,7 @@ const ChangeLogPage = () => {
         }
         date="2025 February 27"
       />
-      
+
       <Log
         message={
           <ul>
@@ -144,7 +147,7 @@ const ChangeLogPage = () => {
         }
         date="2025 February 24"
       />
-      
+
       <Log
         message={
           <ul>

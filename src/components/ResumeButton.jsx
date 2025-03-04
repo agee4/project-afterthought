@@ -19,10 +19,12 @@ const ResumeButton = (props) => {
       onClick={downloadResume}
       title="Download my Resume!"
     >
-      {!props.className && <img
-        className="emoji -z-10 mr-1 inline-block h-[0.75rem] align-baseline not-dark:invert"
-        src={DownloadIcon}
-      />}
+      {!props.className && (
+        <img
+          className="emoji -z-10 mr-1 inline-block h-[0.75rem] align-baseline not-dark:invert"
+          src={DownloadIcon}
+        />
+      )}
       Resume
     </button>
   )

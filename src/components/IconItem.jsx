@@ -144,16 +144,16 @@ const IconItem = (props) => {
       break
   }
   if (props.img) {
-    icon = (
-      <Emoji
-        src={props.img}
-      />
-    )
+    icon = <Emoji src={props.img} />
   }
   return (
     <div className="m-1 rounded-lg border border-transparent bg-neutral-300 p-2 font-bold dark:bg-neutral-700">
       {icon}
-      <span className={(icon ? "ml-1 " : "") + "text-neutral-700 dark:text-neutral-300"}>
+      <span
+        className={
+          (icon ? "ml-1 " : "") + "text-neutral-700 dark:text-neutral-300"
+        }
+      >
         {props.name}
       </span>
     </div>

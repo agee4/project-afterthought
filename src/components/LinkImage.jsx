@@ -4,9 +4,7 @@ import { Link } from "react-router"
 const LinkImage = (props) => (
   <div
     className={
-      props.className
-        ? props.className
-        : "group/linkimg relative m-auto"
+      props.className ? props.className : "group/linkimg relative m-auto"
     }
   >
     <Link to={props.to} title={props.title}>

@@ -11,11 +11,7 @@ const Secret1Page = () => {
       <h1 className="m-5 text-5xl font-bold">Secret Page!</h1>
       <p>Wow, you managed to find this hidden page!</p>
       <p>
-        Have a bob! --&gt;{" "}
-        <Emoji
-          src={bobLogo}
-          alt=":D"
-        />
+        Have a bob! --&gt; <Emoji src={bobLogo} alt=":D" />
       </p>
     </main>
   )
