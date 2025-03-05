@@ -8,8 +8,8 @@ import PresentationImg from "../../assets/firedetectorpresentation.jpg"
 
 const FireDetectorPage = () => <Page title="Fire Detector">
   <h1 className="m-5 text-5xl font-bold">Fire Detector Drone</h1>
-  <p>
-    <i>The culmination of my undergraduate CSE skills.</i>
+  <p className="italic">
+    The culmination of my undergraduate CSE skills.
     <br />
   </p>
   <h2 className="m-3 text-3xl font-bold">What is this project?</h2>

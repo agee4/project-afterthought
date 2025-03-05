@@ -8,18 +8,18 @@ const ProjectsPage = () => <Page title="Projects Home">
   </h1>
   <h2 className="m-3 text-3xl font-bold">Past Projects</h2>
   <p>
-    <Link to="../projects/ride-organizer">Ride Organizer</Link>
+    <Link className="hover:text-indigo-500" to="../projects/ride-organizer">Ride Organizer</Link>
   </p>
   <p>
-    <Link to="../projects/fire-detector">Fire Detector</Link>
+    <Link className="hover:text-indigo-500" to="../projects/fire-detector">Fire Detector</Link>
   </p>
   <h2 className="m-3 text-3xl font-bold">Present Projects</h2>
   <p>
-    <Link to="../projects/portfolio-site">Portfolio Website</Link>
+    <Link className="hover:text-indigo-500" to="../projects/portfolio-site">Portfolio Website</Link>
   </p>
   <h2 className="m-3 text-3xl font-bold">Future Projects</h2>
   <p>
-    <Link to="../projects/pvz-bb">
+    <Link className="hover:text-indigo-500" to="../projects/pvz-bb">
       Plants vs. Zombies: Botanical Battles
     </Link>
   </p>

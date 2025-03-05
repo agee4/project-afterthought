@@ -8,12 +8,12 @@ import LoggedOutHomeImg from "../../assets/rideorganizerapploggedout.png"
 
 const RideOrganizerPage = () => <Page title="Ride Organizer">
   <h1 className="m-5 text-5xl font-bold">Ride Organizer Application</h1>
-  <p>
-    <i>A first step into fullstack application development.</i>
+  <p className="italic">
+    A first step into fullstack application development.
   </p>
   <h2 className="m-3 text-3xl font-bold">What is this project?</h2>
   <p>
-    The <b>Berean Community Church College Ride Organizer</b> was a
+    The <span className="font-bold">Berean Community Church College Ride Organizer</span> was a
     programming project for{" "}
     <abbr title="University of California, Irvine">UCI</abbr>'s CompSci 137
     class (Internet Applications Engineering). It was completed as a group

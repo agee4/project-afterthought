@@ -4,7 +4,7 @@ import Page from "../../components/Page"
 const AboutSitePage = () => <Page title="About the Site">
   <h1 className="m-5 text-5xl font-bold">Why does this site exist?</h1>
   <p>
-    <b>Aaron Gee's Digital Portfolio</b> is intended to be a small
+    <span className="font-bold">Aaron Gee's Digital Portfolio</span> is intended to be a small
     exhibition of Aaron Gee's past accomplishments and present skills,
     demonstrating his computer science experience to friends and potential
     future employers.

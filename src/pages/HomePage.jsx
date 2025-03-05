@@ -1,21 +1,20 @@
 // HomePage.jsx
 import { Link } from "react-router"
-import pageTitle from "../components/Functions/pageTitleFunct"
+import Page from "../components/Page"
 import LinkImage from "../components/LinkImage"
 import Logo from "../assets/logo/logo_shadow.png"
 import RideOrganizerImg from "../assets/rideorganizerapploggedin.png"
 import FireDetectorImg from "../assets/firedetectordronefinal.png"
 import PortfolioWebsiteImg from "../assets/portfoliowebsiterecursive.png"
-import Page from "../components/Page"
 
-const HomeCycleGallery = (props) => {
+const HomeCycleGallery = ({children}) => {
   return (
     <div className="group/gallery flex flex-row justify-end overflow-hidden whitespace-nowrap">
       <div className="gallery/home m-0 flex min-w-full animate-loopscroll list-none flex-row justify-evenly p-0 group-hover/gallery:animation-pause">
-        {props.children}
+        {children}
       </div>
       <div className="gallery/home-facade m-0 flex min-w-full animate-loopscroll list-none flex-row justify-evenly p-0 group-hover/gallery:animation-pause">
-        {props.children}
+        {children}
       </div>
     </div>
   )

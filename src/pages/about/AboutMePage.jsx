@@ -9,7 +9,7 @@ import DinoImg from "../../assets/aargeephoto/aargeephoto_retreatdilopho.jpg"
 const AboutMePage = () => <Page title="About Me">
   <h1 className="m-5 text-5xl font-bold">Who are you?</h1>
   <p>
-    Hi there! My name is <b>Aaron Gee</b>!
+    Hi there! My name is <span className="font-bold">Aaron Gee</span>!
   </p>
   <ModalImage
     className="img/profile m-auto max-w-1/2"
@@ -44,9 +44,7 @@ const AboutMePage = () => <Page title="About Me">
       title="Aaron Gee standing next to a Dilophosaurus statue. He looks happy."
     />
   </ul>
-  <p>
-    <br />
-  </p>
+  <br />
 </Page>
 
 export default AboutMePage

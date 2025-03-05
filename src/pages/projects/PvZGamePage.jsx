@@ -5,8 +5,8 @@ const PvZGamePage = () => <Page title="Plants vs. Zombies Fan Game">
   <h1 className="m-5 text-5xl font-bold text-green-500">
     Project Chloroville
   </h1>
-  <p>
-    <i>A spin on the 2009 classic.</i>
+  <p className="italic">
+    A spin on the 2009 classic.
   </p>
   <h2 className="m-3 text-3xl font-bold">What is this project?</h2>
   <p>

@@ -14,8 +14,8 @@ const ErrorPage = () => {
       <NavigationBar />
       <Page title={error.status + ": " + (error.statusText || error.message)}>
         <h1 className="m-5 text-5xl font-bold">Uh oh!</h1>
-        <p>
-          <i>{error.status + ": " + (error.statusText || error.message)}</i>
+        <p className="italic">
+          {error.status + ": " + (error.statusText || error.message)}
         </p>
         <sub>how did you even get here lol</sub>
       </Page>

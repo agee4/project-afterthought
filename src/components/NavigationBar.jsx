@@ -38,11 +38,11 @@ const NavigationBar = () => {
           id="logo"
           onClick={logoClick}
         />
-        <h1 className="logo/text hidden truncate text-2xl font-semibold sm:block">
+        <h1 className="logo/text hidden truncate text-2xl font-semibold xl:block">
           Aaron Gee's Portfolio
         </h1>
       </Link>
-      <menu className="navbar/desktop hidden items-center gap-4 sm:flex">
+      <menu className="navbar/desktop hidden items-center gap-4 xl:flex">
         <li className="group/dropdown relative inline-block animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
           <Link to="../overview" title="Overview">
             Overview
@@ -52,34 +52,34 @@ const NavigationBar = () => {
           About
           <menu className="absolute right-0 hidden bg-white p-3 text-right whitespace-nowrap shadow-md group-hover/dropdown:block dark:bg-black">
             <li>
-              <Link to="../about-site" title="About the Site">
+              <Link className="hover:text-indigo-500" to="../about-site" title="About the Site">
                 About the Site
               </Link>
             </li>
             <li>
-              <Link to="../about-me" title="About Me">
+              <Link className="hover:text-indigo-500" to="../about-me" title="About Me">
                 About Me
               </Link>
             </li>
             <li>
-              <Link to="../changelog" title="Change Log">
+              <Link className="hover:text-indigo-500" to="../changelog" title="Change Log">
                 Change Log
               </Link>
             </li>
           </menu>
         </li>
         <li className="group/dropdown relative inline-block">
-          <Link to="../projects" title="Projects Home">
+          <Link className="hover:text-indigo-500" to="../projects" title="Projects Home">
             Projects
           </Link>
           <menu className="absolute right-0 hidden bg-white p-3 text-right whitespace-nowrap shadow-md group-hover/dropdown:block dark:bg-black">
             <li>
-              <Link to="../projects/ride-organizer" title="Ride Organizer App">
+              <Link className="hover:text-indigo-500" to="../projects/ride-organizer" title="Ride Organizer App">
                 Ride Organizer App
               </Link>
             </li>
             <li>
-              <Link to="../projects/fire-detector" title="Fire Detection Model">
+              <Link className="hover:text-indigo-500" to="../projects/fire-detector" title="Fire Detection Model">
                 Fire Detection Model
               </Link>
             </li>
@@ -87,37 +87,37 @@ const NavigationBar = () => {
               <hr />
             </li>
             <li>
-              <Link to="../projects/portfolio-site" title="Portfolio Website">
+              <Link className="hover:text-indigo-500" to="../projects/portfolio-site" title="Portfolio Website">
                 Portfolio Website
               </Link>
             </li>
             <li>
-              <Link to="../projects/pvz-bb" title="Plants vs. Zombies Fangame">
+              <Link className="hover:text-indigo-500" to="../projects/pvz-bb" title="Plants vs. Zombies Fangame">
                 PvZ Fangame
               </Link>
             </li>
           </menu>
         </li>
         <li className="group/dropdown relative inline-block">
-          <Link to="../contact" title="Contact">
+          <Link className="hover:text-indigo-500" to="../contact" title="Contact">
             Contact
           </Link>
           <menu className="absolute right-0 hidden bg-white p-3 shadow-md group-hover/dropdown:block dark:bg-black">
             <li>
-              <ResumeButton />
+              <ResumeButton className="cursor-pointer hover:text-indigo-500" />
             </li>
           </menu>
         </li>
       </menu>
       <div
-        className="navbar/mobile flex items-center gap-4 sm:hidden"
+        className="navbar/mobile flex items-center gap-4 xl:hidden"
         ref={navRef}
       >
         <button className="text-3xl" onClick={toggleMobNav}>
           {mobileNavOff ? "≡" : "⨯"}
         </button>
         {!mobileNavOff && (
-          <menu className="absolute top-[3rem] right-0 bg-white p-3 text-right whitespace-nowrap shadow-md dark:bg-black">
+          <menu className="absolute top-[3rem] right-0 bg-white p-3 text-right whitespace-nowrap shadow-md dark:bg-black overflow-scroll">
             <li className="animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
               <Link to="../overview" title="Overview">
                 Overview
@@ -178,7 +178,7 @@ const NavigationBar = () => {
               </Link>
             </li>
             <li>
-              <ResumeButton />
+              <ResumeButton className="cursor-pointer hover:text-indigo-500" />
             </li>
           </menu>
         )}

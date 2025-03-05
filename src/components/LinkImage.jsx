@@ -22,9 +22,9 @@ const LinkImage = (props) => (
       </span>
       <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full opacity-0 transition-opacity duration-150 group-hover/linkimg:opacity-100">
         <div className="absolute top-[50%] left-[50%] -translate-1/2 text-white">
-          <b>{props.title}</b>
+          <span className="font-bold">{props.title}</span>
           <br />
-          <i>{props.caption ? props.caption : props.alt}</i>
+          <span className="italic">{props.caption ? props.caption : props.alt}</span>
         </div>
       </div>
     </Link>

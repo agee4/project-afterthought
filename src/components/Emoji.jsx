@@ -4,7 +4,7 @@ const Emoji = (props) => (
   <img
     className={
       props.className ||
-      "emoji inline-block h-[0.75rem] align-baseline" +
+      "emoji inline-block h-3 align-baseline" +
         (props.mono ? " dark:invert" : "")
     }
     src={props.src}

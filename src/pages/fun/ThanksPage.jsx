@@ -3,11 +3,9 @@ import Page from "../../components/Page"
 
 const ThanksPage = () => <Page title="Special Thanks">
   <h1 className="m-5 text-5xl font-bold">Special Thanks!</h1>
-  <p>
-    <i>
+  <p className="italic">
       For all the organizations and people that helped me make this site a
       reality!
-    </i>
   </p>
   <h2 className="m-3 text-3xl font-bold">Jesus Christ</h2>
   <p>For dying and rising again for my sins</p>

@@ -6,12 +6,12 @@ import PortfolioWebsiteImg from "../../assets/portfoliowebsiterecursive.png"
 
 const PortfolioSitePage = () => <Page title="Digital Portfolio Website">
   <h1 className="m-5 text-5xl font-bold">Digital Portfolio Website</h1>
-  <p>
-    <i>Showcasing my computer science skills in more ways than one.</i>
+  <p className="italic">
+    Showcasing my computer science skills in more ways than one.
   </p>
   <h2 className="m-3 text-3xl font-bold">What is this project?</h2>
   <p>
-    The <b>Digital Portfolio Website</b> is a personal programming project
+    The <span className="font-bold">Digital Portfolio Website</span> is a personal programming project
     intended to showcase my computer-related projects and skills. Initial
     work began 7 November 2024 and continues to this day. The goal is to
     create a fullstack website that highlights my computer science
