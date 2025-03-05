@@ -52,34 +52,58 @@ const NavigationBar = () => {
           About
           <menu className="absolute right-0 hidden bg-white p-3 text-right whitespace-nowrap shadow-md group-hover/dropdown:block dark:bg-black">
             <li>
-              <Link className="hover:text-indigo-500" to="../about-site" title="About the Site">
+              <Link
+                className="hover:text-indigo-500"
+                to="../about-site"
+                title="About the Site"
+              >
                 About the Site
               </Link>
             </li>
             <li>
-              <Link className="hover:text-indigo-500" to="../about-me" title="About Me">
+              <Link
+                className="hover:text-indigo-500"
+                to="../about-me"
+                title="About Me"
+              >
                 About Me
               </Link>
             </li>
             <li>
-              <Link className="hover:text-indigo-500" to="../changelog" title="Change Log">
+              <Link
+                className="hover:text-indigo-500"
+                to="../changelog"
+                title="Change Log"
+              >
                 Change Log
               </Link>
             </li>
           </menu>
         </li>
         <li className="group/dropdown relative inline-block">
-          <Link className="hover:text-indigo-500" to="../projects" title="Projects Home">
+          <Link
+            className="hover:text-indigo-500"
+            to="../projects"
+            title="Projects Home"
+          >
             Projects
           </Link>
           <menu className="absolute right-0 hidden bg-white p-3 text-right whitespace-nowrap shadow-md group-hover/dropdown:block dark:bg-black">
             <li>
-              <Link className="hover:text-indigo-500" to="../projects/ride-organizer" title="Ride Organizer App">
+              <Link
+                className="hover:text-indigo-500"
+                to="../projects/ride-organizer"
+                title="Ride Organizer App"
+              >
                 Ride Organizer App
               </Link>
             </li>
             <li>
-              <Link className="hover:text-indigo-500" to="../projects/fire-detector" title="Fire Detection Model">
+              <Link
+                className="hover:text-indigo-500"
+                to="../projects/fire-detector"
+                title="Fire Detection Model"
+              >
                 Fire Detection Model
               </Link>
             </li>
@@ -87,19 +111,31 @@ const NavigationBar = () => {
               <hr />
             </li>
             <li>
-              <Link className="hover:text-indigo-500" to="../projects/portfolio-site" title="Portfolio Website">
+              <Link
+                className="hover:text-indigo-500"
+                to="../projects/portfolio-site"
+                title="Portfolio Website"
+              >
                 Portfolio Website
               </Link>
             </li>
             <li>
-              <Link className="hover:text-indigo-500" to="../projects/pvz-bb" title="Plants vs. Zombies Fangame">
+              <Link
+                className="hover:text-indigo-500"
+                to="../projects/pvz-bb"
+                title="Plants vs. Zombies Fangame"
+              >
                 PvZ Fangame
               </Link>
             </li>
           </menu>
         </li>
         <li className="group/dropdown relative inline-block">
-          <Link className="hover:text-indigo-500" to="../contact" title="Contact">
+          <Link
+            className="hover:text-indigo-500"
+            to="../contact"
+            title="Contact"
+          >
             Contact
           </Link>
           <menu className="absolute right-0 hidden bg-white p-3 shadow-md group-hover/dropdown:block dark:bg-black">
@@ -117,7 +153,7 @@ const NavigationBar = () => {
           {mobileNavOff ? "≡" : "⨯"}
         </button>
         {!mobileNavOff && (
-          <menu className="absolute top-[3rem] right-0 bg-white p-3 text-right whitespace-nowrap shadow-md dark:bg-black overflow-scroll">
+          <menu className="absolute top-[3rem] right-0 overflow-scroll bg-white p-3 text-right whitespace-nowrap shadow-md dark:bg-black">
             <li className="animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
               <Link to="../overview" title="Overview">
                 Overview

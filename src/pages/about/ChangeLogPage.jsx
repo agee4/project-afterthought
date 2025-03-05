@@ -425,18 +425,20 @@ const ChangeLogPage = () => {
     </>
   )
 
-  return <Page title="Change Log">
-    <h1 className="m-5 text-5xl font-bold">Change Log</h1>
-    <button
-      onClick={toggleWrittenList}
-      className="cursor-pointer rounded-lg border border-transparent bg-gray-900 px-4 py-2 font-medium text-white transition-colors duration-200 hover:border-indigo-500 hover:text-indigo-500 focus:ring-4 focus:ring-indigo-500 focus:outline-none"
-    >
-      {writtenListOn ? "Written Log" : "Github Commits"}
-    </button>
-    <ul className="m-5 rounded border border-gray-400 p-1">
-      {writtenListOn ? <WrittenList /> : <GitHubList />}
-    </ul>
-  </Page>
+  return (
+    <Page title="Change Log">
+      <h1 className="m-5 text-5xl font-bold">Change Log</h1>
+      <button
+        onClick={toggleWrittenList}
+        className="cursor-pointer rounded-lg border border-transparent bg-gray-900 px-4 py-2 font-medium text-white transition-colors duration-200 hover:border-indigo-500 hover:text-indigo-500 focus:ring-4 focus:ring-indigo-500 focus:outline-none"
+      >
+        {writtenListOn ? "Written Log" : "Github Commits"}
+      </button>
+      <ul className="m-5 rounded border border-gray-400 p-1">
+        {writtenListOn ? <WrittenList /> : <GitHubList />}
+      </ul>
+    </Page>
+  )
 }
 
 export default ChangeLogPage

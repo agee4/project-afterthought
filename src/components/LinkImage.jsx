@@ -24,7 +24,9 @@ const LinkImage = (props) => (
         <div className="absolute top-[50%] left-[50%] -translate-1/2 text-white">
           <span className="font-bold">{props.title}</span>
           <br />
-          <span className="italic">{props.caption ? props.caption : props.alt}</span>
+          <span className="italic">
+            {props.caption ? props.caption : props.alt}
+          </span>
         </div>
       </div>
     </Link>
