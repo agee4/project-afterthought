@@ -43,7 +43,7 @@ const NavigationBar = () => {
         </h1>
       </Link>
       <menu className="navbar/desktop hidden items-center gap-4 xl:flex">
-        <li className="group/dropdown relative inline-block animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
+        <li className="relative inline-block animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
           <Link to="../overview" title="Overview">
             Overview
           </Link>
@@ -160,7 +160,7 @@ const NavigationBar = () => {
               </Link>
             </li>
             <li>
-              <Link to="../purpose" title="Purpose">
+              <Link to="../about-site" title="About the Site">
                 About the Site
               </Link>
             </li>

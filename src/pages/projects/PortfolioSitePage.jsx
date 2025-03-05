@@ -11,7 +11,7 @@ const PortfolioSitePage = () => (
       Showcasing my computer science skills in more ways than one.
     </p>
     <h2 className="m-3 text-3xl font-bold">What is this project?</h2>
-    <p>
+    <p className="px-5">
       The <span className="font-bold">Digital Portfolio Website</span> is a
       personal programming project intended to showcase my computer-related
       projects and skills. Initial work began 7 November 2024 and continues to

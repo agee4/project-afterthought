@@ -8,7 +8,7 @@ const PvZGamePage = () => (
     </h1>
     <p className="italic">A spin on the 2009 classic.</p>
     <h2 className="m-3 text-3xl font-bold">What is this project?</h2>
-    <p>
+    <p className="px-5">
       <b className="text-lime-400">Project Chloroville</b>, also known as{" "}
       <b className="text-lime-400">Plants vs. Zombies: Botanical Battles</b>, is
       a video game project designed to recreate and expand upon the gameplay of
@@ -19,7 +19,7 @@ const PvZGamePage = () => (
       gameplay experience.
     </p>
     <h2 className="m-3 text-3xl font-bold">What makes this different?</h2>
-    <ul>
+    <ul className="px-5">
       <li>
         <span className="m-auto px-2 py-1 text-xl font-bold text-amber-200 not-dark:bg-amber-600">
           Limited Sun Storage
@@ -58,7 +58,7 @@ const PvZGamePage = () => (
         </span>{" "}
         speed up surrounding plants, making them attack and produce faster!
         <br />
-        And of course, <span className="font-bold">Bloom Blaster</span> can
+        And finally, <span className="font-bold">Bloom Blaster</span> can
         decimate zombies while more flower plants are planted!
         <br />
         These plants and more are just a few of the new faces to get to meet in

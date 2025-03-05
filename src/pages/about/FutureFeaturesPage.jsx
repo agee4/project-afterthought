@@ -8,7 +8,7 @@ const FutureFeaturesPage = () => (
       *Note: None of these features are promised nor confirmed. These are just
       current wants for the website.
     </p>
-    <ul>
+    <ul className="px-5">
       <li>More fleshed out content in project pages</li>
       <li>
         More graphic design (better website layout/design, ability to change

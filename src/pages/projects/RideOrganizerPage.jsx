@@ -13,7 +13,7 @@ const RideOrganizerPage = () => (
       A first step into fullstack application development.
     </p>
     <h2 className="m-3 text-3xl font-bold">What is this project?</h2>
-    <p>
+    <p className="px-5">
       The{" "}
       <span className="font-bold">
         Berean Community Church College Ride Organizer

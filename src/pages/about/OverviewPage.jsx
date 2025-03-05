@@ -9,7 +9,7 @@ const ResumePage = () => (
     <ResumeButton />
     <h2 className="m-3 text-3xl font-bold">Projects</h2>
     <h3 className="m-1 text-xl font-bold">Fire Detector Model+Drone</h3>
-    <p>
+    <p className="px-5">
       Prototyped low-cost semi-autonomous aerial drone with fire detection
       capabilities using Python. Developed the drone’s fire detecting program by
       combining image processing techniques, non-neural object detection, and
@@ -19,13 +19,13 @@ const ResumePage = () => (
       prototypes that were both accurate and inexpensive.
     </p>
     <h3 className="m-1 text-xl font-bold">Ride Organizer App</h3>
-    <p>
+    <p className="px-5">
       Created a web-based ride organizing application. Produced a user-friendly
       frontend website using React, and a stable backend using NodeJS and
       MongoDB.
     </p>
     <h3 className="m-1 text-xl font-bold">Portfolio Website</h3>
-    <p>
+    <p className="px-5">
       Created a project portfolio website. Produced a user-friendly frontend
       website using React and Tailwind.
     </p>

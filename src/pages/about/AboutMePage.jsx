@@ -18,7 +18,7 @@ const AboutMePage = () => (
       alt="Imagine a really cool photo of Aaron Gee, the site creator, here!"
       title="Aaron Gee dressed in college graduation attire. He looks happy."
     />
-    <p>
+    <p className="px-5">
       I am a Computer Science & Engineering graduate from University of
       California, Irvine. I enjoy learning, practicing, and teaching others the
       wonders of computers, from coding to building them. I hope to use the

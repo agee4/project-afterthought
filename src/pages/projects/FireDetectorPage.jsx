@@ -14,11 +14,12 @@ const FireDetectorPage = () => (
       <br />
     </p>
     <h2 className="m-3 text-3xl font-bold">What is this project?</h2>
-    <p>
-      The <b>Fire Detecting Drone</b> was a CSE undergraduate Capstone project
-      that begun Spring of 2023 and was completed Winter of 2024. The final
-      product was a semiautonomous aerial drone equipped with various sensors
-      that it could use to identify fires. Undergraduate capstone project
+    <p className="px-5">
+      The <span className="font-bold">Fire Detecting Drone</span> was a CSE
+      undergraduate Capstone project that begun Spring of 2023 and was completed
+      Winter of 2024. The final product was a semiautonomous aerial drone
+      equipped with various sensors that it could use to identify fires.
+      Undergraduate capstone project
       <br />
     </p>
     <ul className="gallery m-0 flex list-none flex-row justify-evenly p-0 text-center">
