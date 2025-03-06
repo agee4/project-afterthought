@@ -149,28 +149,44 @@ const NavigationBar = () => {
         className="navbar/mobile flex items-center gap-4 xl:hidden"
         ref={navRef}
       >
-        <button className="text-3xl" onClick={toggleMobNav}>
+        <button className="text-3xl hover:text-indigo-500" onClick={toggleMobNav}>
           {mobileNavOff ? "≡" : "⨯"}
         </button>
         {!mobileNavOff && (
           <menu className="absolute top-[3rem] right-0 overflow-scroll bg-white p-3 text-right whitespace-nowrap shadow-md dark:bg-black">
             <li className="animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
-              <Link to="../overview" title="Overview">
+              <Link
+                className="hover:text-indigo-500"
+                to="../overview"
+                title="Overview"
+              >
                 Overview
               </Link>
             </li>
             <li>
-              <Link to="../about-site" title="About the Site">
+              <Link
+                className="hover:text-indigo-500"
+                to="../about-site"
+                title="About the Site"
+              >
                 About the Site
               </Link>
             </li>
             <li>
-              <Link to="../about-me" title="About Me">
+              <Link
+                className="hover:text-indigo-500"
+                to="../about-me"
+                title="About Me"
+              >
                 About Me
               </Link>
             </li>
             <li>
-              <Link to="../changelog" title="Change Log">
+              <Link
+                className="hover:text-indigo-500"
+                to="../changelog"
+                title="Change Log"
+              >
                 Change Log
               </Link>
             </li>
@@ -178,17 +194,29 @@ const NavigationBar = () => {
               <br />
             </li>
             <li className="font-bold underline">
-              <Link to="../projects" title="Projects Home">
+              <Link
+                className="hover:text-indigo-500"
+                to="../projects"
+                title="Projects Home"
+              >
                 Projects
               </Link>
             </li>
             <li>
-              <Link to="../projects/ride-organizer" title="Ride Organizer App">
+              <Link
+                className="hover:text-indigo-500"
+                to="../projects/ride-organizer"
+                title="Ride Organizer App"
+              >
                 Ride Organizer App
               </Link>
             </li>
             <li>
-              <Link to="../projects/fire-detector" title="Fire Detection Model">
+              <Link
+                className="hover:text-indigo-500"
+                to="../projects/fire-detector"
+                title="Fire Detection Model"
+              >
                 Fire Detection Model
               </Link>
             </li>
@@ -196,12 +224,20 @@ const NavigationBar = () => {
               <hr />
             </li>
             <li>
-              <Link to="../projects/portfolio-site" title="Portfolio Website">
+              <Link
+                className="hover:text-indigo-500"
+                to="../projects/portfolio-site"
+                title="Portfolio Website"
+              >
                 Portfolio Website
               </Link>
             </li>
             <li>
-              <Link to="../projects/pvz-bb" title="Plants vs. Zombies Fangame">
+              <Link
+                className="hover:text-indigo-500"
+                to="../projects/pvz-bb"
+                title="Plants vs. Zombies Fangame"
+              >
                 PvZ Fangame
               </Link>
             </li>
@@ -209,7 +245,11 @@ const NavigationBar = () => {
               <br />
             </li>
             <li className="font-bold underline">
-              <Link to="../contact" title="Contact">
+              <Link
+                className="hover:text-indigo-500"
+                to="../contact"
+                title="Contact"
+              >
                 Contact Me
               </Link>
             </li>

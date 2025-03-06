@@ -40,8 +40,9 @@ const PortfolioSitePage = () => (
       <div className="flex flex-row flex-wrap place-content-center">
         <IconItem name="React" />
         <IconItem name="Vite" />
-        <IconItem name="GitHub" />
+        <IconItem name="ReactRouter" />
         <IconItem name="Tailwind" />
+        <IconItem name="GitHub" />
       </div>
     </ul>
     <br />

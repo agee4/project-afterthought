@@ -7,7 +7,7 @@ const Python_Mono =
   "https://upload.wikimedia.org/wikipedia/commons/d/d3/Python_icon_%28black_and_white%29.svg"
 /*
 const Python_Color =
-  <svg className="h-[0.75rem]" viewBox="0 -0.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+  <svg className="h-3" viewBox="0 -0.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
     <defs>
       <linearGradient x1="12.9593594%" y1="12.0393928%" x2="79.6388325%" y2="78.2008538%" id="linearGradient-1">
         <stop stop-color="#387EB8" offset="0%">
@@ -61,6 +61,7 @@ const Auth0_Mono =
   "https://cdn.auth0.com/quantum-assets/dist/latest/logos/auth0/auth0-icon-onlight.svg"
 const OpenCV_Color = "https://www.svgrepo.com/show/354139/opencv.svg"
 const OpenCV_Mono = "https://www.svgrepo.com/show/518318/opencvmanager.svg"
+const ReactRouter_Color = "https://www.svgrepo.com/show/354262/react-router.svg"
 
 const IconItem = (props) => {
   {
@@ -108,7 +109,7 @@ const IconItem = (props) => {
       )
       break
     case "react":
-      icon = icon = props.mono ? (
+      icon = props.mono ? (
         <Emoji mono src={React_Mono} />
       ) : (
         <Emoji src={React_Color} />
@@ -142,6 +143,10 @@ const IconItem = (props) => {
         <Emoji src={OpenCV_Color} />
       )
       break
+      case "reactrouter":
+      case "react_router":
+        icon = <Emoji src={ReactRouter_Color} />
+        break
   }
   if (props.img) {
     icon = <Emoji src={props.img} />

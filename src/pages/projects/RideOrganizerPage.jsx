@@ -56,6 +56,7 @@ const RideOrganizerPage = () => (
       <div className="flex flex-row flex-wrap place-content-center">
         <IconItem name="React" />
         <IconItem name="NodeJS" />
+        <IconItem name="ReactRouter" />
         <IconItem name="Auth0" />
       </div>
     </ul>

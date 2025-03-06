@@ -74,6 +74,7 @@ const ResumePage = () => (
       <IconItem name="NodeJS" mono />
       <IconItem name="Vite" />
       <IconItem name="Tailwind" />
+      <IconItem name="ReactRouter" />
       <IconItem name="OpenCV" />
       <IconItem name="Notepad++" />
     </div>
