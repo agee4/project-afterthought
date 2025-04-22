@@ -122,6 +122,15 @@ const NavigationBar = () => {
             <li>
               <Link
                 className="hover:text-indigo-500"
+                to="../projects/ride-organizer-v2a"
+                title="Ride Organizer v.2A"
+              >
+                Ride Organizer v.2A
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="hover:text-indigo-500"
                 to="../projects/pvz-bb"
                 title="Plants vs. Zombies Fangame"
               >
@@ -149,7 +158,10 @@ const NavigationBar = () => {
         className="navbar/mobile flex items-center gap-4 xl:hidden"
         ref={navRef}
       >
-        <button className="text-3xl hover:text-indigo-500" onClick={toggleMobNav}>
+        <button
+          className="text-3xl hover:text-indigo-500"
+          onClick={toggleMobNav}
+        >
           {mobileNavOff ? "≡" : "⨯"}
         </button>
         {!mobileNavOff && (
@@ -230,6 +242,15 @@ const NavigationBar = () => {
                 title="Portfolio Website"
               >
                 Portfolio Website
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="hover:text-indigo-500"
+                to="../projects/ride-organizer-v2a"
+                title="Ride Organizer v.2A"
+              >
+                Ride Organizer v.2A
               </Link>
             </li>
             <li>

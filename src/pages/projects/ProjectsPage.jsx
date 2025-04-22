@@ -24,6 +24,15 @@ const ProjectsPage = () => (
         Portfolio Website
       </Link>
     </p>
+    <p>
+      <Link
+        className="hover:text-indigo-500"
+        to="../projects/ride-organizer-v2a"
+      >
+        Ride Organizer v.2A
+      </Link>
+    </p>
+    <p>GroupU Org</p>
     <h2 className="m-3 text-3xl font-bold">Future Projects</h2>
     <p>
       <Link className="hover:text-indigo-500" to="../projects/pvz-bb">
