@@ -1,10 +1,7 @@
 // RideOrganizerPage.jsx
 import { Link } from "react-router"
 import Page from "../../components/Page"
-import ModalImage from "../../components/Modal/ModalImage"
 import IconItem from "../../components/IconItem"
-import LoggedInHomeImg from "../../assets/rideorganizerapploggedin.png"
-import LoggedOutHomeImg from "../../assets/rideorganizerapploggedout.png"
 
 const RideOrganizerV2APage = () => (
   <Page title="Ride Organizer">

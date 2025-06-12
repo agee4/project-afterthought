@@ -1,5 +1,5 @@
 // ReferenceFooter.jsx
-import React, { useState } from "react"
+import { useState } from "react"
 import { Link } from "react-router"
 import bobLogo from "../assets/logo/logo.svg"
 import ResumeButton from "./ResumeButton"

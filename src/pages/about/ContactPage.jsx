@@ -27,9 +27,9 @@ const ContactPage = () => (
           <td className="px-4 py-2">
             <Link
               className="hover:text-indigo-500"
-              to="mailto:aarongeenius@gmail.com"
+              to="mailto:aarongee0925@gmail.com"
             >
-              aarongeenius@gmail.com
+              aarongee0925@gmail.com
             </Link>
           </td>
         </tr>

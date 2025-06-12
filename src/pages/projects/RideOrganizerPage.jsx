@@ -5,9 +5,13 @@ import ModalImage from "../../components/Modal/ModalImage"
 import IconItem from "../../components/IconItem"
 import LoggedInHomeImg from "../../assets/rideorganizerapploggedin.png"
 import LoggedOutHomeImg from "../../assets/rideorganizerapploggedout.png"
+import useModal from "../../components/Modal/ModalDisplay"
 
-const RideOrganizerPage = () => (
+const RideOrganizerPage = () => {
+  const { Modal, setModal } = useModal(undefined, true)
+  return(
   <Page title="Ride Organizer">
+    {Modal}
     <h1 className="m-5 text-5xl font-bold">Ride Organizer Application</h1>
     <p className="italic">
       A first step into fullstack application development.
@@ -31,6 +35,7 @@ const RideOrganizerPage = () => (
       src={LoggedInHomeImg}
       alt="A sample screenshot of the Ride Organizer Website, logged in"
       title="A sample screenshot of the Ride Organizer Website, logged in"
+      setModal={setModal}
     />
     <p>
       The application supported authentication, ride list creation, and ride
@@ -71,6 +76,6 @@ const RideOrganizerPage = () => (
     />
     <br />
   </Page>
-)
+)}
 
 export default RideOrganizerPage

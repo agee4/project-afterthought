@@ -1,5 +1,5 @@
 // ChangeLogPage.jsx
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { App } from "octokit"
 import Page from "../../components/Page"
 import githubkey from "../../../changelogcommitkey.txt"
@@ -15,8 +15,8 @@ const Log = (props) => (
 const ChangeLogPage = () => {
   const [writtenListOn, setWrittenListOn] = useState(false)
   const [commitKey, setCommitKey] = useState("")
-  const [appId, setAppId] = useState(1150126)
-  const [installationId, setInstallationId] = useState(61513690)
+  const appId = 1150126
+  const installationId = 61513690
   const [commitReadAttempted, setCommitReadAttempted] = useState(false)
   const [commitList, setCommitList] = useState([])
   const toggleWrittenList = () => {
@@ -84,14 +84,90 @@ const ChangeLogPage = () => {
       .then((data) => setCommitKey(data))
       .then(setCommitReadAttempted(true))
     if (commitReadAttempted) getCommits()
-  }, [commitKey, appId, installationId])
+  }, [commitKey])
 
   const WrittenList = () => (
     <>
       <h3>2025</h3>
       <li>
+        <b>June</b>
+      </li>
+
+      <Log
+        message={
+          <ul>
+            <li>Upgraded Modals</li>
+            <li>Updated email</li>
+            <li>Updated resume</li>
+          </ul>
+        }
+        date="2025 June 11"
+      />
+
+      <li>
+        <b>April</b>
+      </li>
+
+      <Log
+        message={
+          <ul>
+            <li>Added Ride Organizer v2.A page</li>
+          </ul>
+        }
+        date="2025 April 21"
+      />
+
+      <li>
         <b>March</b>
       </li>
+
+      <Log
+        message={
+          <ul>
+            <li>Style updates</li>
+            <li>Updated resume</li>
+          </ul>
+        }
+        date="2025 March 3"
+      />
+
+      <Log
+        message={
+          <ul>
+            <li>Style updates</li>
+          </ul>
+        }
+        date="2025 March 4"
+      />
+
+      <Log
+        message={
+          <ul>
+            <li>Style updates</li>
+            <li>Properly encrypted github API key</li>
+          </ul>
+        }
+        date="2025 March 3"
+      />
+
+      <Log
+        message={
+          <ul>
+            <li>Style updates</li>
+            <li>Properly encrypted github API key</li>
+          </ul>
+        }
+        date="2025 March 3"
+      />
+
+      <Log
+        message={
+          <ul>
+            <li>Style updates</li>
+          </ul>
+        }
+        date="2025 March 2"
+      />
 
       <Log
         message={
