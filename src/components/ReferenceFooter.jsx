@@ -231,7 +231,7 @@ const ReferenceFooter = () => {
           <span className="flex flex-col justify-evenly sm:flex-row">
             <li>
               <Link
-                to="mailto:aarongeenius@gmail.com"
+                to="mailto:aarongee0925@gmail.com"
                 className="hover:text-indigo-500"
               >
                 {EmailIcon}
