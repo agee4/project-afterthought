@@ -40,6 +40,19 @@ const FriendsPage = () => (
           src="https://jimfolio.xyz"
         />
       </li>
+      <li>
+        <Link
+          className="hover:text-indigo-500"
+          to="https://lukas-l-hu.github.io"
+          title="Lukas Hu"
+        >
+          Lukas Hu's Portfolio
+        </Link>
+        <embed
+          className="m-auto h-[75vh] w-[75%] rounded-sm border-5 border-indigo-500 p-2"
+          src="https://lukas-l-hu.github.io"
+        />
+      </li>
     </ul>
   </Page>
 )
