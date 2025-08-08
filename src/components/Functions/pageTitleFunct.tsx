@@ -2,7 +2,7 @@
 import { useEffect } from "react"
 import { useLocation } from "react-router"
 
-const pageTitle = (title, addSiteName = true) => {
+const pageTitle = (title? : string, addSiteName : boolean = true) => {
   const location = useLocation()
 
   useEffect(() => {

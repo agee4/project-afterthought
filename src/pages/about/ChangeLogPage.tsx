@@ -1,24 +1,32 @@
 // ChangeLogPage.jsx
-import { useState, useEffect } from "react"
-import { App } from "octokit"
+import { useState, useEffect, type ReactNode } from "react"
+import { App, RequestError } from "octokit"
 import Page from "../../components/Page"
 import githubkey from "../../../changelogcommitkey.txt"
 
-const Log = (props) => (
-  <div className="m-5 rounded-lg border border-transparent bg-neutral-400 p-2 text-left dark:bg-neutral-600">
-    {props.title && <h3 className="py-3 text-xl font-bold">{props.title}</h3>}
-    {props.message}
-    {props.date && <i>{props.date}</i>}
+const Log = ({
+  title,
+  message,
+  date,
+}: {
+  title?: string
+  message: ReactNode
+  date?: string
+}) => (
+  <div className="m-5 rounded-lg bg-neutral-400 p-2 dark:bg-neutral-600 border border-transparent text-left">
+    {title && <h3 className="py-3 text-xl font-bold">{title}</h3>}
+    {message}
+    {date && <i>{date}</i>}
   </div>
 )
 
 const ChangeLogPage = () => {
-  const [writtenListOn, setWrittenListOn] = useState(false)
-  const [commitKey, setCommitKey] = useState("")
+  const [writtenListOn, setWrittenListOn] = useState<boolean>(false)
+  const [commitKey, setCommitKey] = useState<string>("")
   const appId = 1150126
   const installationId = 61513690
-  const [commitReadAttempted, setCommitReadAttempted] = useState(false)
-  const [commitList, setCommitList] = useState([])
+  const [commitReadAttempted, setCommitReadAttempted] = useState<boolean>(false)
+  const [commitList, setCommitList] = useState<ReactNode[]>([])
   const toggleWrittenList = () => {
     setWrittenListOn(!writtenListOn)
   }
@@ -37,7 +45,10 @@ const ChangeLogPage = () => {
           }
         )) {
           for (const message of response.data) {
-            let commitdate = new Date(message.commit.committer.date)
+            let commitdatestring = message.commit.committer!.date
+            let commitdate = commitdatestring
+              ? new Date(commitdatestring)
+              : Date()
             let commitmessage = message.commit.message
             let committitleend = commitmessage.search(/\n/)
             let committitle =
@@ -67,14 +78,16 @@ const ChangeLogPage = () => {
         }
         setCommitList(promisedCommitList)
       } catch (error) {
-        promisedCommitList.push("GitHub commit fetching failed ):")
-        promisedCommitList.push(
-          <ul>
-            <li>{error.status + ": " + error.message}</li>
-            <li>{commitKey}</li>
-          </ul>
-        )
-        setCommitList(promisedCommitList)
+        if (error instanceof RequestError) {
+          promisedCommitList.push("GitHub commit fetching failed ):")
+          promisedCommitList.push(
+            <ul>
+              <li>{error.status + ": " + error.message}</li>
+              <li>{commitKey}</li>
+            </ul>
+          )
+          setCommitList(promisedCommitList)
+        }
       }
     }
 
@@ -82,7 +95,7 @@ const ChangeLogPage = () => {
     fetch(githubkey)
       .then((response) => response.text())
       .then((data) => setCommitKey(data))
-      .then(setCommitReadAttempted(true))
+      .then(() => setCommitReadAttempted(true))
     if (commitReadAttempted) getCommits()
   }, [commitKey])
 
@@ -506,11 +519,11 @@ const ChangeLogPage = () => {
       <h1 className="m-5 text-5xl font-bold">Change Log</h1>
       <button
         onClick={toggleWrittenList}
-        className="cursor-pointer rounded-lg border border-transparent bg-gray-900 px-4 py-2 font-medium text-white transition-colors duration-200 hover:border-indigo-500 hover:text-indigo-500 focus:ring-4 focus:ring-indigo-500 focus:outline-none"
+        className="rounded-lg bg-gray-900 px-4 py-2 font-medium text-white hover:border-indigo-500 hover:text-indigo-500 focus:ring-indigo-500 cursor-pointer border border-transparent transition-colors duration-200 focus:ring-4 focus:outline-none"
       >
         {writtenListOn ? "Written Log" : "Github Commits"}
       </button>
-      <ul className="m-5 rounded border border-gray-400 p-1">
+      <ul className="m-5 rounded border-gray-400 p-1 border">
         {writtenListOn ? <WrittenList /> : <GitHubList />}
       </ul>
     </Page>

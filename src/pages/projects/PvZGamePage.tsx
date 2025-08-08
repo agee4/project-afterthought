@@ -21,7 +21,7 @@ const PvZGamePage = () => (
     <h2 className="m-3 text-3xl font-bold">What makes this different?</h2>
     <ul className="px-5">
       <li>
-        <span className="m-auto px-2 py-1 text-xl font-bold text-amber-200 not-dark:bg-amber-600">
+        <span className="px-2 py-1 text-xl font-bold text-amber-200 not-dark:bg-amber-600 m-auto">
           Limited Sun Storage
         </span>
       </li>
@@ -33,7 +33,7 @@ const PvZGamePage = () => (
         Better start growing some Cachevas.
       </li>
       <li>
-        <span className="m-auto px-2 py-1 text-xl font-bold text-lime-400 not-dark:bg-green-600">
+        <span className="px-2 py-1 text-xl font-bold text-lime-400 not-dark:bg-green-600 m-auto">
           Greenhouse Growing
         </span>
       </li>

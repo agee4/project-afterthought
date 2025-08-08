@@ -32,15 +32,24 @@ const OpenCV_Mono = "https://www.svgrepo.com/show/518318/opencvmanager.svg"
 const ReactRouter_Color = "https://www.svgrepo.com/show/354262/react-router.svg"
 const SheetJS_Color = "https://sheetjs.com/sketch128.png"
 import NextJS_Color from "../assets/nextjs.svg"
+import type { ReactNode } from "react"
 
-const IconItem = (props) => {
-  {
+const IconItem = ({
+  name,
+  img,
+  mono,
+}: {
+  name: string
+  mono?: boolean
+  img?: string
+}) => {
+  /* {
     props.emoji && <span className="mr-1">{props.emoji}</span>
-  }
-  let icon
-  switch (props.name.toLowerCase()) {
+  } */
+  let icon: ReactNode
+  switch (name.toLowerCase()) {
     case "python":
-      icon = props.mono ? (
+      icon = mono ? (
         <Emoji mono src={Python_Mono} />
       ) : (
         <Emoji src={Python_Color} />
@@ -57,37 +66,21 @@ const IconItem = (props) => {
       icon = <Emoji src={CIcon} />
       break
     case "html":
-      icon = props.mono ? (
-        <Emoji mono src={HTML_Mono} />
-      ) : (
-        <Emoji src={HTML_Color} />
-      )
+      icon = mono ? <Emoji mono src={HTML_Mono} /> : <Emoji src={HTML_Color} />
       break
     case "css":
-      icon = props.mono ? (
-        <Emoji mono src={CSS_Mono} />
-      ) : (
-        <Emoji src={CSS_Color} />
-      )
+      icon = mono ? <Emoji mono src={CSS_Mono} /> : <Emoji src={CSS_Color} />
       break
     case "js":
     case "javascript":
-      icon = props.mono ? (
-        <Emoji mono src={JS_Mono} />
-      ) : (
-        <Emoji src={JS_Color} />
-      )
+      icon = mono ? <Emoji mono src={JS_Mono} /> : <Emoji src={JS_Color} />
       break
     case "ts":
     case "typescript":
-      icon = props.mono ? (
-        <Emoji mono src={TS_Mono} />
-      ) : (
-        <Emoji src={TS_Color} />
-      )
+      icon = mono ? <Emoji mono src={TS_Mono} /> : <Emoji src={TS_Color} />
       break
     case "react":
-      icon = props.mono ? (
+      icon = mono ? (
         <Emoji mono src={React_Mono} />
       ) : (
         <Emoji src={React_Color} />
@@ -98,7 +91,7 @@ const IconItem = (props) => {
       break
     case "nodejs":
     case "node_js":
-      icon = props.mono ? (
+      icon = mono ? (
         <Emoji mono src={NodeJS_Mono} />
       ) : (
         <Emoji src={NodeJS_Color} />
@@ -115,7 +108,7 @@ const IconItem = (props) => {
       break
     case "opencv":
     case "open_cv":
-      icon = props.mono ? (
+      icon = mono ? (
         <Emoji mono src={OpenCV_Mono} />
       ) : (
         <Emoji src={OpenCV_Color} />
@@ -132,18 +125,18 @@ const IconItem = (props) => {
       icon = <Emoji src={NextJS_Color} />
       break
   }
-  if (props.img) {
-    icon = <Emoji src={props.img} />
+  if (img) {
+    icon = <Emoji src={img} />
   }
   return (
-    <div className="m-1 rounded-lg border border-transparent bg-neutral-300 p-2 font-bold dark:bg-neutral-700">
+    <div className="m-1 rounded-lg bg-neutral-300 p-2 font-bold dark:bg-neutral-700 border border-transparent">
       {icon}
       <span
         className={
           (icon ? "ml-1 " : "") + "text-neutral-700 dark:text-neutral-300"
         }
       >
-        {props.name}
+        {name}
       </span>
     </div>
   )

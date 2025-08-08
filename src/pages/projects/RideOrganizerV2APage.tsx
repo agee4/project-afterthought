@@ -95,7 +95,7 @@ const RideOrganizerV2APage = () => (
       </Link>
     </h2>
     <embed
-      className="m-auto h-[75vh] w-[75%] rounded-sm border-5 border-indigo-500 p-2"
+      className="rounded-sm border-indigo-500 p-2 m-auto h-[75vh] w-[75%] border-5"
       src="https://ride-organizer-va-git-main-agee4s-projects.vercel.app/rides"
     />
     <br />

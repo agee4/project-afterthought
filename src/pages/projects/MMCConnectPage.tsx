@@ -1,5 +1,5 @@
 // MMCConnectPage.jsx
-import MMCCPage from "../../components/Page"
+import Page from "../../components/Page"
 
 const MMCCPage = () => (
   <Page title="Multi-Microcontroller Connect">

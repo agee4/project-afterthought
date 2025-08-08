@@ -1,14 +1,14 @@
 // NavigationBar.js
-import { useState, useRef } from "react"
+import { useState } from "react"
 import { Link } from "react-router"
 import bobLogo from "../assets/logo/logo.svg"
 import bobLogoClick from "../assets/logo/logo_oh.svg"
 import ResumeButton from "./ResumeButton"
-import useModal from "./Modal/ModalDisplay"
+import useModal from "./Modal/useModal"
 
 const NavigationBar = () => {
-  const { Modal, setModal, closeModal } = useModal(null, true)
-  const [logo, setLogo] = useState(bobLogo)
+  const [Modal, setModal] = useModal(null)
+  const [logo, setLogo] = useState<string>(bobLogo)
   const logoClick = () => {
     setLogo(bobLogoClick)
     setTimeout(() => {
@@ -17,8 +17,8 @@ const NavigationBar = () => {
   }
 
   const NavModal = () => (
-    <menu className="overflow-scroll bg-white p-3 whitespace-nowrap shadow-md dark:bg-black">
-      <li className="animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
+    <menu className="bg-white p-3 shadow-md dark:bg-black overflow-scroll whitespace-nowrap">
+      <li className="animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:text-indigo-500 hover:text-shadow-portfolio hover:animate-none">
         <Link
           className="hover:text-indigo-500"
           to="../overview"
@@ -123,7 +123,7 @@ const NavigationBar = () => {
         </Link>
       </li>
       <li>
-        <ResumeButton className="cursor-pointer hover:text-indigo-500" />
+        <ResumeButton className="hover:text-indigo-500 cursor-pointer" />
       </li>
     </menu>
   )
@@ -131,11 +131,11 @@ const NavigationBar = () => {
   return (
     <>
       {Modal}
-      <header className="navbar sticky top-0 z-1 flex items-stretch justify-between gap-8 bg-neutral-100 pr-5 text-neutral-700 shadow-md dark:bg-neutral-900 dark:text-neutral-300">
+      <header className="navbar top-0 gap-8 bg-neutral-100 pr-5 text-neutral-700 shadow-md dark:bg-neutral-900 dark:text-neutral-300 sticky z-1 flex items-stretch justify-between">
         <Link
           to="../"
           title="Return Home"
-          className="logo m-3 flex h-8 items-center"
+          className="logo m-3 h-8 flex items-center"
         >
           <img
             src={logo}
@@ -143,19 +143,19 @@ const NavigationBar = () => {
             id="logo"
             onClick={logoClick}
           />
-          <h1 className="logo/text hidden truncate text-2xl font-semibold xl:block">
+          <h1 className="logo/text text-2xl font-semibold xl:block hidden truncate">
             Aaron Gee's Portfolio
           </h1>
         </Link>
-        <menu className="navbar/desktop hidden items-center gap-4 xl:flex">
-          <li className="relative inline-block animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
+        <menu className="navbar/desktop gap-4 xl:flex hidden items-center">
+          <li className="animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:text-indigo-500 hover:text-shadow-portfolio relative inline-block hover:animate-none">
             <Link to="../overview" title="Overview">
               Overview
             </Link>
           </li>
           <li className="group/dropdown relative inline-block">
             About
-            <menu className="absolute right-0 hidden bg-white p-3 text-right whitespace-nowrap shadow-md group-hover/dropdown:block dark:bg-black">
+            <menu className="right-0 bg-white p-3 shadow-md dark:bg-black absolute hidden text-right whitespace-nowrap group-hover/dropdown:block">
               <li>
                 <Link
                   className="hover:text-indigo-500"
@@ -193,7 +193,7 @@ const NavigationBar = () => {
             >
               Projects
             </Link>
-            <menu className="absolute right-0 hidden bg-white p-3 text-right whitespace-nowrap shadow-md group-hover/dropdown:block dark:bg-black">
+            <menu className="right-0 bg-white p-3 shadow-md dark:bg-black absolute hidden text-right whitespace-nowrap group-hover/dropdown:block">
               <li>
                 <Link
                   className="hover:text-indigo-500"
@@ -252,14 +252,14 @@ const NavigationBar = () => {
             >
               Contact
             </Link>
-            <menu className="absolute right-0 hidden bg-white p-3 shadow-md group-hover/dropdown:block dark:bg-black">
+            <menu className="right-0 bg-white p-3 shadow-md dark:bg-black absolute hidden group-hover/dropdown:block">
               <li>
-                <ResumeButton className="cursor-pointer hover:text-indigo-500" />
+                <ResumeButton className="hover:text-indigo-500 cursor-pointer" />
               </li>
             </menu>
           </li>
         </menu>
-        <div className="navbar/mobile flex items-center gap-4 xl:hidden">
+        <div className="navbar/mobile gap-4 xl:hidden flex items-center">
           <button
             className="text-3xl hover:text-indigo-500"
             onClick={() => setModal(<NavModal />)}

@@ -1,7 +1,7 @@
 // downloadFileFunct.jsx
 
-const downloadFile = (source, name) => {
-  fetch({ source })
+const downloadFile = (source: string, name: string) => {
+  fetch(source)
     .then(() => {
       let alink = document.createElement("a")
       alink.href = source

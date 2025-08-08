@@ -11,12 +11,12 @@ const EmailIcon = (
     version="1.1"
     baseProfile="tiny"
     id="Layer_1"
-    xmlns:x="http://ns.adobe.com/Extensibility/1.0/"
-    xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/"
-    xmlns:graph="http://ns.adobe.com/Graphs/1.0/"
+    /* xmlns:x="http://ns.adobe.com/Extensibility/1.0/" */
+    /* xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/" */
+    /* xmlns:graph="http://ns.adobe.com/Graphs/1.0/" */
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+    /* xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" */
     viewBox="-0.5 0.5 42 42"
     xmlSpace="preserve"
   >

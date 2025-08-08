@@ -3,10 +3,10 @@ import Page from "../../components/Page"
 import ModalImage from "../../components/Modal/ModalImage"
 import IconItem from "../../components/IconItem"
 import PortfolioWebsiteImg from "../../assets/portfoliowebsiterecursive.png"
-import useModal from "../../components/Modal/ModalDisplay"
+import useModal from "../../components/Modal/useModal"
 
 const PortfolioSitePage = () => {
-  const { Modal, setModal } = useModal(undefined, true)
+  const { Modal, setModal } = useModal(undefined)
   return (
     <Page title="Digital Portfolio Website">
       {Modal}

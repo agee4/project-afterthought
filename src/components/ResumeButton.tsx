@@ -3,7 +3,7 @@ import resumePDF from "../assets/aarongeeresume.pdf"
 import downloadFile from "./Functions/downloadFileFunct"
 const DownloadIcon = (
   <svg
-    className="inline-block h-3 fill-none stroke-black align-baseline group-hover:stroke-indigo-500 dark:stroke-white"
+    className="h-3 stroke-black group-hover:stroke-indigo-500 dark:stroke-white inline-block fill-none align-baseline"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -16,7 +16,7 @@ const DownloadIcon = (
   </svg>
 )
 
-const ResumeButton = (props) => {
+const ResumeButton = ({className}: {className?: string}) => {
   const downloadResume = () => {
     downloadFile(resumePDF, "aarongee-resume.pdf")
   }
@@ -24,10 +24,10 @@ const ResumeButton = (props) => {
   return (
     <button
       className={
-        "group cursor-pointer font-medium whitespace-nowrap transition-colors duration-200 hover:text-indigo-500 " +
-        (props.className
-          ? props.className
-          : "rounded-lg border border-transparent bg-neutral-100 px-4 py-2 hover:border-indigo-500 focus:ring-4 focus:ring-indigo-500 focus:outline-none dark:bg-neutral-900")
+        "group font-medium hover:text-indigo-500 cursor-pointer whitespace-nowrap transition-colors duration-200 " +
+        (className
+          ? className
+          : "rounded-lg bg-neutral-100 px-4 py-2 hover:border-indigo-500 focus:ring-indigo-500 dark:bg-neutral-900 border border-transparent focus:ring-4 focus:outline-none")
       }
       onClick={downloadResume}
       title="Download my Resume!"

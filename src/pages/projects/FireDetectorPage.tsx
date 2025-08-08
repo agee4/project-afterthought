@@ -5,10 +5,10 @@ import IconItem from "../../components/IconItem"
 import DroneFinalImg from "../../assets/firedetectordronefinal.png"
 import SystemDiagramImg from "../../assets/firedetectordronediagram.jpg"
 import PresentationImg from "../../assets/firedetectorpresentation.jpg"
-import useModal from "../../components/Modal/ModalDisplay"
+import useModal from "../../components/Modal/useModal"
 
 const FireDetectorPage = () => {
-  const { Modal, setModal } = useModal(undefined, true)
+  const { Modal, setModal } = useModal(undefined)
   return (
     <Page title="Fire Detector">
       {Modal}
@@ -26,7 +26,7 @@ const FireDetectorPage = () => {
         Undergraduate capstone project
         <br />
       </p>
-      <ul className="gallery m-0 flex list-none flex-row justify-evenly p-0 text-center">
+      <ul className="gallery m-0 p-0 flex list-none flex-row justify-evenly text-center">
         <ModalImage
           className="mx-auto max-w-[20%]"
           src={DroneFinalImg}

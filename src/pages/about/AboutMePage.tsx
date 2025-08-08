@@ -5,10 +5,10 @@ import GradImg from "../../assets/aargeephoto/aargeephoto_grad.jpg"
 import TahoeImg from "../../assets/aargeephoto/aargeephoto_tahoe.jpg"
 import HippoImg from "../../assets/aargeephoto/aargeephoto_goldenhippo.jpg"
 import DinoImg from "../../assets/aargeephoto/aargeephoto_retreatdilopho.jpg"
-import useModal from "../../components/Modal/ModalDisplay"
+import useModal from "../../components/Modal/useModal"
 
 const AboutMePage = () => {
-  const { Modal, setModal } = useModal(undefined, true)
+  const { Modal, setModal } = useModal(undefined)
   return (
     <Page title="About Me">
       {Modal}
@@ -30,7 +30,7 @@ const AboutMePage = () => {
         the skills God has given me to glorify His name and improve the lives of
         others around me!
       </p>
-      <ul className="gallery m-0 flex list-none flex-row justify-evenly p-0 text-center">
+      <ul className="gallery m-0 p-0 flex list-none flex-row justify-evenly text-center">
         <ModalImage
           className="mx-auto max-w-[20%]"
           src={TahoeImg}
