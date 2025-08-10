@@ -1,7 +1,7 @@
 // IconItem.jsx
 import Emoji from "./Emoji"
 import React_Color from "../assets/react.svg"
-import Vite_Color from "../../public/vite.svg"
+import Vite_Color from "/vite.svg?url"
 const Python_Color = "https://www.svgrepo.com/show/354238/python.svg"
 const Python_Mono =
   "https://upload.wikimedia.org/wikipedia/commons/d/d3/Python_icon_%28black_and_white%29.svg"
@@ -129,7 +129,7 @@ const IconItem = ({
     icon = <Emoji src={img} />
   }
   return (
-    <div className="m-1 rounded-lg bg-neutral-300 p-2 font-bold dark:bg-neutral-700 border border-transparent">
+    <div className="m-1 rounded-lg border border-transparent bg-neutral-300 p-2 font-bold dark:bg-neutral-700">
       {icon}
       <span
         className={

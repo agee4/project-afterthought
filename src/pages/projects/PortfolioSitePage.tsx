@@ -6,7 +6,7 @@ import PortfolioWebsiteImg from "../../assets/portfoliowebsiterecursive.png"
 import useModal from "../../components/Modal/useModal"
 
 const PortfolioSitePage = () => {
-  const { Modal, setModal } = useModal(undefined)
+  const [Modal, setModal] = useModal(undefined)
   return (
     <Page title="Digital Portfolio Website">
       {Modal}
