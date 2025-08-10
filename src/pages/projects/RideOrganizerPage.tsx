@@ -8,7 +8,7 @@ import LoggedInHomeImg from "../../assets/rideorganizerapploggedin.png"
 import useModal from "../../components/Modal/useModal"
 
 const RideOrganizerPage = () => {
-  const { Modal, setModal } = useModal(undefined)
+  const [Modal, setModal] = useModal(undefined)
   return (
     <Page title="Ride Organizer">
       {Modal}
@@ -71,7 +71,7 @@ const RideOrganizerPage = () => {
         </Link>
       </h2>
       <embed
-        className="rounded-sm border-indigo-500 p-2 m-auto h-[75vh] w-[75%] border-5"
+        className="m-auto h-[75vh] w-[75%] rounded-sm border-5 border-indigo-500 p-2"
         src="https://ridesprojectfrontend.onrender.com"
       />
       <br />
