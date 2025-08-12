@@ -63,6 +63,7 @@ const ReferenceFooter = () => {
       "/projects/fire-detector",
       "/projects/portfolio-site",
       "/projects/ride-organizer-v2a",
+      "/projects/groupu-organizer",
       "/projects/pvz-bb",
       "/changelog",
       "/future",

@@ -13,7 +13,7 @@ const Log = ({
   message: ReactNode
   date?: string
 }) => (
-  <div className="m-5 rounded-lg bg-neutral-400 p-2 dark:bg-neutral-600 border border-transparent text-left">
+  <div className="m-5 rounded-lg border border-transparent bg-neutral-400 p-2 text-left dark:bg-neutral-600">
     {title && <h3 className="py-3 text-xl font-bold">{title}</h3>}
     {message}
     {date && <i>{date}</i>}
@@ -102,6 +102,63 @@ const ChangeLogPage = () => {
   const WrittenList = () => (
     <>
       <h3>2025</h3>
+      <li>
+        <b>August</b>
+      </li>
+
+      <Log
+        message={
+          <ul>
+            <li>Add GroupU Organizer page</li>
+            <li>Upgraded Navigation Bar</li>
+            <ul>
+              <li>Buttons for current page now disabled</li>
+              <li>Modal Nav closes upon page change</li>
+            </ul>
+            <li>
+              Updated various pages and assets with more recent information
+            </li>
+          </ul>
+        }
+        date="2025 August 10"
+      />
+
+      <Log
+        message={
+          <ul>
+            <li>TypeScript port fixes</li>
+            <ul>
+              <li>Fixed broken modals</li>
+              <li>Readded favicons</li>
+            </ul>
+          </ul>
+        }
+        date="2025 August 10"
+      />
+
+      <Log
+        message={
+          <ul>
+            <li>Initial port to TypeScript</li>
+          </ul>
+        }
+        date="2025 August 8"
+      />
+
+      <li>
+        <b>July</b>
+      </li>
+
+      <Log
+        message={
+          <ul>
+            <li>Upgraded Vite to v7</li>
+            <li>Added Lukas Hu portfolio to Friends page</li>
+          </ul>
+        }
+        date="2025 July 31"
+      />
+
       <li>
         <b>June</b>
       </li>
@@ -519,11 +576,11 @@ const ChangeLogPage = () => {
       <h1 className="m-5 text-5xl font-bold">Change Log</h1>
       <button
         onClick={toggleWrittenList}
-        className="rounded-lg bg-gray-900 px-4 py-2 font-medium text-white hover:border-indigo-500 hover:text-indigo-500 focus:ring-indigo-500 cursor-pointer border border-transparent transition-colors duration-200 focus:ring-4 focus:outline-none"
+        className="cursor-pointer rounded-lg border border-transparent bg-gray-900 px-4 py-2 font-medium text-white transition-colors duration-200 hover:border-indigo-500 hover:text-indigo-500 focus:ring-4 focus:ring-indigo-500 focus:outline-none"
       >
         {writtenListOn ? "Written Log" : "Github Commits"}
       </button>
-      <ul className="m-5 rounded border-gray-400 p-1 border">
+      <ul className="m-5 rounded border border-gray-400 p-1">
         {writtenListOn ? <WrittenList /> : <GitHubList />}
       </ul>
     </Page>

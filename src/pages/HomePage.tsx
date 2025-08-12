@@ -5,7 +5,9 @@ import LinkImage from "../components/LinkImage"
 import Logo from "../assets/logo/logo_shadow.png"
 import RideOrganizerImg from "../assets/rideorganizerapploggedin.png"
 import FireDetectorImg from "../assets/firedetectordronefinal.png"
-import PortfolioWebsiteImg from "../assets/portfoliowebsiterecursive.png"
+import PortfolioWebsiteImg from "../assets/portfoliowebsiterecursive2.png"
+import RideOrganizerV2AImg from "../assets/rideorganizerv2aapp.png"
+import GroupUOrganizerImg from "../assets/groupuorganizerapp.png"
 import type { ReactNode } from "react"
 
 const HomeCycleGallery = ({
@@ -13,14 +15,15 @@ const HomeCycleGallery = ({
 }: {
   children: ReactNode | ReactNode[]
 }) => {
+  const SingleCycle = () => (
+    <div className="gallery/home m-0 flex min-w-full animate-loopscroll list-none flex-row justify-evenly p-0 group-hover/gallery:animation-pause">
+      {children}
+    </div>
+  )
   return (
     <div className="group/gallery flex flex-row justify-end overflow-hidden whitespace-nowrap">
-      <div className="gallery/home m-0 animate-loopscroll p-0 group-hover/gallery:animation-pause flex min-w-full list-none flex-row justify-evenly">
-        {children}
-      </div>
-      <div className="gallery/home-facade m-0 animate-loopscroll p-0 group-hover/gallery:animation-pause flex min-w-full list-none flex-row justify-evenly">
-        {children}
-      </div>
+      <SingleCycle />
+      <SingleCycle />
     </div>
   )
 }
@@ -45,7 +48,7 @@ const HomePage = () => (
     </p>
     <h2 className="m-3 text-xl">
       <Link
-        className="animate-shadowpulse rounded-lg bg-gray-900 px-4 py-2 font-bold text-indigo-500 shadow-indigo-500 hover:text-shadow-portfolio focus:ring-indigo-500 dark:bg-gray-100 cursor-pointer border border-transparent transition-colors duration-200 hover:animate-none focus:ring-4 focus:outline-none"
+        className="animate-shadowpulse cursor-pointer rounded-lg border border-transparent bg-gray-900 px-4 py-2 font-bold text-indigo-500 shadow-indigo-500 transition-colors duration-200 hover:animate-none hover:text-shadow-portfolio focus:ring-4 focus:ring-indigo-500 focus:outline-none dark:bg-gray-100"
         to="/overview"
         title="Overview"
       >
@@ -83,6 +86,23 @@ const HomePage = () => (
         alt="The homepage of my portfolio website"
         title="Portfolio Website"
         caption="Recursive!"
+      />
+    </HomeCycleGallery>
+    <br />
+    <HomeCycleGallery>
+      <LinkImage
+        to="../projects/ride-organizer"
+        src={RideOrganizerV2AImg}
+        alt="Screenshot of the Ride Organizer v2A App"
+        title="Ride Organizer v2A"
+        caption="We ride together, we organize together... but better!"
+      />
+      <LinkImage
+        to="../projects/groupu-organizer"
+        src={GroupUOrganizerImg}
+        alt="GroupU Organizer App"
+        title="GroupU Organizer"
+        caption="An organizer for me and U!"
       />
     </HomeCycleGallery>
     <br />

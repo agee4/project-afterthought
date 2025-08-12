@@ -1,13 +1,13 @@
 // NavigationBar.js
-import { useState } from "react"
-import { Link } from "react-router"
+import { useEffect, useState } from "react"
+import { NavLink, useLocation } from "react-router"
 import bobLogo from "../assets/logo/logo.svg"
 import bobLogoClick from "../assets/logo/logo_oh.svg"
 import ResumeButton from "./ResumeButton"
 import useModal from "./Modal/useModal"
 
 const NavigationBar = () => {
-  const [Modal, setModal] = useModal(null)
+  const [Modal, setModal, closeModal] = useModal(null)
   const [logo, setLogo] = useState<string>(bobLogo)
   const logoClick = () => {
     setLogo(bobLogoClick)
@@ -16,114 +16,195 @@ const NavigationBar = () => {
     }, 500)
   }
 
+  const location = useLocation()
+  useEffect(() => {
+    closeModal()
+  }, [location.pathname])
+
   const NavModal = () => (
-    <menu className="bg-white p-3 shadow-md dark:bg-black overflow-scroll whitespace-nowrap">
-      <li className="animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:text-indigo-500 hover:text-shadow-portfolio hover:animate-none">
-        <Link
-          className="hover:text-indigo-500"
+    <menu className="overflow-scroll bg-white p-3 whitespace-nowrap shadow-md dark:bg-black">
+      <li>
+        <NavLink
+          to="../"
+          title="Return Home"
+          className="logo m-3 flex h-8 place-content-center"
+        >
+          {({ isActive }) => (
+            <img
+              src={isActive ? bobLogo : bobLogoClick}
+              className="logo/image h-8 border-0"
+              id="logo"
+            />
+          )}
+        </NavLink>
+      </li>
+      <li className="animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
           to="../overview"
           title="Overview"
         >
           Overview
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link
-          className="hover:text-indigo-500"
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
           to="../about-site"
           title="About the Site"
         >
           About the Site
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link
-          className="hover:text-indigo-500"
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
           to="../about-me"
           title="About Me"
         >
           About Me
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link
-          className="hover:text-indigo-500"
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
           to="../changelog"
           title="Change Log"
         >
           Change Log
-        </Link>
+        </NavLink>
       </li>
       <li>
         <br />
       </li>
       <li className="font-bold underline">
-        <Link
-          className="hover:text-indigo-500"
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
           to="../projects"
           title="Projects Home"
         >
           Projects
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link
-          className="hover:text-indigo-500"
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
           to="../projects/ride-organizer"
           title="Ride Organizer App"
         >
           Ride Organizer App
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link
-          className="hover:text-indigo-500"
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
           to="../projects/fire-detector"
           title="Fire Detection Model"
         >
           Fire Detection Model
-        </Link>
+        </NavLink>
       </li>
       <li>
         <hr />
       </li>
       <li>
-        <Link
-          className="hover:text-indigo-500"
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
           to="../projects/portfolio-site"
           title="Portfolio Website"
         >
           Portfolio Website
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link
-          className="hover:text-indigo-500"
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
           to="../projects/ride-organizer-v2a"
           title="Ride Organizer v.2A"
         >
           Ride Organizer v.2A
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link
-          className="hover:text-indigo-500"
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
+          to="../projects/groupu-organizer"
+          title="GroupU Organizer"
+        >
+          GroupU Organizer
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
           to="../projects/pvz-bb"
           title="Plants vs. Zombies Fangame"
         >
           PvZ Fangame
-        </Link>
+        </NavLink>
       </li>
       <li>
         <br />
       </li>
       <li className="font-bold underline">
-        <Link className="hover:text-indigo-500" to="../contact" title="Contact">
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "pointer-events-none cursor-default text-neutral-500"
+              : "hover:text-indigo-500"
+          }
+          to="../contact"
+          title="Contact"
+        >
           Contact Me
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <ResumeButton className="hover:text-indigo-500 cursor-pointer" />
+        <ResumeButton className="cursor-pointer hover:text-indigo-500" />
       </li>
     </menu>
   )
@@ -131,11 +212,11 @@ const NavigationBar = () => {
   return (
     <>
       {Modal}
-      <header className="navbar top-0 gap-8 bg-neutral-100 pr-5 text-neutral-700 shadow-md dark:bg-neutral-900 dark:text-neutral-300 sticky z-1 flex items-stretch justify-between">
-        <Link
+      <header className="navbar sticky top-0 z-1 flex items-stretch justify-between gap-8 bg-neutral-100 pr-5 text-neutral-700 shadow-md dark:bg-neutral-900 dark:text-neutral-300">
+        <NavLink
           to="../"
           title="Return Home"
-          className="logo m-3 h-8 flex items-center"
+          className="logo m-3 flex h-8 items-center"
         >
           <img
             src={logo}
@@ -143,123 +224,176 @@ const NavigationBar = () => {
             id="logo"
             onClick={logoClick}
           />
-          <h1 className="logo/text text-2xl font-semibold xl:block hidden truncate">
+          <h1 className="logo/text hidden truncate text-2xl font-semibold xl:block">
             Aaron Gee's Portfolio
           </h1>
-        </Link>
-        <menu className="navbar/desktop gap-4 xl:flex hidden items-center">
-          <li className="animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:text-indigo-500 hover:text-shadow-portfolio relative inline-block hover:animate-none">
-            <Link to="../overview" title="Overview">
+        </NavLink>
+        <menu className="navbar/desktop hidden items-center gap-4 xl:flex">
+          <li className="relative inline-block animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
+            <NavLink to="../overview" title="Overview">
               Overview
-            </Link>
+            </NavLink>
           </li>
           <li className="group/dropdown relative inline-block">
             About
-            <menu className="right-0 bg-white p-3 shadow-md dark:bg-black absolute hidden text-right whitespace-nowrap group-hover/dropdown:block">
+            <menu className="absolute right-0 hidden bg-white p-3 text-right whitespace-nowrap shadow-md group-hover/dropdown:block dark:bg-black">
               <li>
-                <Link
-                  className="hover:text-indigo-500"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "pointer-events-none cursor-default text-neutral-500"
+                      : "hover:text-indigo-500"
+                  }
                   to="../about-site"
                   title="About the Site"
                 >
                   About the Site
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
-                  className="hover:text-indigo-500"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "pointer-events-none cursor-default text-neutral-500"
+                      : "hover:text-indigo-500"
+                  }
                   to="../about-me"
                   title="About Me"
                 >
                   About Me
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
-                  className="hover:text-indigo-500"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "pointer-events-none cursor-default text-neutral-500"
+                      : "hover:text-indigo-500"
+                  }
                   to="../changelog"
                   title="Change Log"
                 >
                   Change Log
-                </Link>
+                </NavLink>
               </li>
             </menu>
           </li>
           <li className="group/dropdown relative inline-block">
-            <Link
-              className="hover:text-indigo-500"
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../projects"
               title="Projects Home"
             >
               Projects
-            </Link>
-            <menu className="right-0 bg-white p-3 shadow-md dark:bg-black absolute hidden text-right whitespace-nowrap group-hover/dropdown:block">
+            </NavLink>
+            <menu className="absolute right-0 hidden bg-white p-3 text-right whitespace-nowrap shadow-md group-hover/dropdown:block dark:bg-black">
               <li>
-                <Link
-                  className="hover:text-indigo-500"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "pointer-events-none cursor-default text-neutral-500"
+                      : "hover:text-indigo-500"
+                  }
                   to="../projects/ride-organizer"
                   title="Ride Organizer App"
                 >
                   Ride Organizer App
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
-                  className="hover:text-indigo-500"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "pointer-events-none cursor-default text-neutral-500"
+                      : "hover:text-indigo-500"
+                  }
                   to="../projects/fire-detector"
                   title="Fire Detection Model"
                 >
                   Fire Detection Model
-                </Link>
+                </NavLink>
               </li>
               <li>
                 <hr />
               </li>
               <li>
-                <Link
-                  className="hover:text-indigo-500"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "pointer-events-none cursor-default text-neutral-500"
+                      : "hover:text-indigo-500"
+                  }
                   to="../projects/portfolio-site"
                   title="Portfolio Website"
                 >
                   Portfolio Website
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
-                  className="hover:text-indigo-500"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "pointer-events-none cursor-default text-neutral-500"
+                      : "hover:text-indigo-500"
+                  }
                   to="../projects/ride-organizer-v2a"
                   title="Ride Organizer v.2A"
                 >
                   Ride Organizer v.2A
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
-                  className="hover:text-indigo-500"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "pointer-events-none cursor-default text-neutral-500"
+                      : "hover:text-indigo-500"
+                  }
+                  to="../projects/groupu-organizer"
+                  title="GroupU Organizer"
+                >
+                  GroupU Organizer
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "pointer-events-none cursor-default text-neutral-500"
+                      : "hover:text-indigo-500"
+                  }
                   to="../projects/pvz-bb"
                   title="Plants vs. Zombies Fangame"
                 >
                   PvZ Fangame
-                </Link>
+                </NavLink>
               </li>
             </menu>
           </li>
           <li className="group/dropdown relative inline-block">
-            <Link
-              className="hover:text-indigo-500"
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../contact"
               title="Contact"
             >
               Contact
-            </Link>
-            <menu className="right-0 bg-white p-3 shadow-md dark:bg-black absolute hidden group-hover/dropdown:block">
+            </NavLink>
+            <menu className="absolute right-0 hidden bg-white p-3 shadow-md group-hover/dropdown:block dark:bg-black">
               <li>
-                <ResumeButton className="hover:text-indigo-500 cursor-pointer" />
+                <ResumeButton className="cursor-pointer hover:text-indigo-500" />
               </li>
             </menu>
           </li>
         </menu>
-        <div className="navbar/mobile gap-4 xl:hidden flex items-center">
+        <div className="navbar/mobile flex items-center gap-4 xl:hidden">
           <button
             className="text-3xl hover:text-indigo-500"
             onClick={() => setModal(<NavModal />)}

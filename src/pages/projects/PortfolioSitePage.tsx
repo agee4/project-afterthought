@@ -3,10 +3,13 @@ import Page from "../../components/Page"
 import ModalImage from "../../components/Modal/ModalImage"
 import IconItem from "../../components/IconItem"
 import PortfolioWebsiteImg from "../../assets/portfoliowebsiterecursive.png"
+import PortfolioWebsiteImg2 from "../../assets/portfoliowebsiterecursive2.png"
 import useModal from "../../components/Modal/useModal"
+import { Link } from "react-router"
 
 const PortfolioSitePage = () => {
   const [Modal, setModal] = useModal(undefined)
+
   return (
     <Page title="Digital Portfolio Website">
       {Modal}
@@ -30,6 +33,12 @@ const PortfolioSitePage = () => {
         alt="A screenshot of the Portfolio Website homepage"
         setModal={setModal}
       />
+      <ModalImage
+        className="img/profile m-auto max-w-1/2"
+        src={PortfolioWebsiteImg2}
+        alt="A more recent screenshot of the Portfolio Website homepage"
+        setModal={setModal}
+      />
       <h2 className="m-3 text-3xl font-bold">What have I learned?</h2>
       <h3 className="m-1 text-xl font-bold">Specific Skills</h3>
       <ul>
@@ -38,6 +47,7 @@ const PortfolioSitePage = () => {
           <IconItem name="HTML" />
           <IconItem name="CSS" />
           <IconItem name="JavaScript" />
+          <IconItem name="TypeScript" />
         </div>
         <li>
           Basics of web development JavaScript-based libraries and environments
@@ -50,6 +60,21 @@ const PortfolioSitePage = () => {
           <IconItem name="GitHub" />
         </div>
       </ul>
+      {window.frameElement ? (
+        <p>no recursion for u xD</p>
+      ) : (
+        <>
+          <h2 className="m-3 text-3xl font-bold hover:text-indigo-500">
+            <Link to="https://aaron-gees-digital-portfolio.onrender.com">
+              Check out the final site!
+            </Link>
+          </h2>
+          <embed
+            className="m-auto h-[75vh] w-[75%] rounded-sm border-5 border-indigo-500 p-2"
+            src="https://aaron-gees-digital-portfolio.onrender.com/projects/portfolio-site"
+          />
+        </>
+      )}
       <br />
     </Page>
   )

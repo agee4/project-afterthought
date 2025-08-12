@@ -19,6 +19,7 @@ import ThanksPage from "./pages/fun/ThanksPage"
 import Secret1Page from "./pages/fun/secret/Secret1"
 import Secret2Page from "./pages/fun/secret/Secret2"
 import RideOrganizerV2APage from "./pages/projects/RideOrganizerV2APage"
+import GroupUOrganizerPage from "./pages/projects/GroupUOrganizerPage"
 
 const router = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
           {
             path: "ride-organizer-v2a",
             element: <RideOrganizerV2APage />,
+          },
+          {
+            path: "groupu-organizer",
+            element: <GroupUOrganizerPage />,
           },
         ],
       },
