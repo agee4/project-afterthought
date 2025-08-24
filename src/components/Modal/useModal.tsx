@@ -1,10 +1,14 @@
-import { useRef, useState, type ReactNode, type RefObject } from "react"
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+  type RefObject,
+} from "react"
 import useClickOutside from "../Functions/useClickOutside"
-
-/**
- * @typedef {Object} useModal
- * @property {JSX.Element} Modal
- */
+import { useOnKeyPress } from "../Functions/useOnKeyPress"
 
 /**Custom Hook intended for use in conjunction with ModalDisplay
  *
@@ -17,27 +21,72 @@ import useClickOutside from "../Functions/useClickOutside"
  * Intended to be used in elements displayed in Modal to close upon certain actions
  *
  * @param {ReactNode} initialValue Initial component to be displayed
+ * @param {boolean} base Whether this modal prevents the main page content from scrolling
  *
- * @returns {useModal} Modal, setModal, closeModal
+ * @returns {Array} Modal, setModal, closeModal
  */
 function useModal(
-  initialValue: ReactNode = null
+  initialValue: ReactNode = null,
+  base: boolean = false
 ): [ReactNode, (element: ReactNode) => void, () => void] {
   const [modalElement, setModalElementHelper] =
     useState<ReactNode>(initialValue)
   const modalRef = useRef<HTMLDivElement>(null)
 
-  function setModal(element: ReactNode) {
-    setModalElementHelper(element)
-    if (modalRef.current) modalRef.current.style.display = "block"
-  }
+  useEffect(() => {
+    if (base) {
+      if (modalElement) {
+        if (
+          !document.body.classList.replace("overflow-auto", "overflow-hidden")
+        )
+          document.body.classList.add("overflow-hidden")
+      } else {
+        if (
+          !document.body.classList.replace("overflow-hidden", "overflow-auto")
+        )
+          document.body.classList.add("overflow-auto")
+      }
+      return () => {
+        if (
+          !document.body.classList.replace("overflow-hidden", "overflow-auto")
+        )
+          document.body.classList.add("overflow-auto")
+      }
+    }
+  }, [base, modalElement])
 
-  function closeModal() {
-    setModalElementHelper(undefined)
-    if (modalRef.current) modalRef.current.style.display = "none"
-  }
+  useEffect(() => {
+    if (modalRef.current) {
+      if (modalElement) {
+        modalRef.current.classList.add("block")
+        modalRef.current.classList.remove("hidden")
+      } else {
+        modalRef.current.classList.add("hidden")
+        modalRef.current.classList.remove("block")
+      }
+    }
+  }, [modalElement])
 
-  const Modal = <ModalDisplay element={modalElement} modalRef={modalRef} />
+  const setModal = useCallback(
+    (element: ReactNode) => setModalElementHelper(element),
+    [setModalElementHelper]
+  )
+
+  const closeModal = useCallback(
+    () => setModalElementHelper(null),
+    [setModalElementHelper]
+  )
+
+  const Modal = useMemo(
+    () => (
+      <ModalDisplay
+        element={modalElement}
+        modalRef={modalRef}
+        closeModal={closeModal}
+      />
+    ),
+    [modalElement, modalRef, closeModal]
+  )
 
   return [Modal, setModal, closeModal]
 }
@@ -45,27 +94,26 @@ function useModal(
 const ModalDisplay = ({
   element,
   modalRef,
+  closeModal,
 }: {
   element: ReactNode
   modalRef: RefObject<HTMLDivElement | null>
+  closeModal: () => void
 }) => {
   const modalElementRef = useRef<HTMLDivElement>(null)
 
-  const closeModal = () => {
-    if (modalRef.current) modalRef.current.style.display = "none"
-  }
-
   useClickOutside(modalElementRef, closeModal)
+  useOnKeyPress("Escape", closeModal)
 
   return (
     <div
-      className="top-0 left-0 bg-white/60 pt-15 dark:bg-black/60 fixed z-5 hidden h-full w-full place-content-center overflow-auto text-inherit"
+      className="fixed top-0 left-0 z-5 hidden h-full w-full place-content-center overflow-auto bg-white/60 pt-15 text-inherit dark:bg-black/60"
       ref={modalRef}
     >
       <button
         id="modal-close"
         onClick={closeModal}
-        className="top-4 right-8 text-4xl font-bold text-black hover:text-gray-300 dark:text-white absolute cursor-pointer"
+        className="absolute top-4 right-8 cursor-pointer text-4xl font-bold text-black hover:text-gray-300 dark:text-white"
       >
         &times;
       </button>

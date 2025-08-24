@@ -16,7 +16,7 @@ const Emoji = ({
   <img
     className={
       className ||
-      "emoji h-3 inline-block align-baseline" + (mono ? " dark:invert" : "")
+      "emoji inline-block h-3 align-baseline" + (mono ? " dark:invert" : "")
     }
     src={src}
     alt={alt}

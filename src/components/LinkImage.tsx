@@ -8,7 +8,7 @@ const LinkImage = ({
   src,
   alt,
   title,
-  caption
+  caption,
 }: {
   className?: string
   imgClassName?: string
@@ -18,18 +18,11 @@ const LinkImage = ({
   title?: string
   caption?: string
 }) => (
-  <div
-    className={
-      className || "group/linkimg relative m-auto"
-    }
-  >
+  <div className={className || "group/linkimg relative m-auto"}>
     <Link to={to} title={title}>
       <span className="transition duration-150 group-hover/linkimg:brightness-20">
         <img
-          className={
-            imgClassName
-              || "m-auto w-full object-contain"
-          }
+          className={imgClassName || "m-auto w-full object-contain"}
           src={src}
           alt={alt}
           title={title}
@@ -39,9 +32,7 @@ const LinkImage = ({
         <div className="absolute top-[50%] left-[50%] -translate-1/2 text-white">
           <span className="font-bold">{title}</span>
           <br />
-          <span className="italic">
-            {caption || alt}
-          </span>
+          <span className="italic">{caption || alt}</span>
         </div>
       </div>
     </Link>

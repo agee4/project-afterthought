@@ -14,7 +14,7 @@ const Page = ({
   children: ReactNode | ReactNode[]
 }) => {
   pageTitle(title, titlewrapper)
-  return <main className="animate-fadein flex-1">{children}</main>
+  return <main className="flex-1 animate-fadein">{children}</main>
 }
 
 export default Page

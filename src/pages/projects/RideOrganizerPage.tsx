@@ -8,7 +8,7 @@ import LoggedInHomeImg from "../../assets/rideorganizerapploggedin.png"
 import useModal from "../../components/Modal/useModal"
 
 const RideOrganizerPage = () => {
-  const [Modal, setModal] = useModal(undefined)
+  const [Modal, setModal] = useModal(null, true)
   return (
     <Page title="Ride Organizer">
       {Modal}

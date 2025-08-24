@@ -36,7 +36,7 @@ const FriendsPage = () => (
           Jimmy Jin's Portfolio
         </Link>
         <embed
-          className="rounded-sm border-indigo-500 p-2 m-auto h-[75vh] w-[75%] border-5"
+          className="m-auto h-[75vh] w-[75%] rounded-sm border-5 border-indigo-500 p-2"
           src="https://jimfolio.xyz"
         />
       </li>
@@ -49,7 +49,7 @@ const FriendsPage = () => (
           Lukas Hu's Portfolio
         </Link>
         <embed
-          className="rounded-sm border-indigo-500 p-2 m-auto h-[75vh] w-[75%] border-5"
+          className="m-auto h-[75vh] w-[75%] rounded-sm border-5 border-indigo-500 p-2"
           src="https://lukas-l-hu.github.io"
         />
       </li>

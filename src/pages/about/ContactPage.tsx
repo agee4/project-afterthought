@@ -18,8 +18,8 @@ const ContactPage = () => (
     </p>
     <table className="mx-auto text-center">
       <tbody>
-        <tr className="border-gray-300 border-b">
-          <th className="border-gray-300 px-4 py-2 border-r text-left">
+        <tr className="border-b border-gray-300">
+          <th className="border-r border-gray-300 px-4 py-2 text-left">
             <Emoji mono src={EmailIcon} />
             <span className="ml-1" />
             Email
@@ -33,8 +33,8 @@ const ContactPage = () => (
             </Link>
           </td>
         </tr>
-        <tr className="border-gray-300 border-b">
-          <th className="border-gray-300 px-4 py-2 border-r text-left">
+        <tr className="border-b border-gray-300">
+          <th className="border-r border-gray-300 px-4 py-2 text-left">
             <Emoji mono src={PhoneIcon} />
             <span className="ml-1" />
             Cell
@@ -45,8 +45,8 @@ const ContactPage = () => (
             </Link>
           </td>
         </tr>
-        <tr className="border-gray-300 border-b">
-          <th className="border-gray-300 px-4 py-2 border-r text-left">
+        <tr className="border-b border-gray-300">
+          <th className="border-r border-gray-300 px-4 py-2 text-left">
             <Emoji mono src={LinkedInIcon} />
             <span className="ml-1" />
             LinkedIn
@@ -61,7 +61,7 @@ const ContactPage = () => (
           </td>
         </tr>
         <tr>
-          <th className="border-gray-300 px-4 py-2 border-r text-left">
+          <th className="border-r border-gray-300 px-4 py-2 text-left">
             <Emoji mono src={GitHubIcon} />
             <span className="ml-1" />
             GitHub

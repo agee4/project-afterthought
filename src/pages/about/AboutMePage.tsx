@@ -8,7 +8,7 @@ import DinoImg from "../../assets/aargeephoto/aargeephoto_retreatdilopho.jpg"
 import useModal from "../../components/Modal/useModal"
 
 const AboutMePage = () => {
-  const [Modal, setModal] = useModal(undefined)
+  const [Modal, setModal] = useModal(null, true)
   return (
     <Page title="About Me">
       {Modal}

@@ -8,7 +8,7 @@ import PresentationImg from "../../assets/firedetectorpresentation.jpg"
 import useModal from "../../components/Modal/useModal"
 
 const FireDetectorPage = () => {
-  const [Modal, setModal] = useModal(undefined)
+  const [Modal, setModal] = useModal(null, true)
   return (
     <Page title="Fire Detector">
       {Modal}

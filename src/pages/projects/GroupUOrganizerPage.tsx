@@ -10,7 +10,7 @@ const GroupUOrganizerPage = () => (
     <h2 className="m-3 text-3xl font-bold">What is this project?</h2>
     <p className="px-5">
       <span className="font-bold">GroupU Organizer</span> is an expanded-scope
-      iteration of
+      iteration of{" "}
       <Link
         className="font-bold hover:text-indigo-500"
         to="/projects/ride-organizer-v2a"

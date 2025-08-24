@@ -1,4 +1,5 @@
 // AboutSitePage.jsx
+import IconItem from "../../components/IconItem"
 import Page from "../../components/Page"
 
 const AboutSitePage = () => (
@@ -14,6 +15,20 @@ const AboutSitePage = () => (
       robust internet application architecture to efficient and functional
       program design.
     </p>
+    <h2 className="m-3 text-3xl font-bold">Built using...</h2>
+    <div className="flex flex-row flex-wrap place-content-center">
+      <IconItem name="TypeScript" />
+      <IconItem name="React" />
+      <IconItem name="Vite" />
+      <IconItem name="Tailwind" />
+      <IconItem name="React Router" />
+      <IconItem name="Octokit" />
+    </div>
+    <h3 className="m-1 text-xl font-bold">Formerly used...</h3>
+    <div className="flex flex-row flex-wrap place-content-center">
+      <IconItem name="JavaScript" />
+    </div>
+    <br />
   </Page>
 )
 

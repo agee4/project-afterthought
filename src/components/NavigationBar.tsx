@@ -7,7 +7,7 @@ import ResumeButton from "./ResumeButton"
 import useModal from "./Modal/useModal"
 
 const NavigationBar = () => {
-  const [Modal, setModal, closeModal] = useModal(null)
+  const [Modal, setModal, closeModal] = useModal(null, true)
   const [logo, setLogo] = useState<string>(bobLogo)
   const logoClick = () => {
     setLogo(bobLogoClick)
@@ -27,23 +27,20 @@ const NavigationBar = () => {
         <NavLink
           to="../"
           title="Return Home"
-          className="logo m-3 flex h-8 place-content-center"
+          className={({ isActive }) =>
+            "logo m-3 flex h-8 place-content-center" +
+            (isActive ? " pointer-events-none cursor-default opacity-50" : "")
+          }
         >
-          {({ isActive }) => (
-            <img
-              src={isActive ? bobLogo : bobLogoClick}
-              className="logo/image h-8 border-0"
-              id="logo"
-            />
-          )}
+          <img src={bobLogo} className="logo/image h-8 border-0" id="logo" />
         </NavLink>
       </li>
-      <li className="animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
+      <li className="animate-shadowpulse font-bold shadow-indigo-500 hover:animate-none hover:text-shadow-portfolio">
         <NavLink
           className={({ isActive }) =>
             isActive
               ? "pointer-events-none cursor-default text-neutral-500"
-              : "hover:text-indigo-500"
+              : "text-indigo-500"
           }
           to="../overview"
           title="Overview"
@@ -102,6 +99,7 @@ const NavigationBar = () => {
           }
           to="../projects"
           title="Projects Home"
+          end
         >
           Projects
         </NavLink>
@@ -216,7 +214,10 @@ const NavigationBar = () => {
         <NavLink
           to="../"
           title="Return Home"
-          className="logo m-3 flex h-8 items-center"
+          className={({ isActive }) =>
+            "logo m-3 flex h-8 place-content-center" +
+            (isActive ? " pointer-events-none cursor-default" : "")
+          }
         >
           <img
             src={logo}
@@ -287,6 +288,7 @@ const NavigationBar = () => {
               }
               to="../projects"
               title="Projects Home"
+              end
             >
               Projects
             </NavLink>

@@ -8,7 +8,7 @@ import useModal from "../../components/Modal/useModal"
 import { Link } from "react-router"
 
 const PortfolioSitePage = () => {
-  const [Modal, setModal] = useModal(undefined)
+  const [Modal, setModal] = useModal(null, true)
 
   return (
     <Page title="Digital Portfolio Website">

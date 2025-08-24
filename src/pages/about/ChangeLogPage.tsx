@@ -109,6 +109,20 @@ const ChangeLogPage = () => {
       <Log
         message={
           <ul>
+            <li>Implemented deactivating NavLinks</li>
+            <li>Upgraded modals</li>
+            <ul>
+              <li>Most modals prevent main content scrolling while opened</li>
+              <li>Pressing "Esc" closes opened modals</li>
+            </ul>
+          </ul>
+        }
+        date="2025 August 23"
+      />
+
+      <Log
+        message={
+          <ul>
             <li>Add GroupU Organizer page</li>
             <li>Upgraded Navigation Bar</li>
             <ul>
@@ -120,7 +134,7 @@ const ChangeLogPage = () => {
             </li>
           </ul>
         }
-        date="2025 August 10"
+        date="2025 August 11"
       />
 
       <Log

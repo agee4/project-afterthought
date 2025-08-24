@@ -31,6 +31,10 @@ const OpenCV_Color = "https://www.svgrepo.com/show/354139/opencv.svg"
 const OpenCV_Mono = "https://www.svgrepo.com/show/518318/opencvmanager.svg"
 const ReactRouter_Color = "https://www.svgrepo.com/show/354262/react-router.svg"
 const SheetJS_Color = "https://sheetjs.com/sketch128.png"
+const Dart_Color =
+  "https://upload.wikimedia.org/wikipedia/commons/c/c6/Dart_logo.png"
+const Flutter_Color =
+  "https://storage.googleapis.com/cms-storage-bucket/icon_flutter.4fd5520fe28ebf839174.svg"
 import NextJS_Color from "../assets/nextjs.svg"
 import type { ReactNode } from "react"
 
@@ -101,6 +105,7 @@ const IconItem = ({
       icon = <Emoji src={Tailwind_Color} />
       break
     case "github":
+    case "octokit":
       icon = <Emoji mono src={GitHub_Mono} />
       break
     case "auth0":
@@ -116,6 +121,7 @@ const IconItem = ({
       break
     case "reactrouter":
     case "react_router":
+    case "react router":
       icon = <Emoji src={ReactRouter_Color} />
       break
     case "sheetjs":
@@ -123,6 +129,12 @@ const IconItem = ({
       break
     case "nextjs":
       icon = <Emoji src={NextJS_Color} />
+      break
+    case "dart":
+      icon = <Emoji src={Dart_Color} />
+      break
+    case "flutter":
+      icon = <Emoji src={Flutter_Color} />
       break
   }
   if (img) {

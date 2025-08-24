@@ -1,6 +1,6 @@
 // ReferenceFooter.jsx
 import { useState } from "react"
-import { Link } from "react-router"
+import { Link, NavLink } from "react-router"
 import bobLogo from "../assets/logo/logo.svg"
 import ResumeButton from "./ResumeButton"
 import Emoji from "./Emoji"
@@ -81,99 +81,142 @@ const ReferenceFooter = () => {
         <menu className="px-2">
           <li>
             <h1>
-              <Link
+              <NavLink
+                className={({ isActive }) =>
+                  "font-bold " +
+                  (isActive
+                    ? "pointer-events-none cursor-default text-neutral-500"
+                    : "text-black hover:text-indigo-500 dark:text-white")
+                }
                 to="../"
                 title="Home"
-                className="font-bold text-black hover:text-indigo-500 dark:text-white"
               >
                 Home
-              </Link>
+              </NavLink>
             </h1>
           </li>
           <li>
-            <Link
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../overview"
               title="Overview"
-              className="hover:text-indigo-500"
             >
               Overview
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../about-site"
               title="About the Site"
-              className="hover:text-indigo-500"
             >
               About the Site
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../about-me"
               title="About Me"
-              className="hover:text-indigo-500"
             >
               About Me
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../changelog"
               title="Change Log"
-              className="hover:text-indigo-500"
             >
               Change Log
-            </Link>
+            </NavLink>
           </li>
         </menu>
         <menu className="px-2">
           <li>
             <h1>
-              <Link
+              <NavLink
+                className={({ isActive }) =>
+                  "font-bold " +
+                  (isActive
+                    ? "pointer-events-none cursor-default text-neutral-500"
+                    : "text-black hover:text-indigo-500 dark:text-white")
+                }
                 to="../projects"
                 title="Projects Home"
-                className="font-bold text-black hover:text-indigo-500 dark:text-white"
+                end
               >
                 Projects
-              </Link>
+              </NavLink>
             </h1>
           </li>
           <li>
-            <Link
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../projects/ride-organizer"
               title="Ride Organizer App"
-              className="hover:text-indigo-500"
             >
               Ride Organizer App
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../projects/fire-detector"
               title="Fire Detection Model"
-              className="hover:text-indigo-500"
             >
               Fire Detection Model
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../projects/portfolio-site"
               title="Portfolio Website"
-              className="hover:text-indigo-500"
             >
               Portfolio Website
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              to="../projects/pvz-bb"
-              title="Plants vs. Zombies Fangame"
-              className="hover:text-indigo-500"
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
+              to="../projects/groupu-organizer"
+              title="GroupU Organizer"
             >
-              PvZ Fangame
-            </Link>
+              GroupU Organizer
+            </NavLink>
           </li>
         </menu>
         <menu className="px-2">
@@ -190,43 +233,60 @@ const ReferenceFooter = () => {
             </Link>
           </li>
           <li>
-            <Link
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../future"
               title="Future Features"
-              className="hover:text-indigo-500"
             >
               Future Features
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../friends"
               title="Friends"
-              className="hover:text-indigo-500"
             >
               Friends
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "hover:text-indigo-500"
+              }
               to="../thanks"
               title="Special Thanks"
-              className="hover:text-indigo-500"
             >
               Thanks
-            </Link>
+            </NavLink>
           </li>
         </menu>
         <menu className="px-2">
           <li>
             <h1>
-              <Link
+              <NavLink
+                className={({ isActive }) =>
+                  "font-bold " +
+                  (isActive
+                    ? "pointer-events-none cursor-default text-neutral-500"
+                    : "text-black hover:text-indigo-500 dark:text-white")
+                }
                 to="../contact"
                 title="Contact"
-                className="font-bold text-black hover:text-indigo-500 dark:text-white"
               >
                 Contact
-              </Link>
+              </NavLink>
             </h1>
           </li>
           <span className="flex flex-col justify-evenly sm:flex-row">
@@ -249,7 +309,7 @@ const ReferenceFooter = () => {
             <li>
               <Link
                 to="https://github.com/agee4"
-                className="h-full w-full content-[''] hover:after:bg-indigo-500 hover:after:mix-blend-multiply"
+                className="hover:text-indigo-500"
               >
                 {GitHubIcon}
               </Link>
