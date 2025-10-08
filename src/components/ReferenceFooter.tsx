@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router"
 import bobLogo from "../assets/logo/logo.svg"
 import ResumeButton from "./ResumeButton"
 import Emoji from "./Emoji"
+import { randomIndex } from "./Functions/_helpers"
 
 const EmailIcon = (
   <svg
@@ -71,8 +72,7 @@ const ReferenceFooter = () => {
       "/thanks",
       "/YzJWamNtVjBNZw",
     ]
-    let randomIndex = Math.floor(Math.random() * routeList.length)
-    setRandomPath(routeList[randomIndex])
+    setRandomPath(randomIndex(routeList))
   }
 
   return (
@@ -225,9 +225,10 @@ const ReferenceFooter = () => {
           </li>
           <li>
             <Link
+              className="hover:text-indigo-500"
               onClick={randomPage}
               to={randomPath}
-              className="hover:text-indigo-500"
+              title="Random Page"
             >
               Random Page
             </Link>

@@ -107,7 +107,7 @@ const ModalDisplay = ({
 
   return (
     <div
-      className="fixed top-0 left-0 z-5 hidden h-full w-full place-content-center overflow-auto bg-white/60 pt-15 text-inherit dark:bg-black/60"
+      className="fixed top-0 left-0 z-5 hidden h-full w-full place-content-center overflow-auto bg-white/60 pt-15 text-inherit animate-duration-250 motion-safe:animate-fade dark:bg-black/60"
       ref={modalRef}
     >
       <button
@@ -117,7 +117,7 @@ const ModalDisplay = ({
       >
         &times;
       </button>
-      <div className="mx-auto flex max-h-[80%] place-content-center overflow-auto">
+      <div className="mx-auto flex max-h-[80%] place-content-center overflow-auto animate-duration-500 motion-safe:animate-jump-in">
         <div ref={modalElementRef}>{element}</div>
       </div>
       <div id="modal-caption"></div>

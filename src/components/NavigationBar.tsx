@@ -5,6 +5,7 @@ import bobLogo from "../assets/logo/logo.svg"
 import bobLogoClick from "../assets/logo/logo_oh.svg"
 import ResumeButton from "./ResumeButton"
 import useModal from "./Modal/useModal"
+import { useOnKeyPress } from "./Functions/useOnKeyPress"
 
 const NavigationBar = () => {
   const [Modal, setModal, closeModal] = useModal(null, true)
@@ -16,10 +17,14 @@ const NavigationBar = () => {
     }, 500)
   }
 
+  const openModalNav = () => setModal(<NavModal />)
+
   const location = useLocation()
   useEffect(() => {
     closeModal()
   }, [location.pathname])
+
+  useOnKeyPress("`", openModalNav)
 
   const NavModal = () => (
     <menu className="overflow-scroll bg-white p-3 whitespace-nowrap shadow-md dark:bg-black">
@@ -28,19 +33,19 @@ const NavigationBar = () => {
           to="../"
           title="Return Home"
           className={({ isActive }) =>
-            "logo m-3 flex h-8 place-content-center" +
+            "logo m-3 flex h-8 place-content-center motion-safe:hover:animate-pulse" +
             (isActive ? " pointer-events-none cursor-default opacity-50" : "")
           }
         >
           <img src={bobLogo} className="logo/image h-8 border-0" id="logo" />
         </NavLink>
       </li>
-      <li className="animate-shadowpulse font-bold shadow-indigo-500 hover:animate-none hover:text-shadow-portfolio">
+      <li className="font-bold">
         <NavLink
           className={({ isActive }) =>
             isActive
               ? "pointer-events-none cursor-default text-neutral-500"
-              : "text-indigo-500"
+              : "animate-shadowpulse text-indigo-500 text-shadow-indigo-500 hover:animate-none hover:text-shadow-portfolio"
           }
           to="../overview"
           title="Overview"
@@ -215,7 +220,7 @@ const NavigationBar = () => {
           to="../"
           title="Return Home"
           className={({ isActive }) =>
-            "logo m-3 flex h-8 place-content-center" +
+            "logo m-3 flex h-8 place-content-center motion-safe:hover:animate-pulse" +
             (isActive ? " pointer-events-none cursor-default" : "")
           }
         >
@@ -230,8 +235,16 @@ const NavigationBar = () => {
           </h1>
         </NavLink>
         <menu className="navbar/desktop hidden items-center gap-4 xl:flex">
-          <li className="relative inline-block animate-shadowpulse font-bold text-indigo-500 shadow-indigo-500 hover:animate-none hover:text-indigo-500 hover:text-shadow-portfolio">
-            <NavLink to="../overview" title="Overview">
+          <li className="relative inline-block font-bold">
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "pointer-events-none cursor-default text-neutral-500"
+                  : "animate-shadowpulse text-indigo-500 text-shadow-indigo-500 hover:animate-none hover:text-shadow-portfolio"
+              }
+              to="../overview"
+              title="Overview"
+            >
               Overview
             </NavLink>
           </li>
@@ -397,8 +410,8 @@ const NavigationBar = () => {
         </menu>
         <div className="navbar/mobile flex items-center gap-4 xl:hidden">
           <button
-            className="text-3xl hover:text-indigo-500"
-            onClick={() => setModal(<NavModal />)}
+            className="cursor-pointer text-3xl hover:text-indigo-500"
+            onClick={openModalNav}
           >
             ≡
           </button>
