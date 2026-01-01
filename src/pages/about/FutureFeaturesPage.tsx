@@ -18,7 +18,6 @@ const FutureFeaturesPage = () => (
         Backend implementation(s) (either a revamped RideOrganizer app with
         Spreadsheet syncing, or some other project that utilizes a server)
       </li>
-      <li>In-browser game(s)</li>
     </ul>
   </Page>
 )

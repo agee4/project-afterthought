@@ -24,11 +24,10 @@ const AboutMePage = () => {
         setModal={setModal}
       />
       <p className="px-5">
-        I am a Computer Science & Engineering graduate from University of
-        California, Irvine. I enjoy learning, practicing, and teaching others
-        the wonders of computers, from coding to building them. I hope to use
-        the skills God has given me to glorify His name and improve the lives of
-        others around me!
+        I am a guy that does stuff on computers. I enjoy learning, practicing,
+        and teaching others the wonders of technology, from coding to system
+        design. I hope to use the skills God has given me to glorify His name
+        and improve the lives of others around me!
       </p>
       <ul className="gallery m-0 flex list-none flex-row justify-evenly p-0 text-center">
         <ModalImage

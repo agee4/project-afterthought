@@ -9,7 +9,7 @@ const AboutSitePage = () => (
       <span className="font-bold">Aaron Gee's Digital Portfolio</span> is
       intended to be a small exhibition of Aaron Gee's past accomplishments and
       present skills, demonstrating his computer science experience to friends
-      and potential future employers.
+      and family.
       <br />
       Projects detailed on this site demonstrate various skills, ranging from
       robust internet application architecture to efficient and functional

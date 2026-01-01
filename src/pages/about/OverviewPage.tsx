@@ -8,6 +8,12 @@ const ResumePage = () => (
     <h1 className="m-5 text-5xl font-bold text-indigo-500">Overview</h1>
     <ResumeButton />
 
+    <h2 className="m-3 text-3xl font-bold">Work Experience</h2>
+    <h3 className="m-1 text-xl font-bold">Capital Group</h3>
+    <p>
+      <span className="font-bold">Software Engineer I</span> |{" "}
+      <span className="italic">September 2025</span>
+    </p>
     <h2 className="m-3 text-3xl font-bold">Skills</h2>
     <h3 className="m-1 text-xl font-bold">Computer Languages</h3>
     <div className="flex flex-row flex-wrap place-content-center">

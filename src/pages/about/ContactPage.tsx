@@ -14,7 +14,8 @@ const ContactPage = () => (
   <Page title="Contact">
     <h1 className="m-5 text-5xl font-bold">Talk to me!</h1>
     <p className="italic">
-      Interested in hiring me? Contact me through one of the following!
+      Interested in getting in touch with me? Contact me through one of the
+      following!
     </p>
     <table className="mx-auto text-center">
       <tbody>
